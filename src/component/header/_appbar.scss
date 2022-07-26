@@ -1,0 +1,111 @@
+.header-container {
+    height: 5rem;
+    border-bottom: #eceeef 0.188rem solid;
+
+    /* UI Properties */
+    font: normal normal 600 1rem/1.25rem Muli;
+    color: #1B252C;
+    opacity: 1;
+}
+
+.menu {
+    display: none;
+}
+
+.venia-logo {
+    margin-top: 6%;
+    width: 63%;
+    height: 3.438rem;
+    margin-left: 20%;
+}
+
+.list-class {
+    display: inline;
+    margin-right: 1rem;
+}
+
+.menu-class {
+    margin-top: 1.75rem;
+    margin-left: 20%;
+}
+
+.list-class-women {
+    display: inline;
+    margin-right: 2rem;
+    margin-left: 6.25rem;
+}
+
+.sign-in-logo {
+    visibility: visible;
+}
+
+//Mobile View
+@media (min-width: 320px) and (max-width: 768px) {
+    .menu {
+        width: auto;
+        display: block;
+    }
+
+    .venia-logo {
+        margin-top: 0%;
+        width: auto;
+        margin-left: 35%;
+        height: 4rem;
+    }
+
+    .list-class {
+        display: none;
+    }
+
+    .search-logo {
+        width: auto;
+    }
+
+    .header-container {
+        border: none;
+        padding-top: 2%;
+    }
+
+    .sign-in-logo {
+        visibility: hidden
+    }
+
+    .menu-class {
+        margin-top: 0.75rem;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 603px) {
+    .menu-class {
+        margin-left: -50%;
+    }
+}
+
+
+
+@media (min-width: 1024px) and (max-width: 1207px) {
+    .menu-class {
+        margin-left: 0px;
+    }
+}
+
+@media (min-width: 1208px) and (max-width: 1289px) {
+    .menu-class {
+        margin-left: 10%;
+    }
+}
+
+
+@media (min-width: 769px) and (max-width: 1032px) {
+    .menu-class {
+        margin-left: -35px;
+    }
+
+    .list-class-women {
+        margin-right: 0.5rem;
+    }
+
+    .list-class {
+        margin-right: 0rem;
+    }
+}

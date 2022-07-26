@@ -1,0 +1,129 @@
+ // Breadcrum
+ .span-beadcrum {
+     text-transform: capitalize;
+     /* UI Properties */
+     font: normal normal normal 18px/12px Muli;
+     letter-spacing: 0px;
+     color: #181C24;
+     opacity: 1;
+ }
+
+ .breadcrum-container {
+     height: 20px;
+ }
+
+ //color
+ .color-list {
+     width: -webkit-fill-available;
+     height: 4vw;
+     margin-top: 5px;
+ }
+
+ //size 
+ .box {
+     // width: 55px;
+     width: auto;
+     height: 35px;
+     border: 2px solid #91959C;
+     border-radius: 6px;
+ }
+
+ .box-span {
+     margin: 3px 0px 0px 11px;
+ }
+
+ // quantity
+ .quantity-logo-minus {
+     width: 20px;
+     height: 20px;
+     margin-right: 10px;
+ }
+
+ .quantity-logo-plus {
+     width: 20px;
+     height: 20px;
+     margin-left: 10px;
+ }
+
+ .quantity-span {
+     padding: 5px 35px 5px 35px;
+     border: 2px solid #91959C;
+     border-radius: 8px;
+     opacity: 1;
+ }
+
+ //Accordian
+ .accordian-typo1-span {
+     font: normal normal normal 18px/22px Muli;
+ }
+
+ .accordian-typo2-span {
+     font: normal normal normal 14px/21px Muli;
+     margin-left: 50%;
+ }
+
+ //Edit Menu
+ .edit-icons {
+     width: 16px;
+     height: 16px;
+     margin-right: 4%;
+ }
+
+ .edit-icon-span {
+     font: normal normal 600 11px/13px Muli;
+ }
+
+ .edit-icon-container {
+     margin-top: 20px;
+ }
+
+ //loader
+ .react-spinner-material {
+     margin: 25% 35% 25% 35%;
+ }
+
+ /*=== Mobile Media ===*/
+ @media (min-width: 320px) and (max-width: 768px) {
+
+     //braedcum 
+     .breadcrum-container {
+         height: 45px;
+     }
+
+     .breadcum {
+         margin-left: 13%;
+     }
+
+     .span-beadcrum {
+         text-transform: capitalize;
+         /* UI Properties */
+         font: normal normal normal 20px/25px Muli;
+         letter-spacing: 0px;
+         color: #181C24;
+         opacity: 1;
+     }
+
+     //loader
+     .react-spinner-material {
+         margin: 65% 65% 65% 65%;
+     }
+
+     //color
+     .color-list {
+         width: -webkit-fill-available;
+         height: 8vw;
+         margin-top: 1vw;
+         margin-right: 2vw;
+     }
+
+     //Accordian
+     .accordian-container {
+         margin: 2vw;
+     }
+
+     //quantity
+     .quantity-span {
+         padding: 1vw 8vw 1vw 8vw;
+     }
+
+ }

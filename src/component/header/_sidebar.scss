@@ -1,0 +1,123 @@
+.sidebar-container {
+    width: 306px;
+    height: 1369px;
+    margin-left: 8px;
+}
+
+.sidebar-span {
+    /* UI Properties */
+    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-20)/14px var(--unnamed-font-family-muli);
+    letter-spacing: var(--unnamed-character-spacing-0);
+    color: var(--gray-d2);
+    text-align: left;
+    font: normal normal normal 18px/14px Muli;
+    letter-spacing: 0px;
+    color: #181C24;
+    opacity: 1;
+}
+
+.attr {
+    width: 260px;
+    height: max-content;
+    border-bottom: #eceeef 3px solid;
+    margin-bottom: 25px;
+    /* UI Properties */
+    opacity: 1;
+}
+
+.checkbox-span {
+    position: absolute;
+    padding-top: 12px;
+
+    /* UI Properties */
+    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-16)/var(--unnamed-line-spacing-24) var(--unnamed-font-family-muli);
+    letter-spacing: var(--unnamed-character-spacing-0);
+    text-align: left;
+    font: normal normal normal 16px/24px Muli;
+    letter-spacing: 0px;
+    opacity: 1;
+}
+
+.chechbox-resize {
+    width: 20px;
+    height: 20px;
+    margin: 15px 30px 0px 0px;
+
+    /* UI Properties */
+    background: var(--white) 0% 0% no-repeat padding-box;
+    border: 2px solid var(--gray-m1);
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 2px solid #91959C;
+    opacity: 1;
+}
+
+.attr-bottom {
+    padding-bottom: 25px;
+}
+
+.close-log {
+    display: none;
+}
+
+
+//Mobile View
+@media (min-width: 320px) and (max-width: 768px) {
+    .sidebar-container {
+        width: 540%;
+        height: max-content;
+        margin-top: -34%;
+        margin-left: 185px;
+        border: 2px solid #91959C;
+        box-shadow: 0px 8px 16px #00000026;
+    }
+
+    .attr {
+        width: auto;
+        padding-bottom: 4%;
+        padding-left: 5%;
+    }
+
+    .sidebar-span {
+        font: normal normal normal 30px/38px Muli;
+        color: #1D1D1B;
+    }
+
+    .checkbox-span {
+        width: 70%;
+        font: normal normal normal 20px/32px Muli;
+    }
+
+    .chechbox-resize {
+        width: 35px;
+        height: 35px;
+        margin: 17px 40px 25px 0px;
+        padding-top: 23px;
+    }
+
+    .sidebar-span-div {
+        padding: 4% 0% 4% 0%;
+    }
+
+    .filter-title-div {
+        width: auto;
+        padding: 3% 0% 4% 5%;
+        background: ghostwhite;
+    }
+
+    .close-log {
+        margin-left: 75%;
+        width: 35px;
+        display: block;
+        margin-top: -3%;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .attr {
+        width: 138px;
+    }
+
+    .chechbox-resize {
+        margin: 15px 10px 0px 0px;
+    }
+}

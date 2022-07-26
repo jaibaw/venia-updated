@@ -1,0 +1,115 @@
+.banner-container {
+    margin-top: 30px;
+}
+
+.women-block {
+    width: 555px;
+    height: 352px;
+    margin-bottom: 32px;
+}
+
+.man-play {
+    width: 91%;
+    height: 320px;
+    margin-left: 4.5%;
+    margin-top: 16px;
+}
+
+.banner-sub-container {
+    height: 44px;
+    margin-bottom: 30px;
+}
+
+.result-span {
+    margin-left: 4px;
+    /* UI Properties */
+    font: normal normal 600 18px/12px Muli;
+}
+
+.filter-dropdown-span {
+    /* UI Properties */
+    font: normal normal normal 16px/24px Muli;
+}
+
+.filter-dropdown {
+    width: 260px;
+    height: 44px;
+}
+
+.filter-sort-div {
+    display: none;
+}
+
+.banner-desktop {
+    display: block;
+}
+
+.banner-phone {
+    display: none;
+}
+
+/*=== Mobile Media ===*/
+@media (min-width: 320px) and (max-width: 768px) {
+
+    .banner-desktop {
+        display: none;
+    }
+
+    .banner-phone {
+        display: block;
+    }
+
+    .women-block-phone {
+        width: 90vw;
+        margin: -10vw 0vw 3vw 12vw;
+    }
+
+    .man-play-phone {
+        width: 110vw;
+        margin-top: -6%;
+    }
+
+    .filter-sort-div {
+        display: block;
+        padding-left: 15%;
+        padding-bottom: 5%;
+    }
+
+    .filter-sort-sub-container {
+        padding-top: 6%;
+    }
+
+    .filter-sort-logo {
+        width: auto;
+        margin-right: 3px;
+    }
+
+    .sort-logo {
+        width: auto;
+        margin-right: 3px;
+    }
+
+
+    .result-div {
+        margin-left: 40%;
+        margin-bottom: 3%;
+    }
+}
+
+
+@media (min-width: 769px) and (max-width: 1920px) {
+    .women-block {
+        width: 108%;
+    }
+
+    .man-play {
+        margin-left: 5.5%;
+    }
+
+}
+
+@media (min-width: 1800px) and (max-width: 1920px) {
+    .filter-div {
+        margin-left: 130px;
+    }
+}

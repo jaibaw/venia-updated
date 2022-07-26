@@ -1,0 +1,23 @@
+.product-list-container {
+    height: max-content;
+    margin-left: 50px;
+    margin-right: 50px;
+    // border-bottom: #eceeef 3px solid;
+    // margin-bottom: 25px;
+    /* UI Properties */
+    opacity: 1;
+}
+
+/*=== Mobile Media ===*/
+
+@media (min-width: 320px) and (max-width: 768px) {
+    .product-list-container {
+        height: max-content;
+        margin-left: -4%;
+        margin-right: 0px;
+    }
+
+    .display-list {
+        display: none;
+    }
+}

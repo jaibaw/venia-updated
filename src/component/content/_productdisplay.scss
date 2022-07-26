@@ -1,0 +1,120 @@
+.product-display-list-container {
+    /* UI Properties */
+    font: var(--unnamed-font-style-normal) normal var(--unnamed-line-spacing-20) var(--unnamed-font-family-muli);
+    letter-spacing: var(--unnamed-character-spacing-0);
+    color: var(--unnamed-color-172026);
+    text-align: left;
+    font: normal normal bold 13px Muli;
+    letter-spacing: 0px;
+    color: #172026;
+    opacity: 1;
+}
+
+.product-img {
+    width: 190px;
+    height: 250px;
+    margin: 0px 32px 15px 25%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    /* UI Properties */
+    mix-blend-mode: multiply;
+    opacity: 1;
+}
+
+.product-discription {
+    margin: 5px 0px 30px 20px;
+    height: 96px;
+}
+
+.product-display-container {
+    width: auto;
+    height: 370px;
+    margin-bottom: 15px;
+    margin-right: 10%;
+}
+
+.product-display-img-div {
+    border: aliceblue 1px solid;
+    box-shadow: 0px 0px 8px #0000000D;
+}
+
+.product-dispaly-sub-container {
+    height: 125rem;
+}
+
+.pagination {
+    margin-right: 30%;
+    padding-bottom: 8%;
+}
+
+/*=== Mobile Media ===*/
+@media (min-width: 320px) and (max-width: 768px) {
+    .product-display-list-container {
+        margin-left: 14%;
+        font: normal normal bold 15px Muli;
+    }
+
+    .product-dispaly-sub-container {
+        height: 195rem;
+    }
+
+    .product-display-img-div {
+        height: 62%;
+    }
+
+    .product-display-container {
+        width: auto;
+        margin-bottom: 15px;
+        margin-right: 10%;
+
+    }
+
+    .product-img {
+        width: -webkit-fill-available;
+        height: 100%;
+    }
+
+}
+
+
+@media (min-width: 1620px) and (max-width: 1920px) {
+    .product-img {
+        margin: 0px 32px 15px 25%;
+    }
+
+}
+
+@media (min-width: 1320px) and (max-width: 1619px) {
+    .product-img {
+        margin: 0px 32px 15px 17%;
+    }
+
+}
+
+@media (min-width: 1320px) and (max-width: 1619px) {
+    .product-img {
+        margin: 0px 32px 15px 17%;
+    }
+
+}
+
+@media (min-width: 1280px) and (max-width: 1319px) {
+    .product-img {
+        margin: 0px 32px 15px 13%;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+    .product-img {
+        width: 145px;
+        margin: 0px 32px 15px 13%;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1023px) {
+    .product-img {
+        width: 115px;
+        margin: 0px 32px 15px 13%;
+    }
+}

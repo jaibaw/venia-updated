@@ -1,0 +1,25 @@
+.recent-product-img {
+    width: 185px;
+    height: 250px;
+    margin: 0px 22% 15px 17%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    /* UI Properties */
+    mix-blend-mode: multiply;
+    opacity: 1;
+}
+
+.recent-product-display-container {
+    //    width: 280px;
+    width: auto;
+    height: 370px;
+    margin: 0px 30px 15px 30px
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .recent-product-img {
+        width: -webkit-fill-available;
+        padding: 10px 10% 10px 10%;
+    }
+}
