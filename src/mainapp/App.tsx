@@ -8,9 +8,12 @@ import { ROUTES } from "../constant/routes";
 import { lazy, Suspense, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { action_fetchProductList } from "../actions/get-products";
-
+import Home from "../container/Home";
+import CheckoutContainer from "../container/CheckoutContainer";
+import Order from "../container/Order";
 //lazy loading
 const ProductList = lazy(() => import('../container/ProductList'))
+//const Home = lazy(() => import('../container/Home'))
 
 // main app loading
 function App() {
@@ -33,9 +36,13 @@ function App() {
           <div className="aem-GridColumn aem-GridColumn--default--12 aem-GridColumn--phone--12">
             <main>
               <Routes>
+                <Route path={ROUTES.HOME} element={<Home />} />
                 <Route path={ROUTES.PRODUCT_LIST} element={<ProductList />} />
                 <Route path={ROUTES.PRODUCT_DETAILS} element={<ProductDetail />} />
                 <Route path={ROUTES.SHOPPING_CART} element={<ShoppingCart />} />
+                <Route path={ROUTES.CHECKOUT} element={<CheckoutContainer />} />
+                <Route path={ROUTES.ORDER_PLACES} element={<Order />} />
+
               </Routes>
             </main>
           </div>

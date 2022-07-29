@@ -1,7 +1,7 @@
 .header-container {
     height: 5rem;
-    border-bottom: #eceeef 0.188rem solid;
-
+    //border-bottom: #eceeef 0.188rem solid;
+    background-color:#1363DF;
     /* UI Properties */
     font: normal normal 600 1rem/1.25rem Muli;
     color: #1B252C;
@@ -27,6 +27,7 @@
 .menu-class {
     margin-top: 1.75rem;
     margin-left: 20%;
+    color: white;
 }
 
 .list-class-women {

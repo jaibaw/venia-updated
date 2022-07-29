@@ -1,0 +1,73 @@
+::placeholder {
+  font: normal normal normal 16px/19px Muli;
+  color: #91959C;
+}
+
+input[type="radio"] {
+  /* remove standard background appearance */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /* create custom radiobutton appearance */
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  padding: 5px;
+  /* background-color only for content */
+  background-clip: content-box;
+  border: 2px solid #1363DF;
+  // background-color: #1363DF;
+  border-radius: 50%;
+}
+
+/* appearance for checked radiobutton */
+input[type="radio"]:checked {
+  background-color: #1363DF;
+}
+
+
+.shipping__info__container {
+  // font: normal normal 16px/24px Muli;
+  font: normal normal 600 16px/24px Muli;
+}
+
+.guest__checkout__div {
+  margin-bottom: 20px;
+  font: normal normal 600 36px/30px Source Serif Pro;
+}
+
+.contract__information__div {
+  font: normal normal 600 20px/25px Muli;
+  margin-bottom: 5px;
+}
+
+.contract__information_sub_title {
+  font: normal normal normal 16px/25px Muli;
+  margin-bottom: 16px;
+}
+
+.checkout__methods__div {
+  font: normal normal 600 20px/25px Muli;
+  margin-bottom: 24px;
+}
+
+.input__box {
+  width: -webkit-fill-available;
+  margin-right: 33px;
+  height: 44px;
+  border: 2px solid #B5B7BC;
+  border-radius: 8px;
+}
+
+.checkout__step1__btn {
+  width: 347px;
+  height: 40px;
+  margin-top: 41px;
+  margin-left: 25%;
+  margin-bottom: 48px;
+  background: var(--white) 0% 0% no-repeat padding-box;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  border: 2px solid #2A65D7;
+  border-radius: 10px;
+  opacity: 1;
+}

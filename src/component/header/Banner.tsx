@@ -1,7 +1,6 @@
 import React, { Suspense, useEffect, useState } from 'react';
 import { useDispatch, useSelector } from "react-redux";
-import womensblock from "../../assests/images/womensblock.jpg";
-import manplay from "../../assests/images/manplay.jpg";
+import mansitcrop from "../../assests/images/mansitcrop.png";
 import { MenuItem, TextField } from "@mui/material";
 import Breadcrum from '../common/Breadcrum';
 import { FILTER } from '../../constant/common';
@@ -40,49 +39,54 @@ function Banner() {
 
     //return component
     return (
-        <div className="banner-container">
+        <div>
             <div className='banner-desktop'>
                 <div className="aem-Grid aem-Grid--12">
-                    <div className='aem-GridColumn aem-GridColumn--default--5'>
+                    <div className='aem-GridColumn aem-GridColumn--default--3'>
                         <div>
-                            <img className="women-block" alt='block' src={womensblock}>
-                            </img>
+                            <label>
+                                Men's OutWear
+                            </label>
+                        </div>
+                        <div>
+
                         </div>
                     </div>
-                    <div className='aem-GridColumn aem-GridColumn--default--7'>
+                    <div className='aem-GridColumn aem-GridColumn--default--9'>
                         <div>
-                            <img className="man-play" src={manplay} alt='man-play'>
+                            <img className="man-sit" src={mansitcrop} alt='man-play'>
                             </img>
 
                         </div>
                     </div>
                 </div>
-
             </div>
 
+            {/* Phone View */}
             <div className='banner-phone'>
                 <div className="aem-Grid aem-Grid--12  aem-GridColumn--phone--12">
                     <div className='aem-GridColumn aem-GridColumn--phone--12'>
                         <div>
-                            <img className="man-play-phone" src={manplay} alt='man-play'>
+                            <img className="man-play-phone" src={mansitcrop} alt='man-play'>
                             </img>
 
                         </div>
                     </div>
                     <div className='aem-GridColumn aem-GridColumn--phone--12'>
                         <div>
-                            <img className="women-block-phone" alt='block' src={womensblock}>
-                            </img>
+                            <label>
+                                hi
+                            </label>
                         </div>
                     </div>
                 </div>
             </div>
 
-            {/* Breadcrum menus */}
+            {/* Breadcrum menus Phone*/}
             <div className='banner-sub-container'>
                 <div className="aem-Grid aem-Grid--12  aem-GridColumn--phone--12" >
                     <div className="aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--phone--12">
-                        <div  className="breadcum">
+                        <div className="breadcum">
                             <Breadcrum
                                 label={filterValue}
                             />

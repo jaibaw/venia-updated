@@ -1,6 +1,6 @@
 .sidebar-container {
     width: 306px;
-    height: 1369px;
+    // height: 1369px;
     margin-left: 8px;
 }
 
@@ -17,7 +17,7 @@
 }
 
 .attr {
-    width: 260px;
+    width: 19vw;
     height: max-content;
     border-bottom: #eceeef 3px solid;
     margin-bottom: 25px;
@@ -59,6 +59,9 @@
     display: none;
 }
 
+.fieldset {
+    border: none;
+}
 
 //Mobile View
 @media (min-width: 320px) and (max-width: 768px) {

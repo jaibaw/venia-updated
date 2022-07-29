@@ -1,15 +1,6 @@
-.banner-container {
-    margin-top: 30px;
-}
 
-.women-block {
-    width: 555px;
-    height: 352px;
-    margin-bottom: 32px;
-}
-
-.man-play {
-    width: 91%;
+.man-sit {
+    width: -webkit-fill-available;
     height: 320px;
     margin-left: 4.5%;
     margin-top: 16px;
@@ -17,6 +8,7 @@
 
 .banner-sub-container {
     height: 44px;
+    margin: 0vw 14vw 0vw 15vw;
     margin-bottom: 30px;
 }
 
@@ -42,6 +34,7 @@
 
 .banner-desktop {
     display: block;
+    margin-bottom: 45px;
 }
 
 .banner-phone {
@@ -65,7 +58,7 @@
     }
 
     .man-play-phone {
-        width: 110vw;
+        width: 100vw;
         margin-top: -6%;
     }
 

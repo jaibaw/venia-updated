@@ -1,0 +1,45 @@
+.order__success__container {
+    font: normal normal normal 16px/24px Muli;
+}
+
+.order__number__div {
+    font: normal normal 600 20px/25px Muli;
+    margin-bottom: 24px;
+
+}
+
+.order__success__methods__div {
+    font: normal normal 600 16px/20px Muli;
+    margin-bottom: 8px;
+
+}
+
+.total__order__count__div {
+    margin-bottom: 24px;
+    font: normal normal 600 16px/20px Muli;
+}
+
+.total__order__summary__container {
+    margin-top: 24px;
+    margin-bottom: 39px;
+}
+
+.discount__span__div {
+    font: normal normal 600 36px/45px Source Serif Pro;
+}
+
+.order__product__summary__discription__div {
+    margin-top: 16px;
+    margin-bottom: 80px;
+}
+
+.discount__span__container {
+   
+    width: -webkit-fill-available;
+    height: 351px;
+    background: var(--primary-d1) 0% 0% no-repeat padding-box;
+    background: #47B5FF 0% 0% no-repeat padding-box;
+    border: 1px solid #D1D3D6;
+    border-radius: 2px;
+    opacity: 1;
+}

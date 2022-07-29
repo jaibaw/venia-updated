@@ -1,7 +1,5 @@
-import venia_logo from '../../assests/images/venia-logo.jpg';
-import search from '../../assests/images/search.svg';
-import user from '../../assests/images/user.svg';
-import archive from '../../assests/images/archive.svg';
+import venialogoupdated from '../../assests/images/venialogoupdated.jpg';
+import shoppingbag from '../../assests/images/shoppingbag.svg';
 import { ROUTES } from '../../constant/routes';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
@@ -9,6 +7,7 @@ import menu from '../../assests/images/menu.png';
 // import Sidebar from './Sidebar';
 import { useState } from 'react';
 import { action_setMenuBarStatus } from '../../actions/get-products';
+import Sidebar from './Sidebar';
 
 //appbar
 function Appbar() {
@@ -40,33 +39,28 @@ function Appbar() {
                         {
                             setMenuBarStatus &&
                             <div className="aem-GridColumn aem-GridColumn--phone--12">
-                                {/* <Sidebar /> */}
+                                <Sidebar />
                             </div>
                         }
                     </div>
                     <div className={menuBar ? 'menu' : "aem-GridColumn aem-GridColumn--default--2 aem-GridColumn--phone--7"} >
-                        <Link to={ROUTES.PRODUCT_LIST}>{<img className={setMenuBarStatus ? 'list-class' : 'venia-logo'} alt='venia-logo' src={venia_logo}></img>}</Link>
+                        <Link to={ROUTES.HOME}>{<img className={setMenuBarStatus ? 'list-class' : 'venia-logo'} alt='venia-logo' src={venialogoupdated}></img>}</Link>
                     </div>
-                    <div className="aem-GridColumn aem-GridColumn--default--6  aem-GridColumn--phone--hide">
+                    <div className="aem-GridColumn aem-GridColumn--default--8  aem-GridColumn--phone--hide">
                         <ul className='menu-class'>
-                            <li className='list-class-women'>Women</li>
+                            <li className='list-class-women'>Home</li>
+                            <li className='list-class'>Women</li>
                             <li className='list-class'>Men</li>
                             <li className='list-class'>Smart Gear</li>
                             <li className='list-class'>Accessories</li>
                         </ul>
                     </div>
-                    <div className={menuBar ? 'menu' : "aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--phone--3"}>
+                    <div className={menuBar ? 'menu' : "aem-GridColumn aem-GridColumn--default--1 aem-GridColumn--phone--3"}>
                         <ul className='menu-class'>
-                            <img className={setMenuBarStatus ? 'list-class' : 'search-logo'} alt='search' src={search}></img>
-                            <li className='list-class'>Search</li>
-
-                            <img className='sign-in-logo' alt='sign-in' src={user}></img>
-                            <li className='list-class'> Sign in</li>
-
                             {
                                 cartValue !== ' ' ?
-                                    <Link to={ROUTES.SHOPPING_CART}> {cartValue === ' ' ? setCartQuantity : cartValue} {<img className={setMenuBarStatus ? 'list-class' : 'search-logo'} alt='cart' src={archive}></img>}</Link>
-                                    : <img className={setMenuBarStatus ? 'list-class' : 'search-logo'} alt='cart' src={archive}></img>
+                                    <Link to={ROUTES.SHOPPING_CART}> {cartValue === ' ' ? setCartQuantity : cartValue} {<img className={setMenuBarStatus ? 'list-class' : 'search-logo'} alt='cart' src={shoppingbag}></img>}</Link>
+                                    : <img className={setMenuBarStatus ? 'list-class' : 'search-logo'} alt='cart' src={shoppingbag}></img>
                             }
                         </ul>
                     </div>

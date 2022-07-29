@@ -1,8 +1,6 @@
-import React, { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { action_fetchProductByCategory, action_setMenuBarStatus } from '../../actions/get-products';
-import { SIZE, STYLE, BRAND } from "../../constant/common";
-import Color from '../common/Color';
+import {  STYLE } from "../../constant/common";
 import close from '../../assests/images/close.png';
 
 //sidebar
@@ -35,35 +33,10 @@ function Sidebar() {
                             <span className='sidebar-span'>Attributes</span>
                         </div>
                         <div className='attr-bottom'>
-                            {SIZE.map(function (key) {
-                                return (
-                                    <div>
-                                        <fieldset>
-                                            <input
-                                                className='chechbox-resize'
-                                                type="checkbox"
-                                                id={key.id}
-                                                name={key.value}
-                                                value={key.value}
-                                            >
-                                            </input>
-                                            <span className='checkbox-span'>{key.value}</span>
-                                        </fieldset>
-                                    </div>
-                                );
-                            })}
-                        </div>
-                    </div>
-
-                    <div className='attr'>
-                        <div className='sidebar-span-div'>
-                            <span className='sidebar-span'>Attributes</span>
-                        </div>
-                        <div className='attr-bottom'>
                             {STYLE.map(function (key) {
                                 return (
                                     <div>
-                                        <fieldset>
+                                        <fieldset  className='fieldset'>
                                             <input
                                                 className='chechbox-resize'
                                                 type="checkbox"
@@ -75,39 +48,6 @@ function Sidebar() {
                                             >
                                             </input>
                                             <span className='checkbox-span'>{key.filterLabel}</span>
-                                        </fieldset>
-                                    </div>
-                                );
-                            })}
-                        </div>
-                    </div>
-
-                    <div className='attr'>
-                        <div className='sidebar-span-div'>
-                            <span className='sidebar-span'>Color</span>
-                        </div>
-                        <div className='attr-bottom'>
-                            <Color />
-                        </div>
-                    </div>
-
-                    <div className='attr'>
-                        <div className='sidebar-span-div'>
-                            <span className='sidebar-span'>Attributes</span>
-                        </div>
-                        <div className='attr-bottom'>
-                            {BRAND.map(function (key) {
-                                return (
-                                    <div>
-                                        <fieldset>
-                                            <input
-                                                className='chechbox-resize'
-                                                type="checkbox"
-                                                id={key}
-                                                name={key}
-                                                value={key}>
-                                            </input>
-                                            <span className='checkbox-span'>{key}</span>
                                         </fieldset>
                                     </div>
                                 );

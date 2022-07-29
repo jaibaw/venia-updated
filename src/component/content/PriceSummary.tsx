@@ -2,9 +2,13 @@ import { useSelector } from "react-redux";
 import paypal from "../../assests/images/paypal.png";
 import checkout from "../../assests/images/checkout.png";
 import { useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { ROUTES } from "../../constant/routes";
 
 //price summary product
 function PriceSummary(props: any) {
+    const location = useLocation()
+ 
     //redux state
     const setQuantity = useSelector((state: any) => state.getProductList.setQuantity);
 
@@ -81,18 +85,20 @@ function PriceSummary(props: any) {
                 </div>
             </div>
             <div className="aem-Grid aem-Grid--12">
-                <div className='price-summary-imgs-container'>
-                    <div>
+                <div className={location.pathname === '/checkout' ? 'checkout-btn-display' : 'price-summary-imgs-container'}>
+                <div>
+                    <Link to={ROUTES.CHECKOUT}>
                         <img className='price-summary-img-checkout' alt="checkout" src={checkout}>
                         </img>
-                    </div>
-                    <div>
-                        <img className='price-summary-img-paypal' alt='payment' src={paypal}>
-                        </img>
-                    </div>
+                    </Link>
+                </div>
+                <div>
+                    <img className='price-summary-img-paypal' alt='payment' src={paypal}>
+                    </img>
                 </div>
             </div>
         </div>
+        </div >
     );
 }
 

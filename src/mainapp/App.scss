@@ -10,10 +10,17 @@
 @import "../component/content/singleproductdisplay";
 @import "../component/content/addedcartproducts";
 @import "../component/content/pricesummary";
-@import "../component/content/recentlyviewcartproduct";
+@import "../component/content/homepage";
+
+@import "../component/content/checkout/shippinginformation";
+@import "../component/content/checkout/shippingmethod";
+@import "../component/content/checkout/paymentinformation";
+@import "../component//content//ordersuccess";
 
 @import "../container/productlist";
 @import "../container/productdetail";
 @import "../container/shoppingcart";
+@import "../container/checkoutcontainer";
+@import "../container/order";
 
 @import "../component/footer/footer";
