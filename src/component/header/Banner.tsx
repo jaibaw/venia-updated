@@ -42,17 +42,26 @@ function Banner() {
         <div>
             <div className='banner-desktop'>
                 <div className="aem-Grid aem-Grid--12">
-                    <div className='aem-GridColumn aem-GridColumn--default--3'>
-                        <div>
-                            <label>
-                                Men's OutWear
-                            </label>
+                    <div className='aem-GridColumn aem-GridColumn--default--4'>
+                        <div className='banner__block'>
+                            <div className='banner__block__span__div '>
+                                <div>
+                                    <label>Men's</label>
+                                </div>
+                                <div>
+                                    <label>
+                                        OutWear
+                                    </label>
+                                </div>
+                                <div>
+                                    <div className="border">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div>
 
-                        </div>
                     </div>
-                    <div className='aem-GridColumn aem-GridColumn--default--9'>
+                    <div className='aem-GridColumn aem-GridColumn--default--8'>
                         <div>
                             <img className="man-sit" src={mansitcrop} alt='man-play'>
                             </img>
@@ -73,10 +82,21 @@ function Banner() {
                         </div>
                     </div>
                     <div className='aem-GridColumn aem-GridColumn--phone--12'>
-                        <div>
-                            <label>
-                                hi
-                            </label>
+                        <div className='banner__block'>
+                            <div className='banner__block__span__div '>
+                                <div>
+                                    <label>Men's</label>
+                                </div>
+                                <div>
+                                    <label>
+                                        OutWear
+                                    </label>
+                                </div>
+                                <div>
+                                    <div className="border">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

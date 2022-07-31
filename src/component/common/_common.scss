@@ -2,14 +2,18 @@
  .span-beadcrum {
      text-transform: capitalize;
      /* UI Properties */
-     font: normal normal normal 18px/12px Muli;
+     font: normal normal normal 16px/24px Muli;
      letter-spacing: 0px;
-     color: #181C24;
+     color: #172026;
      opacity: 1;
  }
 
  .breadcrum-container {
      height: 20px;
+ }
+
+ .hide__link {
+     text-decoration: none !important
  }
 
  // quantity
@@ -42,11 +46,16 @@
      margin-left: 50%;
  }
 
+ .accordian__container {
+     margin-top: 10px;
+     margin-bottom: 50px;
+ }
+
  //Edit Menu
  .edit-icons {
      width: 16px;
      height: 16px;
-     margin-right: 4%;
+     margin-top: 4px;
  }
 
  .edit-icon-span {

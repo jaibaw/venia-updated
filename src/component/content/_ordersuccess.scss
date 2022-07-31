@@ -5,13 +5,13 @@
 .order__number__div {
     font: normal normal 600 20px/25px Muli;
     margin-bottom: 24px;
+    margin-top: 20px;
 
 }
 
 .order__success__methods__div {
     font: normal normal 600 16px/20px Muli;
     margin-bottom: 8px;
-
 }
 
 .total__order__count__div {
@@ -25,7 +25,12 @@
 }
 
 .discount__span__div {
+    color: #FFFFFF;
     font: normal normal 600 36px/45px Source Serif Pro;
+    margin-top: 50px;
+    margin-left: 5vw;
+    margin-right: 4vw;
+    margin-bottom: 50px;
 }
 
 .order__product__summary__discription__div {
@@ -34,7 +39,6 @@
 }
 
 .discount__span__container {
-   
     width: -webkit-fill-available;
     height: 351px;
     background: var(--primary-d1) 0% 0% no-repeat padding-box;
@@ -42,4 +46,23 @@
     border: 1px solid #D1D3D6;
     border-radius: 2px;
     opacity: 1;
+}
+
+.order__product__summary__container {
+    margin-bottom: 39px;
+    margin-top: 24px;
+}
+
+.order__payment__label {
+    margin-top: 32px;
+}
+
+.order__social__img {
+    width: 49px;
+    height: 49px;
+    margin-left: 32px;
+}
+
+.order__social__img__div{
+    margin-left: 32px;
 }

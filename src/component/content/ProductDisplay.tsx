@@ -49,8 +49,8 @@ function ProductDisplay() {
                             <div className="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--6">
                                 <div className='product-display-container'>
                                     <div className='product-display-img-div'>
-                                        <Link to={ROUTES.PRODUCT_DETAILS}> 
-                                           {<img
+                                        <Link to={ROUTES.PRODUCT_DETAILS}>
+                                            {<img
                                                 className='product-img'
                                                 alt='product'
                                                 src={key.image}
@@ -61,17 +61,20 @@ function ProductDisplay() {
                                             }
                                         </Link>
                                     </div>
-                                    <div className='product-discription'>
-                                        <div>
-                                            <label htmlFor='title'>{key.title}</label>
-                                        </div>
-                                        <div>
-                                            <label htmlFor='price' >${key.price}</label>
-                                        </div>
-                                        <div>
-                                            <img alt='save' src={heart}></img>
+                                    <div className="aem-Grid aem-Grid--12 aem-GridColumn--phone--12">
+                                        <div className='product-discription'>
+                                            <div className='product__label__div'>
+                                                <label htmlFor='title'>{key.title}</label>
+                                            </div>
+                                            <div className='product__price__div'>
+                                                <label htmlFor='price' >${key.price}</label>
+                                            </div>
+                                            <div className='save__img__div '>
+                                                <img alt='save' src={heart}></img>
+                                            </div>
                                         </div>
                                     </div>
+
                                 </div>
                             </div>
                         );

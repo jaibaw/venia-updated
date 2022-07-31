@@ -13,8 +13,8 @@ function Footer() {
     const setMenuBarStatus = useSelector((state: any) => state.getProductList.setMenuBarStatus);
 
     return (
-        <div className={setMenuBarStatus ? 'display-list' : 'footer-container'}    >
-            <div className={location.pathname === '/checkout' ? 'checkout-btn-display' : 'footer-main-container'}>
+        <div className={setMenuBarStatus ? 'display-list' : 'footer-container'}    >      
+            <div className={location.pathname === '/checkout' ? 'checkout__btn__display' :  'footer-main-container'}>
                 <div className="aem-Grid aem-Grid--12">
                     <div className="aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--phone--12">
                         <div className='footer-sub-container'>

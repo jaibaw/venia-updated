@@ -75,67 +75,60 @@ function OrderSuccess(props: any) {
                                     3
                                 </label>
                             </div>
-                            <div className="order__success__methods__div">
-                                <label>
-                                    Payment Information
-                                </label>
+                            <div className='order__payment__label'>
+                                <div className="order__success__methods__div">
+                                    <label>
+                                        Payment Information
+                                    </label>
+                                </div>
+                                <div>
+                                    <label>
+                                        1
+                                    </label>
+                                </div>
                             </div>
-                            <div>
-                                <label>
-                                    1
-                                </label>
-                            </div>
-
                         </div>
 
                     </div>
                     <div className="aem-Grid aem-Grid--12">
-                        <div className="total__order__summary__container">
-                            <div className="aem-GridColumn aem-GridColumn--default--12   aem-GridColumn--phone--12 ">
-                                <div className="total__order__count__div">
+                        <div className='order__product__summary__container'>
+                            <div className="aem-Grid aem-Grid--12">
+                                <div className="payment__product__cart__count">
                                     <label>
                                         {uniqueCartItemList.length}items in your order
                                     </label>
                                 </div>
-                                <div>
-                                    <div>
-                                        <div className="aem-Grid aem-Grid--12">
-                                            {uniqueCartItemList && uniqueCartItemList.map(function (key: any) {
-                                                return (
-                                                    <div className="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12">
-                                                        <div className="aem-Grid aem-Grid--12">
+                                {uniqueCartItemList && uniqueCartItemList.map(function (key: any) {
+                                    return (
+                                        <div className="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12">
+                                            <div className="aem-Grid aem-Grid--12">
 
-                                                            <div className="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--5">
-                                                                <div className='added-cart-product'>
-                                                                    <img className='added-cart-product-img' alt='product' src={key.image}>
-                                                                    </img>
-                                                                </div>
-                                                            </div>
-                                                            <div className="aem-GridColumn aem-GridColumn--default--8 aem-GridColumn--phone--6">
-                                                                <div className='added-product-detail'>
-                                                                    <div className='added-cart-label-div'>
-                                                                        <label htmlFor='title' className='added-cart-item-span'> {key.title}</label>
-                                                                    </div>
-                                                                    <div className='added-cart-label-div'>
-                                                                        <label htmlFor='size' className='added-cart-item-label-detail-span' >  Size : Medium</label>
-                                                                    </div>
-                                                                    <div className='added-cart-label-div' >
-                                                                        <label htmlFor='color' className='added-cart-item-label-detail-span'> Color : Black</label>
-                                                                    </div>
-                                                                    <div className='added-cart-label-div'>
-                                                                        <label htmlFor='price' className='added-cart-item-label-detail-span'>${key.price}</label>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
+                                                <div className="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--5">
+                                                    <div>
+                                                        <img className="payment__product__cart__img" alt='product' src={key.image}>
+                                                        </img>
                                                     </div>
-                                                );
-                                            })}
+                                                </div>
+                                                <div className="aem-GridColumn aem-GridColumn--default--8 aem-GridColumn--phone--6">
+                                                    <div>
+                                                        <div className="payent__product__label">
+                                                            <label htmlFor='title'> {key.title}</label>
+                                                        </div>
+                                                        <div>
+                                                            <label htmlFor='size' >  Size : Medium</label>
+                                                        </div>
+                                                        <div >
+                                                            <label htmlFor='color'> Color : Black</label>
+                                                        </div>
+                                                        <div>
+                                                            <label htmlFor='price'>${key.price}</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
-
-                                </div>
+                                    );
+                                })}
                             </div>
                         </div>
                     </div>
@@ -161,15 +154,15 @@ function OrderSuccess(props: any) {
                     <div className="discount__span__container">
                         <div className="discount__span__div ">
                             <label>
-                                Give us a follow to SAVE 20% on your next.
+                                Give us a follow <br></br> to SAVE 20%  <br></br>on your next.
                             </label>
                         </div>
-                        <div>
-                            <img src={instagram1}>
+                        <div className='order__social__img__div'>
+                            <img className='order__social__img' src={instagram1}>
                             </img>
-                            <img src={facebook1}>
+                            <img className='order__social__img' src={facebook1}>
                             </img>
-                            <img src={twitter1}>
+                            <img className='order__social__img' src={twitter1}>
                             </img>
                         </div>
                     </div>

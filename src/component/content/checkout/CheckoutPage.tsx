@@ -10,7 +10,7 @@ function CheckoutPage(props: any) {
     return (
         <div>
             <div className="aem-Grid aem-Grid--12">
-                <div className="aem-GridColumn aem-GridColumn--default--9   aem-GridColumn--phone--12 ">
+                <div className="aem-GridColumn aem-GridColumn--default--8   aem-GridColumn--phone--12 ">
 
                     <div className="aem-GridColumn aem-GridColumn--default--12   aem-GridColumn--phone--12 ">
                         <ShippingInformation />
@@ -22,7 +22,7 @@ function CheckoutPage(props: any) {
                         <PaymentInformation />
                     </div>
                 </div>
-                <div className="aem-GridColumn aem-GridColumn--default--3   aem-GridColumn--phone--12 ">
+                <div className="aem-GridColumn aem-GridColumn--default--4   aem-GridColumn--phone--12 ">
                     <PriceSummary />
                 </div>
             </div>

@@ -11,9 +11,10 @@ function CheckoutContainer(props: any) {
                     Checkout
                 </span>
             </div>
-            <div className='shopping-cart-border'>
+            <div className='shopping__cart__border'>
+                <div className='border'>
+                </div>
             </div>
-
             <div className="aem-GridColumn aem-GridColumn--default--12   aem-GridColumn--phone--12 ">
                 <div className="checkout__container">
                     <CheckoutPage />

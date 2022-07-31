@@ -22,7 +22,7 @@ function Sidebar() {
             <div className="aem-Grid aem-Grid--12 aem-GridColumn--phone--12" >
                 <div>
                     <div className='filter-title-div'>
-                        <span className='sidebar-span'>Filters</span>
+                        <span>Filters</span>
                         <img id='close' className='close-log' alt='close' src={close} onClick={handleMenuClose} ></img>
                     </div>
                     <div className="attr">
@@ -30,7 +30,7 @@ function Sidebar() {
                         </div>
 
                         <div className='sidebar-span-div'>
-                            <span className='sidebar-span'>Attributes</span>
+                            <span className='sidebar-span'>Categories</span>
                         </div>
                         <div className='attr-bottom'>
                             {STYLE.map(function (key) {

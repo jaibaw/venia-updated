@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
 import paypal from "../../assests/images/paypal.png";
-import checkout from "../../assests/images/checkout.png";
+import lock from "../../assests/images/lock.svg";
 import { useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { ROUTES } from "../../constant/routes";
@@ -8,7 +8,7 @@ import { ROUTES } from "../../constant/routes";
 //price summary product
 function PriceSummary(props: any) {
     const location = useLocation()
- 
+
     //redux state
     const setQuantity = useSelector((state: any) => state.getProductList.setQuantity);
 
@@ -32,72 +32,74 @@ function PriceSummary(props: any) {
 
     // return component
     return (
-        <div className='price-summary-container'>
-            <div className='price-summary-title'>
-                <label htmlFor='price-summary' className='price-summary-title-span'>Pricing Summary</label>
+        <div className='price__summary__container'>
+            <div className='price__summary__title__div '>
+                <label htmlFor='price-summary'>Pricing Summary</label>
             </div>
 
             <div className="aem-Grid aem-Grid--12">
                 <div className="aem-GridColumn aem-GridColumn--default--9 aem-GridColumn--phone--11">
                     <div>
-                        <div className='price-summary-sub-title'>
-                            <label htmlFor='subtotal' className="price-summary-sub-title-span">Subtotal</label>
+                        <div className="price__summary__sub__title__div">
+                            <label htmlFor='subtotal' >Subtotal</label>
                         </div>
-                        <div className='price-summary-sub-title'>
-                            <label htmlFor='coupon' className="price-summary-sub-title-span">Coupon</label>
+                        <div className='price__summary__sub__title__div'>
+                            <label htmlFor='coupon'>Coupon</label>
                         </div>
-                        <div className='price-summary-sub-title'>
-                            <label htmlFor='gift-card' className="price-summary-sub-title-span">Gift Card</label>
+                        <div className='price__summary__sub__title__div'>
+                            <label htmlFor='gift-card'>Gift Card</label>
                         </div>
-                        <div className='price-summary-sub-title'>
-                            <label htmlFor='tax' className="price-summary-sub-title-span">Estimated tax</label>
+                        <div className='price__summary__sub__title__div'>
+                            <label htmlFor='tax'>Estimated tax</label>
                         </div>
-                        <div className='price-summary-sub-title'>
-                            <label htmlFor='shipping' className="price-summary-sub-title-span">Estimated shipping</label>
+                        <div className='price__summary__sub__title__div'>
+                            <label htmlFor='shipping'>Estimated shipping</label>
                         </div>
-                        <div className='price-summary-sub-title'>
-                            <label htmlFor='total' className='price-summary-estimated-total-span'> Estimated Total</label>
+                        <div className='price__summary__sub__title__div'>
+                            <label htmlFor='total' className="estimated__total__span "> Estimated Total</label>
                         </div>
                     </div>
                 </div>
                 <div className="aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--phone--1">
-                    <div className='price-summary-sub-title'>
-                        <label htmlFor='subtoatl-value' className="price-summary-sub-title-span">${totolPrice.toFixed(2)}</label>
+                    <div className='price__summary__sub__title__div'>
+                        <label htmlFor='subtoatl-value'>${totolPrice.toFixed(2)}</label>
                     </div>
-                    <div className='price-summary-sub-title'>
-                        <label htmlFor='coupon-value' className="price-summary-sub-title-span">-${35.43}</label>
-                    </div>
-
-                    <div className='price-summary-sub-title'>
-                        <label htmlFor='gift-card-value' className="price-summary-sub-title-span">-${50}</label>
+                    <div className='price__summary__sub__title__div'>
+                        <label htmlFor='coupon-value'>-${35.43}</label>
                     </div>
 
-                    <div className='price-summary-sub-title'>
-                        <label htmlFor='tax-value' className="price-summary-sub-title-span">${23.28}</label>
+                    <div className='price__summary__sub__title__div'>
+                        <label htmlFor='gift-card-value'>-${50}</label>
                     </div>
 
-                    <div className='price-summary-sub-title'>
-                        <label htmlFor='free' className="price-summary-sub-title-span">FREE</label>
+                    <div className='price__summary__sub__title__div'>
+                        <label htmlFor='tax-value'>${23.28}</label>
                     </div>
-                    <div className='price-summary-sub-title'>
-                        <label htmlFor='toatl-value' className='price-summary-estimated-total-span'>${totolPrice.toFixed(2)}</label>
+
+                    <div className='price__summary__sub__title__div'>
+                        <label htmlFor='free'>FREE</label>
+                    </div>
+                    <div className='price__summary__sub__title__div'>
+                        <label htmlFor='toatl-value' className="estimated__total__span ">${totolPrice.toFixed(2)}</label>
                     </div>
                 </div>
             </div>
             <div className="aem-Grid aem-Grid--12">
-                <div className={location.pathname === '/checkout' ? 'checkout-btn-display' : 'price-summary-imgs-container'}>
-                <div>
-                    <Link to={ROUTES.CHECKOUT}>
-                        <img className='price-summary-img-checkout' alt="checkout" src={checkout}>
+                <div className={location.pathname === '/checkout' ? 'checkout__btn__display' : 'price__summary__imgs__container'}>
+                    <div>
+                        <Link to={ROUTES.CHECKOUT}>
+                            <button type="button" className="checkout__btn">
+                                {<img className="lock__img" src={lock} alt="lock"></img>}
+                                CHECKOUT
+                            </button>
+                        </Link>
+                    </div>
+                    <div>
+                        <img className='price__summary__img__paypal' alt='payment' src={paypal}>
                         </img>
-                    </Link>
-                </div>
-                <div>
-                    <img className='price-summary-img-paypal' alt='payment' src={paypal}>
-                    </img>
+                    </div>
                 </div>
             </div>
-        </div>
         </div >
     );
 }

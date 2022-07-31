@@ -7,7 +7,6 @@ import mappin from "../../assests/images/mappin.svg";
 import chevronleft from "../../assests/images/chevronleft.svg"
 import { Button } from "@mui/material";
 import { CATEGORY } from "../../constant/common";
-import { history } from "../../store/config";
 
 //home
 function HomePage() {
@@ -19,31 +18,32 @@ function HomePage() {
 
                     <div className="aem-GridColumn aem-GridColumn--default--1   aem-GridColumn--phone--12 ">
                         <div>
-                            <img src={chevronleft} alt="chevronleft">
+                            <img className="back__arraow" src={chevronleft} alt="chevronleft">
                             </img>
                         </div>
                     </div>
 
                     <div className="aem-GridColumn aem-GridColumn--default--5   aem-GridColumn--phone--12 ">
+                        <div>
+                            <div className="home__title__div">
+                                <label>
+                                    Shop the new <br></br> Signature Collection
+                                </label>
+                            </div>
+                            <div className="home__title__discription__div">
+                                <label>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore ar dolore magna aliqua. Labortis mattis <br></br> aliquam faucibus purus
+                                </label>
+                            </div>
+                            <div>
+                                <Link to={ROUTES.PRODUCT_LIST}>{
+                                    <button type="button" className="shop__now__btn">
+                                        SHOP NOW
+                                    </button>
+                                }</Link>
+                            </div>
+                        </div>
 
-                        <div>
-                            <label>
-                                Shop the new Signature Collection
-                            </label>
-                        </div>
-                        <div>
-                            <label>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore ar dolore magna aliqua. Labortis mattis aliquam faucibus purus
-                            </label>
-                        </div>
-                        <div>
-                            <Link to={ROUTES.PRODUCT_LIST}>{
-                                <button type="submit" className="btn btn-primary mt-3">
-                                    SHOP NOW
-                                </button>
-                            }</Link>
-
-                        </div>
 
                     </div>
                     <div className="aem-GridColumn aem-GridColumn--default--6   aem-GridColumn--phone--12 ">
@@ -62,20 +62,23 @@ function HomePage() {
                             CATEGORY.map((key) => {
                                 return (
                                     <div className="aem-GridColumn aem-GridColumn--default--3  aem-GridColumn--phone--12">
-                                        <Link to={ROUTES.PRODUCT_LIST}>{
-
-                                            <img className="category-img" id={key.id} src={key.img} alt='category-list'>
-                                            </img>
-                                        }</Link>
-                                        <div>
-                                            <label>
-                                                Shop Women
-                                            </label>
+                                        <div className="category__img__list__div">
+                                            <Link to={ROUTES.PRODUCT_LIST}>{
+                                                <img className="category-img" id={key.id} src={key.img} alt='category-list'>
+                                                </img>}
+                                            </Link>
                                         </div>
-                                        <div>
-                                            <label>
-                                                Lorem ipsum dolor sit amet
-                                            </label>
+                                        <div className="category__img__div">
+                                            <div>
+                                                <label className="category__img__span">
+                                                    {key.name}
+                                                </label>
+                                            </div>
+                                            <div>
+                                                <label className="category__img__sub__span ">
+                                                    Lorem ipsum dolor sit amet
+                                                </label>
+                                            </div>
                                         </div>
                                     </div>
                                 )
@@ -87,47 +90,50 @@ function HomePage() {
 
                 <div className="home-page-margin-botton">
                     <div className="aem-Grid aem-Grid--12">
-                        <div className="aem-GridColumn aem-GridColumn--default--6   aem-GridColumn--phone--12 ">
-                            <div>
-                                <label>
-                                    Take off in the new Signature Legging
-                                </label>
-                            </div>
-                            <div>
-                                <label>
-                                    Lorem Ipsum Dolor Tempor
-                                </label>
-                            </div>
-                            <div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor labore dolore magna lorem ipsum dolor sit dolore magna.</p>
-                            </div>
-                            <div className="aem-Grid aem-Grid--12">
-                                <div className="aem-GridColumn aem-GridColumn--default--6   aem-GridColumn--phone--12 ">
-                                    <div>
-                                        <Link to={ROUTES.PRODUCT_LIST}>{
-                                            <button type="submit" className="btn btn-primary mt-3">
-                                                SHOP NOW
-                                            </button>
-                                        }</Link>
+                        <div className="aem-GridColumn aem-GridColumn--default--8   aem-GridColumn--phone--12 ">
+                            <div className="home__title__1__div">
+                                <div className="home__title__1">
+                                    <label>
+                                        Take off in the new Signature Legging
+                                    </label>
+                                </div>
+                                <div className="home__subtitle__1">
+                                    <label>
+                                        Lorem Ipsum Dolor Tempor
+                                    </label>
+                                </div>
+                                <div>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor labore dolore magna lorem ipsum dolor sit dolore magna.</p>
+                                </div>
+                                <div className="aem-Grid aem-Grid--12">
+                                    <div className="aem-GridColumn aem-GridColumn--default--6   aem-GridColumn--phone--12 ">
+                                        <div>
+                                            <Link to={ROUTES.PRODUCT_LIST}>{
+                                                <button type="button" className="shop__cont__btn">
+                                                    SHOP COLLECTION
+                                                </button>
+                                            }</Link>
+
+                                        </div>
 
                                     </div>
+                                    <div className="aem-GridColumn aem-GridColumn--default--6   aem-GridColumn--phone--12 ">
+                                        <div>
+                                            <Link to={ROUTES.PRODUCT_LIST}>{
+                                                <button type="button" className="shop__now__btn">
+                                                    SHOP NOW
+                                                </button>
+                                            }</Link>
 
-                                </div>
-                                <div className="aem-GridColumn aem-GridColumn--default--6   aem-GridColumn--phone--12 ">
-                                    <div>
-                                        <Link to={ROUTES.PRODUCT_LIST}>{
-                                            <button type="submit" className="btn btn-primary mt-3">
-                                                SHOP NOW
-                                            </button>
-                                        }</Link>
-
+                                        </div>
                                     </div>
                                 </div>
-
+                                <div className="border">
+                                </div>
                             </div>
 
                         </div>
-                        <div className="aem-GridColumn aem-GridColumn--default--6   aem-GridColumn--phone--12 ">
+                        <div className="aem-GridColumn aem-GridColumn--default--4   aem-GridColumn--phone--12 ">
                             <div>
                                 <img className="man-stand-img" src={menstand} alt="men-stand">
                                 </img>
@@ -138,30 +144,39 @@ function HomePage() {
 
                 <div>
                     <div className="aem-Grid aem-Grid--12">
-                        <div className="aem-GridColumn aem-GridColumn--default--6   aem-GridColumn--phone--12 ">
+                        <div className="aem-GridColumn aem-GridColumn--default--7   aem-GridColumn--phone--12 ">
                             <div>
                                 <img className="man-sky-img" src={mensky} alt="men-looking-sky">
                                 </img>
                             </div>
                         </div>
-                        <div className="aem-GridColumn aem-GridColumn--default--6   aem-GridColumn--phone--12 ">
-                            <div>
-                                <label>Conquer your next adventure</label>
+                        <div className="aem-GridColumn aem-GridColumn--default--5   aem-GridColumn--phone--12 ">
+                            <div className="block__details">
+                                <div className="home__title__2__div">
+                                    <div className="home__title__2">
+                                        <label>Conquer your <br></br>next adventure</label>
+                                    </div>
+                                    <div>
+                                        <label>
+                                            Lorem Ipsum Dolor Tempor
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <button type="button" className="shop__cont__service__btn">
+                                            SHOP DEVICES
+                                        </button>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img className="map__in__img " src={mappin} alt="mappin">
+                                    </img>
+                                    <div className="border__div">
+                                        <div className="border">
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div>
-                                <label>
-                                    Lorem Ipsum Dolor Tempor
-                                </label>
-                            </div>
-                            <div>
-                                <Button>
-                                    shop now!
-                                </Button>
-                            </div>
-                            <div>
-                                <img src={mappin} alt="mappin">
-                                </img>
-                            </div>
+
                         </div>
                     </div>
 

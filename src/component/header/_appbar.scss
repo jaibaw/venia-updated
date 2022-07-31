@@ -1,7 +1,7 @@
 .header-container {
     height: 5rem;
     //border-bottom: #eceeef 0.188rem solid;
-    background-color:#1363DF;
+    background-color: #1363DF;
     /* UI Properties */
     font: normal normal 600 1rem/1.25rem Muli;
     color: #1B252C;
@@ -38,6 +38,20 @@
 
 .sign-in-logo {
     visibility: visible;
+}
+
+.cart__count {
+    // font-size: var(--font-size-small);
+    // background: var(--color-body);
+    width: 20px;
+    height: 20px;
+    position: absolute;
+  //  margin-top: -20px;
+    right: -8px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 //Mobile View

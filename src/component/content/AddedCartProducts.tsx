@@ -11,6 +11,7 @@ function AddedCartProducts() {
     const Product = window.localStorage.getItem('cart');
     let uniqueCartItemList = Product ? JSON.parse(Product) : [];
 
+    console.log("uniqueCartItemList",uniqueCartItemList)
     //return component
     return (
         <div className='added-item-cart-container'>

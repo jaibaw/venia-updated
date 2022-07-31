@@ -1,8 +1,21 @@
+.banner__block {
+    width: -webkit-fill-available;
+    height: 352px;
+    /* UI Properties */
+    background: #1B252C 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+
+.banner__block__span__div {
+    font: normal normal 600 48px/60px Source Serif Pro;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    padding: 96px 91px 106px 90px;
+}
 
 .man-sit {
     width: -webkit-fill-available;
     height: 320px;
-    margin-left: 4.5%;
     margin-top: 16px;
 }
 
@@ -15,7 +28,9 @@
 .result-span {
     margin-left: 4px;
     /* UI Properties */
-    font: normal normal 600 18px/12px Muli;
+    font: normal normal 600 16px/20px Muli;
+    letter-spacing: 0px;
+    color: #172026;
 }
 
 .filter-dropdown-span {
@@ -52,15 +67,6 @@
         display: block;
     }
 
-    .women-block-phone {
-        width: 90vw;
-        margin: -10vw 0vw 3vw 12vw;
-    }
-
-    .man-play-phone {
-        width: 100vw;
-        margin-top: -6%;
-    }
 
     .filter-sort-div {
         display: block;
@@ -87,18 +93,6 @@
         margin-left: 40%;
         margin-bottom: 3%;
     }
-}
-
-
-@media (min-width: 769px) and (max-width: 1920px) {
-    .women-block {
-        width: 108%;
-    }
-
-    .man-play {
-        margin-left: 5.5%;
-    }
-
 }
 
 @media (min-width: 1800px) and (max-width: 1920px) {

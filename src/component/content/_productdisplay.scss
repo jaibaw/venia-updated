@@ -5,10 +5,11 @@
     letter-spacing: var(--unnamed-character-spacing-0);
     color: var(--unnamed-color-172026);
     text-align: left;
-    font: normal normal bold 13px Muli;
+    font: normal normal bold 13px/20px Muli;
     letter-spacing: 0px;
     color: #172026;
     opacity: 1;
+
 }
 
 .product-img {
@@ -40,9 +41,22 @@
 }
 
 .pagination {
-
     margin: 3% 30% 0% 0%;
     padding-bottom: 8%;
+}
+
+.product__label__div {
+    padding-bottom: 2px;
+}
+
+.product__price__div {
+    padding-bottom: 10px;
+}
+
+.save__img__div {
+    width: 24px;
+    height: 20px;
+    padding-bottom: 10px;
 }
 
 /*=== Mobile Media ===*/

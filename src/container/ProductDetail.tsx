@@ -1,11 +1,8 @@
-import { useSelector } from 'react-redux';
 import SingleProductDisplay from '../component/content/SingleProductDisplay';
 
 // product details container
 function ProductDetail() {
-    //redux state
-    const setMenuBarStatus = useSelector((state: any) => state.getProductList.setMenuBarStatus);
-
+   
     //return component
     return (
         <div className='product-detail-container' >
