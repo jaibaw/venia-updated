@@ -4,37 +4,66 @@ import edit1 from "../../../assests/images/edit1.svg";
 //shipping method
 function ShippingMethod() {
     //local state
-    const [showshippingInfo, setshowshippingInfo] = useState(false);
-    const [showshippingInfoEdit, setshowshippingInfoEdit] = useState(false);
-    const [showshippingInfoLabel, setshowshippingInfoLabel] = useState(true);
+    const [showShippingMethod, setShowShippingMethod] = useState(false);
+    const [showShippingMethodEdit, setShowShippingMethodEdit] = useState(false);
+    const [showShippingMethodLabel, setShowShippingMethodLabel] = useState(true);
 
+    const [shippingDelivery, setShippingDelivery] = useState(true);
+    const [expressDelivery, setExpressDelivery] = useState(false);
+    const [nextDayDelivery, setNextDayDelivery] = useState(false);
+
+
+    const [shippingMethodValue, setShippingMethodValue] = useState("Standard Shipping (4-8 business days via USPS) FREE");
+
+    const shippingMethod = window.localStorage.getItem('shippingMethodValue');
 
     const handleContPayement = () => {
-        setshowshippingInfo(false)
-        setshowshippingInfoEdit(true)
-        setshowshippingInfoLabel(false)
-
+        window.localStorage.setItem('shippingMethodValue', shippingMethodValue);
+        if (shippingMethodValue !== "") {
+            setShowShippingMethod(false)
+            setShowShippingMethodEdit(true)
+            setShowShippingMethodLabel(false)
+        }
     }
 
     const handleContPayementEdit = () => {
-        setshowshippingInfoLabel(false)
-        setshowshippingInfoEdit(false)
-        setshowshippingInfo(true)
+        setShowShippingMethodLabel(false)
+        setShowShippingMethodEdit(false)
+        setShowShippingMethod(true)
+    }
+
+    const handleShippingMethodLabel = () => {
+        setShowShippingMethodLabel(false)
+        setShowShippingMethod(true)
+        setShowShippingMethodEdit(false)
+    }
+
+    const handleStandardShipping = (e: any) => {
+        setExpressDelivery(false);
+        setNextDayDelivery(false);
+        setShippingDelivery(true);
+        setShippingMethodValue(e.target.value)
+    }
+
+    const handleNextDayDelivery = (e: any) => {
+        setExpressDelivery(false);
+        setNextDayDelivery(true);
+        setShippingDelivery(false);
+        setShippingMethodValue(e.target.value)
 
     }
 
-    const handleShippingInfoLabel = () => {
-        setshowshippingInfoLabel(false)
-        setshowshippingInfo(true)
-        setshowshippingInfoEdit(false)
+    const handleExpressDelivery = (e: any) => {
+        setExpressDelivery(true);
+        setNextDayDelivery(false);
+        setShippingDelivery(false);
+        setShippingMethodValue(e.target.value)
     }
-
-
 
     return (
         <div className="shipping__method__container">
             <div>
-                <div onClick={handleShippingInfoLabel} className={showshippingInfoLabel ? "checkout__info__show " : "checkout__info__hide"}>
+                <div onClick={handleShippingMethodLabel} className={showShippingMethodLabel ? "checkout__info__show " : "checkout__info__hide"}>
                     <div className='checkout__methods__div' >
                         <label >
                             2. Shipping Method
@@ -42,7 +71,7 @@ function ShippingMethod() {
                     </div>
                 </div>
             </div>
-            <div className={showshippingInfo ? "checkout__info__show " : "checkout__info__hide"}>
+            <div className={showShippingMethod ? "checkout__info__show " : "checkout__info__hide"}>
                 <div className='checkout__methods__div' >
                     <label >
                         2. Shipping Method
@@ -53,18 +82,19 @@ function ShippingMethod() {
                         <div className="aem-GridColumn aem-GridColumn--default--1   aem-GridColumn--phone--12 ">
                             <div>
                                 <input
+                                    id="shipping-method"
                                     type="radio"
-                                    name="favShow"
-                                    value="Ted Lasso"
-                                    checked={true}
+                                    onClick={handleStandardShipping}
+                                    name="shipping-method"
+                                    checked={shippingDelivery}
+                                    value="Standard Shipping (4-8 business days via USPS) FREE"
                                     className="form-check-input"
-                                    id="ted-lasso"
                                 />
                             </div>
                         </div>
                         <div className="aem-GridColumn aem-GridColumn--default--11   aem-GridColumn--phone--12 ">
                             <div>
-                                <label htmlFor="ted-lasso">
+                                <label htmlFor="standard-shipping">
                                     <span className="delivery__method__span">
                                         Standard Shipping
                                     </span>
@@ -81,18 +111,20 @@ function ShippingMethod() {
                             <div>
                                 <input
                                     type="radio"
-                                    name="favShow"
-                                    value="Ted Lasso"
-                                    checked={true}
+                                    name="express-delivery"
+                                    value="Express Delivery (2-5 business days via USPS) $17.95"
+                                    checked={expressDelivery}
+                                    onClick={handleExpressDelivery}
                                     className="form-check-input"
-                                    id="ted-lasso"
+                                    id="express-delivery"
                                 />
                             </div>
                         </div>
                         <div className="aem-GridColumn aem-GridColumn--default--11   aem-GridColumn--phone--12 ">
                             <div>
-                                <label htmlFor="ted-lasso">
-                                    <span className="delivery__method__span"> Express Delivery </span><span>(2-5 business days via USPS) $17.95
+                                <label htmlFor="express-delivery">
+                                    <span className="delivery__method__span"> Express Delivery</span>
+                                    <span>(2-5 business days via USPS) $17.95
                                     </span>
                                 </label>
                             </div>
@@ -106,18 +138,20 @@ function ShippingMethod() {
                             <div>
                                 <input
                                     type="radio"
-                                    name="favShow"
-                                    value="Ted Lasso"
-                                    checked={true}
+                                    name="next-day-delivery"
+                                    value="Next Day Delivery (Next business days via FedEx) $53.61"
                                     className="form-check-input"
-                                    id="ted-lasso"
+                                    id="next-day-delivery"
+                                    checked={nextDayDelivery}
+                                    onClick={handleNextDayDelivery}
                                 />
                             </div>
                         </div>
                         <div className="aem-GridColumn aem-GridColumn--default--11   aem-GridColumn--phone--12 ">
                             <div>
                                 <label htmlFor="ted-lasso">
-                                    <span className="delivery__method__span">Next Day Delivery </span> <span> (Next business days via FedEx) $53.61</span>
+                                    <span className="delivery__method__span">Next Day Delivery </span>
+                                    <span> (Next business days via FedEx) $53.61</span>
                                 </label>
                             </div>
                         </div>
@@ -127,7 +161,12 @@ function ShippingMethod() {
                 <div className="aem-Grid aem-Grid--12">
                     <div className="aem-GridColumn aem-GridColumn--default--12   aem-GridColumn--phone--12 ">
                         <div>
-                            <button type="button" className="checkout__step2__btn" onClick={handleContPayement}>
+                            <button
+                                id="cont-payment"
+                                type="button"
+                                className="checkout__step2__btn"
+                                onClick={handleContPayement}
+                            >
                                 <span className="btn__span">
                                     CONTINUE TO PAYMENT
                                 </span>
@@ -139,7 +178,7 @@ function ShippingMethod() {
             </div>
 
 
-            <div className={showshippingInfoEdit ? "checkout__info__show" : "checkout__info__hide"}>
+            <div className={showShippingMethodEdit ? "checkout__info__show" : "checkout__info__hide"}>
                 <div className="shipping__info__summary__container">
                     <div className="aem-Grid aem-Grid--12">
                         <div className="aem-GridColumn aem-GridColumn--default--10   aem-GridColumn--phone--10 ">
@@ -173,12 +212,7 @@ function ShippingMethod() {
                             <div className="shipping__method__summary__label__div">
                                 <div>
                                     <label>
-                                        1
-                                    </label>
-                                </div>
-                                <div>
-                                    <label>
-                                        1
+                                        {shippingMethodValue ? shippingMethodValue : shippingMethod}
                                     </label>
                                 </div>
                             </div>

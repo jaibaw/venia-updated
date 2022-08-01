@@ -13,43 +13,90 @@ function PaymentInformation(props: any) {
     let uniqueCartItemList = Product ? JSON.parse(Product) : [];
 
     //local state
-    const [showshippingInfo, setshowshippingInfo] = useState(false);
-    const [showshippingInfoEdit, setshowshippingInfoEdit] = useState(false);
-    const [showshippingInfoLabel, setshowshippingInfoLabel] = useState(true);
-     const [checkedPaypal, setCheckedPaypal] = useState(true);
+    const [showPaymentInfo, setShowPaymentInfo] = useState(false);
+    const [showPaymentInfoEdit, setShowPaymentInfoEdit] = useState(false);
+    const [showPaymentInfoLabel, setShowPaymentInfoLabel] = useState(true);
+    const [checkedPaypal, setCheckedPaypal] = useState(true);
+
+    const [checkedPaymentCard, setCheckedPaymentCard] = useState(false);
+    const [checkedPaymentPaypal, setCheckedPaymentPaypal] = useState(false);
+
+    const [cardName, setCardName] = useState("");
+    const [cardNumber, setCardNumber] = useState("");
+    const [cvvNumber, setCvvNumber] = useState("");
+    const [expirationDate, setExpirationDate] = useState("");
+    const [paymentType, setPaymentType] = useState("");
+
+    const paymentInfo = window.localStorage.getItem('paymentInfo');
+    let paymentInfoList = paymentInfo ? JSON.parse(paymentInfo) : {};
+
 
     const handleContReviewOrder = () => {
-        setshowshippingInfo(false)
-        setshowshippingInfoEdit(true)
-        setshowshippingInfoLabel(false)
+        const formObj = {
+            "cardName": cardName,
+            "cardNumber": cardNumber,
+            "cvvNumber": cvvNumber,
+            "expirationDate": expirationDate,
+            "paymentType": paymentType
+
+        }
+        window.localStorage.setItem('paymentInfo', JSON.stringify(formObj));
+        if ((cardName !== "" && cardNumber !== "" && cvvNumber !== "" && expirationDate !== "")
+            || (paymentType === 'Paypal')) {
+            setShowPaymentInfo(false)
+            setShowPaymentInfoEdit(true)
+            setShowPaymentInfoLabel(false)
+        }
     }
 
     const handleContReviewOrderEdit = () => {
-        setshowshippingInfoLabel(false)
-        setshowshippingInfoEdit(false)
-        setshowshippingInfo(true)
+        setShowPaymentInfoLabel(false)
+        setShowPaymentInfoEdit(false)
+        setShowPaymentInfo(true)
     }
 
-    const handleShippingInfoLabel = () => {
-        setshowshippingInfoLabel(false)
-        setshowshippingInfo(true)
-        setshowshippingInfoEdit(false)
+    const handlePaymentInfoLabel = () => {
+        setShowPaymentInfoLabel(false)
+        setShowPaymentInfo(true)
+        setShowPaymentInfoEdit(false)
     }
 
 
-    const handleCreditCartClick = () => {
-         setCheckedPaypal(false);
+    const handleCreditCartClick = (e: any) => {
+        setPaymentType(e.target.value)
+        setCheckedPaypal(false);
+        setCheckedPaymentCard(true);
+        setCheckedPaymentPaypal(false);
     }
 
-    const handlePaypal = () => {
+    const handlePaypal = (e: any) => {
+        setPaymentType(e.target.value)
         setCheckedPaypal(true);
+        setCheckedPaymentCard(false);
+        setCheckedPaymentPaypal(true);
+    }
+
+    const handleCardName = (e: any) => {
+        setCardName(e.target.value);
+    }
+
+    const handleCardNumber = (e: any) => {
+        setCardNumber(e.target.value)
+    }
+
+    const handleExpirationDate = (e: any) => {
+        setExpirationDate(e.target.value)
+    }
+
+    const handleCVVChange = (e: any) => {
+        setCvvNumber(e.target.value)
     }
 
     //retun component
     return (
         <div>
             <div>
-                <div onClick={handleShippingInfoLabel} className={showshippingInfoLabel ? "checkout__info__show " : "checkout__info__hide"}>
+                <div onClick={handlePaymentInfoLabel} className={showPaymentInfoLabel ? "checkout__info__show " : "checkout__info__hide"}>
                     <div className="payment__info__border">
                         <div className='checkout__methods__div' >
                             <label >
@@ -60,140 +107,180 @@ function PaymentInformation(props: any) {
                 </div>
             </div>
 
-            <div className={showshippingInfo ? "checkout__info__show " : "checkout__info__hide"}>
+            <div className={showPaymentInfo ? "checkout__info__show " : "checkout__info__hide"}>
                 <div className="aem-Grid aem-Grid--12">
                     <div className='checkout__methods__div' >
-                        <label >
+                        <label htmlFor="payment-info">
                             3. Payment Information
                         </label>
                     </div>
                 </div>
-                <div>
-                    <div className="payment__opt__credit__card__div">
-                        <div className="aem-Grid aem-Grid--12">
-                            <div className="aem-GridColumn aem-GridColumn--default--1   aem-GridColumn--phone--12 ">
-                                <div>
-                                    <input
-                                        type="radio"
-                                        id="html"
-                                        name="fav_language"
-                                        value="credit-card"
-                                        onClick={handleCreditCartClick} />
-                                </div>
-                            </div>
-                            <div className="aem-GridColumn aem-GridColumn--default--11   aem-GridColumn--phone--12 ">
-                                <div>
-                                    <label htmlFor="ted-lasso">
-                                        Credit Card
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className={checkedPaypal ? "checkout__info__hide" : "checkout__info__show"}>
-                        <div className="aem-Grid aem-Grid--12">
-                            <div className="aem-GridColumn aem-GridColumn--default--8   aem-GridColumn--phone--12 ">
-                                <div className="label__name__div">
-                                    <label>Name on Card
-                                    </label>
-                                </div>
-                                <div className="input__box__div">
-                                    <input className="input__box" type="text" name="name" />
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="aem-Grid aem-Grid--12">
-                            <div className="aem-GridColumn aem-GridColumn--default--8  aem-GridColumn--phone--12 ">
-                                <div className="label__name__div">
-                                    <label>Credit Card Number
-                                    </label>
-                                </div>
-                                <div className="input__box__div">
-                                    <input className="input__box" type="text" name="name" />
-                                </div>
-                            </div>
-                        </div>
-                        <div>
+                <form>
+                    <div>
+                        <div className="payment__opt__credit__card__div">
                             <div className="aem-Grid aem-Grid--12">
-                                <div className="aem-GridColumn aem-GridColumn--default--5   aem-GridColumn--phone--12 ">
-                                    <div className="label__name__div">
-                                        <label>Expiration Date
-                                        </label>
-                                    </div>
-                                    <div className="input__box__div">
-                                        <input className="input__box" type="select" name="name" />
-                                    </div>
-                                </div>
-                                <div className="aem-GridColumn aem-GridColumn--default--2   aem-GridColumn--phone--12 ">
-                                    <div className="label__name__div">
-                                        <label>CVV
-                                        </label>
-                                    </div>
-                                    <div className="input__box__div">
-                                        <input className="input__box" type="text" name="name" />
-                                    </div>
-                                </div>
                                 <div className="aem-GridColumn aem-GridColumn--default--1   aem-GridColumn--phone--12 ">
-                                    <div className="helpcircle__div">
-                                        <img src={helpcircle} alt="help-circle">
-                                        </img>
+                                    <div>
+                                        <input
+                                            type="radio"
+                                            id="credit-card"
+                                            name="credit-card"
+                                            value="Credit Card"
+                                            onClick={handleCreditCartClick}
+                                            checked={checkedPaymentCard}
+                                        />
+                                    </div>
+                                </div>
+                                <div className="aem-GridColumn aem-GridColumn--default--11   aem-GridColumn--phone--12 ">
+                                    <div>
+                                        <label htmlFor="credit-card">
+                                            Credit Card
+                                        </label>
                                     </div>
                                 </div>
                             </div>
-
+                        </div>
+                        <div className={checkedPaypal ? "checkout__info__hide" : "checkout__info__show"}>
                             <div className="aem-Grid aem-Grid--12">
                                 <div className="aem-GridColumn aem-GridColumn--default--8   aem-GridColumn--phone--12 ">
+                                    <div className="label__name__div">
+                                        <label htmlFor="name-on-card">Name on Card
+                                        </label>
+                                    </div>
                                     <div className="input__box__div">
-                                        <img className="check__square__img " src={checksquare} alt="check-square"></img>
-                                        <label>Billing address same as shipping address</label>
+                                        <input
+                                            required
+                                            className="input__box"
+                                            type="text"
+                                            name="name-on-card"
+                                            id="name-on-card"
+                                            value={cardName ? cardName : paymentInfoList.cardName}
+                                            onChange={handleCardName}
+
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="aem-Grid aem-Grid--12">
+                                <div className="aem-GridColumn aem-GridColumn--default--8  aem-GridColumn--phone--12 ">
+                                    <div className="label__name__div">
+                                        <label htmlFor="card-number" >Credit Card Number
+                                        </label>
+                                    </div>
+                                    <div className="input__box__div">
+                                        <input
+                                            required
+                                            className="input__box"
+                                            type="text"
+                                            name="card-number"
+                                            id="card-number"
+                                            value={cardNumber ? cardNumber : paymentInfoList.cardNumber}
+                                            onChange={handleCardNumber}
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div className="aem-Grid aem-Grid--12">
+                                    <div className="aem-GridColumn aem-GridColumn--default--5   aem-GridColumn--phone--12 ">
+                                        <div className="label__name__div">
+                                            <label htmlFor="expiration-date">Expiration Date
+                                            </label>
+                                        </div>
+                                        <div className="input__box__div">
+                                            <input
+                                                required
+                                                className="input__box"
+                                                type="select"
+                                                name="expiration-date"
+                                                id="expiration-date"
+                                                value={expirationDate ? expirationDate : paymentInfoList.expirationDate}
+                                                onChange={handleExpirationDate}
+                                            />
+                                        </div>
+                                    </div>
+                                    <div className="aem-GridColumn aem-GridColumn--default--2   aem-GridColumn--phone--12 ">
+                                        <div className="label__name__div">
+                                            <label htmlFor="cvv">CVV
+                                            </label>
+                                        </div>
+                                        <div className="input__box__div">
+                                            <input
+                                                required
+                                                className="input__box"
+                                                type="text"
+                                                name="cvv"
+                                                id="cvv"
+                                                value={cvvNumber ? cvvNumber : paymentInfoList.cvvNumber}
+                                                onChange={handleCVVChange} />
+                                        </div>
+                                    </div>
+                                    <div className="aem-GridColumn aem-GridColumn--default--1   aem-GridColumn--phone--12 ">
+                                        <div className="helpcircle__div">
+                                            <img src={helpcircle} alt="help-circle">
+                                            </img>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="aem-Grid aem-Grid--12">
+                                    <div className="aem-GridColumn aem-GridColumn--default--8   aem-GridColumn--phone--12 ">
+                                        <div className="input__box__div">
+                                            <img className="check__square__img " src={checksquare} alt="check-square"></img>
+                                            <label>Billing address same as shipping address</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className={checkedPaypal ? "" : "payment__option__div"}>
+                            <div className="aem-Grid aem-Grid--12">
+                                <div className="aem-GridColumn aem-GridColumn--default--1   aem-GridColumn--phone--12 ">
+                                    <div>
+                                        <input
+                                            type="radio"
+                                            id="paypal"
+                                            name="paypal"
+                                            value="Paypal"
+                                            onClick={handlePaypal}
+                                            checked={checkedPaymentPaypal}
+                                        />
+                                    </div>
+                                </div>
+                                <div className="aem-GridColumn aem-GridColumn--default--11   aem-GridColumn--phone--12 ">
+                                    <div>
+                                        <label htmlFor="paypal">
+                                            PayPal
+                                        </label>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div className={checkedPaypal ? "" : "payment__option__div"}>
-                        <div className="aem-Grid aem-Grid--12">
-                            <div className="aem-GridColumn aem-GridColumn--default--1   aem-GridColumn--phone--12 ">
-                                <div>
-                                    <input
-                                        type="radio"
-                                        id="html"
-                                        name="fav_language"
-                                        value="paypal"
-                                        onClick={handlePaypal} />
-                                </div>
-                            </div>
-                            <div className="aem-GridColumn aem-GridColumn--default--11   aem-GridColumn--phone--12 ">
-                                <div>
-                                    <label htmlFor="ted-lasso">
-                                        PayPal
-                                    </label>
-                                </div>
+
+
+                    <div className="aem-Grid aem-Grid--12">
+                        <div className="aem-GridColumn aem-GridColumn--default--12   aem-GridColumn--phone--12 ">
+                            <div>
+                                <button
+                                    type='button'
+                                    className="checkout__step2__btn"
+                                    onClick={handleContReviewOrder}
+                                >
+                                    <span className="btn__span">
+                                        CONTINUE TO REVIEW ORDER
+                                    </span>
+                                </button>
+
                             </div>
                         </div>
                     </div>
-                </div>
-
-
-                <div className="aem-Grid aem-Grid--12">
-                    <div className="aem-GridColumn aem-GridColumn--default--12   aem-GridColumn--phone--12 ">
-                        <div>
-                            <button type="button" className="checkout__step2__btn" onClick={handleContReviewOrder}>
-                                <span className="btn__span">
-                                    CONTINUE TO REVIEW ORDER
-                                </span>
-                            </button>
-
-                        </div>
-                    </div>
-                </div>
+                </form>
             </div>
 
-
-
             <div>
-                <div className={showshippingInfoEdit ? "checkout__info__show" : "checkout__info__hide"}>
+                <div className={showPaymentInfoEdit ? "checkout__info__show" : "checkout__info__hide"}>
                     <div className="shipping__info__summary__container">
                         <div className="aem-Grid aem-Grid--12">
                             <div className="aem-GridColumn aem-GridColumn--default--10   aem-GridColumn--phone--10 ">
@@ -226,12 +313,12 @@ function PaymentInformation(props: any) {
                                 <div className="shipping__method__summary__label__div">
                                     <div>
                                         <label>
-                                            1
+                                            {paymentType ? paymentType : paymentInfoList.paymentType}
                                         </label>
                                     </div>
                                     <div>
                                         <label>
-                                            1
+                                            Visa ending with {cardNumber ? cardNumber : paymentInfoList.cardNumber}
                                         </label>
                                     </div>
                                 </div>

@@ -23,7 +23,7 @@ function Quantity(props: any) {
                 dispatch(action_setQuantity(quantityCart.toString()));
             }
         }
-        window.localStorage.setItem('quantity', JSON.stringify(quantity))
+        //       window.localStorage.setItem('quantity', JSON.stringify(quantity))
     }
 
     //on increment
@@ -35,7 +35,7 @@ function Quantity(props: any) {
             setquantityCart(quantityCart + 1)
             dispatch(action_setQuantity(quantityCart.toString()));
         }
-        window.localStorage.setItem('quantity', JSON.stringify(quantity))
+        //     window.localStorage.setItem('quantity', JSON.stringify(quantity))
     }
 
     //retun component

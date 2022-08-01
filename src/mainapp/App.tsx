@@ -23,7 +23,6 @@ function App() {
   const location = useLocation();
 
   useEffect(() => {
-    // window.localStorage.setItem('cart', JSON.stringify([]))
     dispatch(action_fetchProductList());
     if (location.pathname === '/delete-product') {
       window.localStorage.setItem('cart', JSON.stringify([]))

@@ -9,6 +9,16 @@ function OrderSuccess(props: any) {
     const Product = window.localStorage.getItem('cart');
     let uniqueCartItemList = Product ? JSON.parse(Product) : [];
 
+
+    const shippingMethod = window.localStorage.getItem('shippingMethodValue');
+
+    const paymentInfo = window.localStorage.getItem('paymentInfo');
+    let paymentInfoList = paymentInfo ? JSON.parse(paymentInfo) : {};
+
+    const shippingInfo = window.localStorage.getItem('shippingInfo');
+    let shippingInfoList = shippingInfo ? JSON.parse(shippingInfo) : {};
+
+
     //retun component
     return (
         <div className="order__success__container">
@@ -33,25 +43,29 @@ function OrderSuccess(props: any) {
                             </div>
                             <div>
                                 <label>
-                                    1
+                                    {shippingInfoList.email}
                                 </label>
                             </div>
                             <div>
                                 <label>
-                                    2
+                                    {shippingInfoList.phone}
                                 </label>
                             </div><div>
                                 <label>
-                                    3
+                                    {shippingInfoList.firstName}{' '}
+                                    {shippingInfoList.lastName}
+
                                 </label>
                             </div><div>
                                 <label>
-                                    4
+                                    {shippingInfoList.city}{' '}
+                                    {shippingInfoList.stateArea}{' '}
+                                    {shippingInfoList.zip}
                                 </label>
                             </div>
                             <div>
                                 <label>
-                                    5
+                                    {shippingInfoList.country}
                                 </label>
                             </div>
                         </div>
@@ -63,16 +77,7 @@ function OrderSuccess(props: any) {
                             </div>
                             <div>
                                 <label>
-                                    1
-                                </label>
-                            </div>
-                            <div>
-                                <label>
-                                    2
-                                </label>
-                            </div><div>
-                                <label>
-                                    3
+                                    {shippingMethod}
                                 </label>
                             </div>
                             <div className='order__payment__label'>
@@ -83,7 +88,12 @@ function OrderSuccess(props: any) {
                                 </div>
                                 <div>
                                     <label>
-                                        1
+                                        {paymentInfoList.paymentType}
+                                    </label>
+                                </div>
+                                <div>
+                                    <label>
+                                        Visa ending with {paymentInfoList.cardNumber}
                                     </label>
                                 </div>
                             </div>
@@ -158,11 +168,11 @@ function OrderSuccess(props: any) {
                             </label>
                         </div>
                         <div className='order__social__img__div'>
-                            <img className='order__social__img' src={instagram1}>
+                            <img className='order__social__img' src={instagram1} alt="instagram">
                             </img>
-                            <img className='order__social__img' src={facebook1}>
+                            <img className='order__social__img' src={facebook1} alt="facebook">
                             </img>
-                            <img className='order__social__img' src={twitter1}>
+                            <img className='order__social__img' src={twitter1} alt="twitter">
                             </img>
                         </div>
                     </div>

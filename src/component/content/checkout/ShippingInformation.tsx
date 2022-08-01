@@ -1,5 +1,6 @@
 import { useState } from "react";
 import edit1 from "../../../assests/images/edit1.svg";
+import { COUNTRY, STATE } from "../../../constant/common";
 
 // shipping info selection
 function ShippingInformation(props: any) {
@@ -8,11 +9,42 @@ function ShippingInformation(props: any) {
     const [showshippingInfoEdit, setshowshippingInfoEdit] = useState(false);
     const [showshippingInfoLabel, setshowshippingInfoLabel] = useState(true);
 
+    const [email, setEmail] = useState("");
+    const [phone, setPhone] = useState("");
+    const [country, setCountry] = useState("India");
+    const [firstName, setFirstName] = useState("");
+    const [lastName, setlastName] = useState("Roy");
+    const [streetAddress, setStreetAddress] = useState("109-B Wapello Street");
+    const [streetAddress2, setStreetAddress2] = useState("");
+    const [city, setCity] = useState("");
+    const [stateArea, setStateArea] = useState("Maharashtra");
+    const [zip, setZip] = useState("92345");
+  
+    const shippingInfo = window.localStorage.getItem('shippingInfo');
+    let shippingInfoList = shippingInfo ? JSON.parse(shippingInfo) : {};
+
 
     const handleContShippingMethod = () => {
-        setshowshippingInfo(false)
-        setshowshippingInfoEdit(true)
-        setshowshippingInfoLabel(false)
+        const formObj = {
+            "city": city,
+            "country": country,
+            "email": email,
+            "phone": phone,
+            "firstName": firstName,
+            "lastName": lastName,
+            "zip": zip,
+            "state": stateArea,
+            "streetAddress": streetAddress,
+            "strretAddress2": streetAddress2
+        }
+        window.localStorage.setItem('shippingInfo', JSON.stringify(formObj));
+
+        if (city !== "" && country !== "" && email !== "" && phone !== "" &&
+            firstName !== "" && lastName !== "" && zip !== "" && stateArea !== "" && streetAddress !== "") {
+            setshowshippingInfo(false);
+            setshowshippingInfoEdit(true);
+            setshowshippingInfoLabel(false);
+        }
 
     }
 
@@ -20,7 +52,6 @@ function ShippingInformation(props: any) {
         setshowshippingInfoLabel(false)
         setshowshippingInfoEdit(false)
         setshowshippingInfo(true)
-
     }
 
     const handleShippingInfoLabel = () => {
@@ -30,6 +61,47 @@ function ShippingInformation(props: any) {
     }
 
 
+    const handleEmailChange = (e: any) => {
+        setEmail(e.target.value);
+    }
+
+    const handlePhoneNoChange = (e: any) => {
+        setPhone(e.target.value);
+    }
+
+    const handleCountryChange = (e: any) => {
+        setCountry(e.target.value);
+    }
+
+    const handleCityChange = (e: any) => {
+        setCity(e.target.value);
+    }
+
+    const handleFirstNameChange = (e: any) => {
+        setFirstName(e.target.value);
+    }
+
+    const handleLastNameChange = (e: any) => {
+        setlastName(e.taget.value);
+    }
+
+    const handleStreetAddressChange = (e: any) => {
+        setStreetAddress(e.taget.value)
+    }
+
+    const handleStreetAddressOptionalChange = (e: any) => {
+        setStreetAddress2(e.taget.value)
+    }
+
+    const handleStateChange = (e: any) => {
+        setStateArea(e.taget.value)
+    }
+
+    const handleZipChange = (e: any) => {
+        setZip(e.taget.value)
+    }
+
+    console.log("shippingInfoList", shippingInfoList)
     //retun component
     return (
         <div className="shipping__info__container">
@@ -65,22 +137,40 @@ function ShippingInformation(props: any) {
                             <div className="aem-Grid aem-Grid--12">
                                 <div className="aem-GridColumn aem-GridColumn--default--6   aem-GridColumn--phone--12 ">
                                     <div className="label__name__div">
-                                        <label>
+                                        <label htmlFor="email">
                                             Email
                                         </label>
                                     </div>
                                     <div className="input__box__div">
-                                        <input className="input__box" type="text" name="name" placeholder="abc@xyz.com" />
+                                        <input
+                                            required
+                                            id="email"
+                                            className="input__box"
+                                            type="text"
+                                            name="email"
+                                            value={email ? email : shippingInfoList.email}
+                                            placeholder="abc@xyz.com"
+                                            onChange={handleEmailChange}
+                                        />
                                     </div>
                                 </div>
                                 <div className="aem-GridColumn aem-GridColumn--default--6   aem-GridColumn--phone--12 ">
                                     <div className="label__name__div">
-                                        <label>
+                                        <label htmlFor="phone-number">
                                             Phone Number
                                         </label>
                                     </div>
-                                    <div className="">
-                                        <input className="input__box" type="text" name="name" placeholder="(222) 222-2222" />
+                                    <div className="input__box__div">
+                                        <input
+                                            required
+                                            id="phone-number"
+                                            className="input__box"
+                                            type="text"
+                                            name="phone-number"
+                                            value={phone ? phone : shippingInfoList.phone}
+                                            placeholder="(222) 222-2222"
+                                            onChange={handlePhoneNoChange}
+                                        />
                                     </div>
                                 </div>
                             </div>
@@ -92,11 +182,26 @@ function ShippingInformation(props: any) {
                                     </div>
 
                                     <div className="label__name__div">
-                                        <label>Country
+                                        <label htmlFor="country">Country
                                         </label>
                                     </div>
                                     <div className="input__box__div">
-                                        <select className="input__box" name="name" />
+                                        <select required
+                                            id="country"
+                                            className="input__box"
+                                            name="country"
+                                            value={country ? country : shippingInfoList.country}
+                                            placeholder="United States"
+                                            onChange={handleCountryChange}
+                                        >
+                                            {COUNTRY.map(function (option: any) {
+                                                return (
+                                                    <option id={option.id} key={option.id} value={option.value}>
+                                                        <span>{option.label} </span>
+                                                    </option>
+                                                );
+                                            })}
+                                        </select>
                                     </div>
                                 </div>
                             </div>
@@ -104,42 +209,74 @@ function ShippingInformation(props: any) {
                             <div className="aem-Grid aem-Grid--12">
                                 <div className="aem-GridColumn aem-GridColumn--default--6   aem-GridColumn--phone--12 ">
                                     <div className="label__name__div">
-                                        <label>First Name
+                                        <label htmlFor="first-name" >First Name
                                         </label>
                                     </div>
                                     <div className="input__box__div">
-                                        <input autoComplete="off" className="input__box" type="text" name="name" />
+                                        <input
+                                            required
+                                            id="first-name"
+                                            autoComplete="off"
+                                            className="input__box"
+                                            type="text"
+                                            value={firstName ? firstName : shippingInfoList.firstName}
+                                            name="first-name"
+                                            onChange={handleFirstNameChange}
+                                        />
                                     </div>
                                 </div>
                                 <div className="aem-GridColumn aem-GridColumn--default--6   aem-GridColumn--phone--12 ">
                                     <div className="label__name__div">
-                                        <label>Last Name
+                                        <label htmlFor="last-name" >Last Name
                                         </label>
                                     </div>
                                     <div className="input__box__div">
-                                        <input className="input__box" type="text" name="name" />
+                                        <input
+                                            required
+                                            id="last-name"
+                                            className="input__box"
+                                            type="text"
+                                            value={lastName ? lastName : shippingInfoList.lastName}
+                                            name="last-name"
+                                            onChange={handleLastNameChange}
+                                        />
                                     </div>
                                 </div>
                             </div>
                             <div className="aem-Grid aem-Grid--12">
                                 <div className="aem-GridColumn aem-GridColumn--default--6   aem-GridColumn--phone--12 ">
                                     <div className="label__name__div">
-                                        <label>Street Address
+                                        <label htmlFor="street-address" >Street Address
                                         </label>
                                     </div>
                                     <div className="input__box__div">
-                                        <input className="input__box" type="text" name="name" />
+                                        <input
+                                            required
+                                            id="street-address"
+                                            className="input__box"
+                                            type="text"
+                                            // value={streetAddress ? streetAddress : shippingInfoList.streetAddress}
+                                            name="street-address"
+                                            onChange={handleStreetAddressChange}
+                                        />
                                     </div>
                                 </div>
                                 <div className="aem-GridColumn aem-GridColumn--default--6   aem-GridColumn--phone--12 ">
                                     <div className="label__name__div">
-                                        <label>Street Address2
+                                        <label htmlFor="street-address-2" >Street Address2
                                         </label>
-                                        <label>Optional
+                                        <label htmlFor="optinal" >Optional
                                         </label>
                                     </div>
                                     <div className="input__box__div">
-                                        <input className="input__box" type="text" name="name" />
+                                        <input
+                                            id="street-address-2"
+                                            className="input__box"
+                                            type="text"
+                                            value={streetAddress2 ? streetAddress2 : shippingInfoList.streetAddress2}
+                                            name="street-address-2"
+                                            onChange={handleStreetAddressOptionalChange}
+                                        />
                                     </div>
                                 </div>
                             </div>
@@ -147,36 +284,71 @@ function ShippingInformation(props: any) {
                             <div className="aem-Grid aem-Grid--12">
                                 <div className="aem-GridColumn aem-GridColumn--default--6   aem-GridColumn--phone--12 ">
                                     <div className="label__name__div">
-                                        <label>City
+                                        <label htmlFor="city">City
                                         </label>
                                     </div>
                                     <div className="input__box__div">
-                                        <input className="input__box" type="text" name="name" placeholder="Altadena" />
+                                        <input
+                                            required
+                                            id="city"
+                                            className="input__box"
+                                            type="text"
+                                            name="city"
+                                            value={city ? city : shippingInfoList.city}
+                                            placeholder="Altadena"
+                                            onChange={handleCityChange} />
                                     </div>
                                 </div>
                                 <div className="aem-GridColumn aem-GridColumn--default--3   aem-GridColumn--phone--12 ">
                                     <div className="label__name__div">
-                                        <label>State
+                                        <label htmlFor="state">State
                                         </label>
                                     </div>
                                     <div className="input__box__div">
-                                        <select className="input__box" name="name" />
+                                        <select required
+                                            id="state"
+                                            className="input__box"
+                                            name="state"
+                                            placeholder="United States"
+                                            value={stateArea ? stateArea : shippingInfoList.stateArea}
+                                            onChange={handleStateChange}
+                                        >
+                                            {STATE.map(function (option: any) {
+                                                return (
+                                                    <option id={option.id} key={option.id} value={option.value}>
+                                                        <span>{option.label} </span>
+                                                    </option>
+                                                );
+                                            })}
+                                        </select>
                                     </div>
                                 </div>
                                 <div className="aem-GridColumn aem-GridColumn--default--3   aem-GridColumn--phone--12 ">
                                     <div className="label__name__div">
-                                        <label>Zip
+                                        <label htmlFor="zip">Zip
                                         </label>
                                     </div>
                                     <div className="input__box__div">
-                                        <input className="input__box" type="text" name="name" placeholder="91001" />
+                                        <input
+                                            id="zip"
+                                            className="input__box"
+                                            type="text"
+                                            name="zip"
+                                            // value={zip ? zip : shippingInfoList.zip}
+                                            placeholder="91001"
+                                            onChange={handleZipChange}
+                                        />
                                     </div>
                                 </div>
                             </div>
                             <div className="aem-Grid aem-Grid--12">
                                 <div className="aem-GridColumn aem-GridColumn--default--12   aem-GridColumn--phone--12 ">
                                     <div>
-                                        <button type="button" className="checkout__step1__btn" onClick={handleContShippingMethod}>
+                                        <button
+                                            type= 'button'
+                                            className="checkout__step1__btn"
+                                            onClick={handleContShippingMethod}
+                                        >
                                             <span className="btn__span">
                                                 CONTINUE TO SHIPPING METHOD
                                             </span>
@@ -187,9 +359,7 @@ function ShippingInformation(props: any) {
                         </form>
                     </div>
                 </div>
-
             </div>
-
 
             <div className={showshippingInfoEdit ? "checkout__info__show" : "checkout__info__hide"}>
                 <div className="shipping__info__summary__container">
@@ -224,12 +394,12 @@ function ShippingInformation(props: any) {
                             <div className="shipping__method__summary__label__div">
                                 <div>
                                     <label>
-                                        1
+                                        {email ? email : shippingInfoList.email}
                                     </label>
                                 </div>
                                 <div>
                                     <label>
-                                        1
+                                        +{phone ? phone : shippingInfoList.phone}
                                     </label>
                                 </div>
                             </div>
@@ -238,12 +408,20 @@ function ShippingInformation(props: any) {
                             <div className="shipping__method__summary__label__div">
                                 <div>
                                     <label>
-                                        1
+                                        {firstName ? firstName : shippingInfoList.firstName}{' '}
+                                        {lastName ? lastName : shippingInfoList.lastName}
                                     </label>
                                 </div>
                                 <div>
                                     <label>
-                                        1
+                                        {city ? city : shippingInfoList.city}{' '}
+                                        {stateArea ? stateArea : shippingInfoList.stateArea}{' '}
+                                        {zip ? zip : shippingInfoList.zip}
+                                    </label>
+                                </div>
+                                <div>
+                                    <label>
+                                        {country ? country : shippingInfoList.country}
                                     </label>
                                 </div>
                             </div>

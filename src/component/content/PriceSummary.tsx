@@ -30,6 +30,10 @@ function PriceSummary(props: any) {
     }
     console.log(price())
 
+    const handleCheckOut = () => {
+        window.localStorage.setItem('shippingInfo', JSON.stringify({}));
+    }
+
     // return component
     return (
         <div className='price__summary__container'>
@@ -89,7 +93,7 @@ function PriceSummary(props: any) {
                     <div>
                         <Link to={ROUTES.CHECKOUT}>
                             <button type="button" className="checkout__btn">
-                                {<img className="lock__img" src={lock} alt="lock"></img>}
+                                {<img className="lock__img" src={lock} alt="lock" onClick={handleCheckOut} ></img>}
                                 CHECKOUT
                             </button>
                         </Link>

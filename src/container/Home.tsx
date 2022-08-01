@@ -7,6 +7,8 @@ function Home() {
     useEffect(() => {
         //maintain state on refresh 
         window.localStorage.setItem('cartValue', ' ')
+        window.localStorage.setItem('shippingInfo', JSON.stringify({}));
+        window.localStorage.setItem('paymentInfo', JSON.stringify({}));
     });
 
     return (
