@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { IMG_CONST_VALUE } from '../../constant/common';
 import Breadcrum from '../common/Breadcrum';
@@ -13,9 +12,6 @@ import chevrondown from "../../assests/images/chevrondown.svg";
 
 // single product display
 function SingleProductDisplay() {
-
-    const [loader, setLoader] = useState(true);
-
     // redux state
     const productDetail = useSelector((state: any) => state.getProductList.singleProductDetail);
     const cartItemList = useSelector((state: any) => state.getProductList.cartItemList);
@@ -34,10 +30,8 @@ function SingleProductDisplay() {
         let uniqueCartItemList = [...new Set(cartItemList)];
         window.localStorage.setItem('cart', JSON.stringify(uniqueCartItemList))
         window.localStorage.setItem('cartValue', JSON.stringify(uniqueCartItemList.length))
-        //temp : added hardcode data
         dispatch(action_setCartQuantity(uniqueCartItemList.length));
     }
-
 
     // return component
     return (
@@ -61,7 +55,7 @@ function SingleProductDisplay() {
                                     }
                                     <div>
                                         <div className="down__arrow">
-                                            <img src={chevrondown}>
+                                            <img src={chevrondown} alt="arrow-down">
                                             </img>
                                         </div>
                                     </div>

@@ -24,18 +24,18 @@ export default function ControlledAccordions() {
           return (<Accordion expanded={expanded === key.panel} onChange={handleChange(key.panel)}>
             <AccordionSummary
               expandIcon={<ExpandMoreIcon />}
-              aria-controls="panel1bh-content"
+              aria-controls="panel1bh__content"
               id={key.panel}
             >
-              <span id='typo1' className='accordian-typo1-span'>
+              <span id='typo1' className='accordian__typo1__span'>
                 {key.typo1}
               </span>
-              <span  id='typo2' className='accordian-typo2-span'>
+              <span  id='typo2' className='accordian__typo2__span'>
                 {key.typo2}
               </span>
             </AccordionSummary>
             <AccordionDetails>
-              <span id='typo3' className='accordian-typo1-span'>
+              <span id='typo3' className='accordian__typo1__span'>
                 {key.typo3}
               </span>
             </AccordionDetails>

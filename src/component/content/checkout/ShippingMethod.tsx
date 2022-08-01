@@ -1,9 +1,8 @@
 import { useState } from "react";
 import edit1 from "../../../assests/images/edit1.svg";
 
+//shipping method
 function ShippingMethod() {
-
-
     //local state
     const [showshippingInfo, setshowshippingInfo] = useState(false);
     const [showshippingInfoEdit, setshowshippingInfoEdit] = useState(false);

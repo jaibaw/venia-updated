@@ -1,10 +1,10 @@
-import { useLocation } from "react-router-dom";
+
 import PriceSummary from "../PriceSummary";
 import PaymentInformation from "./PaymentInformation";
 import ShippingInformation from "./ShippingInformation";
 import ShippingMethod from "./ShippingMethod";
 
-// quntity selection
+// checkout selection
 function CheckoutPage(props: any) {
     //retun component
     return (

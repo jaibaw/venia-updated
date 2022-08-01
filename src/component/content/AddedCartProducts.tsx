@@ -1,4 +1,3 @@
-import { useSelector } from 'react-redux';
 import SimpleAccordion from '../common/Accordian';
 import EditMenu from '../common/EditMenu';
 import Quantity from '../common/Quantity';
@@ -10,14 +9,22 @@ function AddedCartProducts() {
     //maintain state on refresh 
     const Product = window.localStorage.getItem('cart');
     let uniqueCartItemList = Product ? JSON.parse(Product) : [];
+    //maintain state on refresh 
+    const total = window.localStorage.getItem('cartValue');
+    const cartValue = total ? total : ' ';
 
-    console.log("uniqueCartItemList",uniqueCartItemList)
     //return component
     return (
         <div className='added-item-cart-container'>
+            <div>
+                <div className={cartValue === ' ' ? "checkout__info__show" : "checkout__info__hide"}>
+                    <h1>Nothing In cart</h1>
+                </div>
+            </div>
+
             {uniqueCartItemList && uniqueCartItemList.map((key: any) => {
                 return (
-                    <div>
+                    <div className={cartValue !== ' ' ? "checkout__info__show" : "checkout__info__hide"}>
                         <div className="aem-Grid aem-Grid--12">
                             <div className="aem-GridColumn aem-GridColumn--default--2 aem-GridColumn--phone--5">
                                 <div className='added-cart-product'>

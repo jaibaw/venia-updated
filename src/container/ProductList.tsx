@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import { useSelector } from "react-redux";
 import Banner from '../component/header/Banner';
 import Sidebar from '../component/header/Sidebar';

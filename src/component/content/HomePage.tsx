@@ -5,12 +5,10 @@ import mensky from "../../assests/images/mensky.png";
 import menstand from "../../assests/images/menstand.png";
 import mappin from "../../assests/images/mappin.svg";
 import chevronleft from "../../assests/images/chevronleft.svg"
-import { Button } from "@mui/material";
 import { CATEGORY } from "../../constant/common";
 
 //home
 function HomePage() {
-
     return (
         <div className="homepage-container">
             <div className="home-page-sub-container-1">
@@ -69,8 +67,8 @@ function HomePage() {
                                             </Link>
                                         </div>
                                         <div className="category__img__div">
-                                            <div>
-                                                <label className="category__img__span">
+                                            <div className="category__img__span__div">
+                                                <label>
                                                     {key.name}
                                                 </label>
                                             </div>

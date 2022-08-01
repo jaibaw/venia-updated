@@ -109,13 +109,15 @@
     width: -webkit-fill-available;
     background-color: #1B252CD9;
     margin-right: 10px;
-    margin-top: -60px;
+    margin-top: -70px;
+    position: relative;
 }
 
-.category__img__span {
+.category__img__span__div {
     font: normal normal 600 24px/30px Source Serif Pro;
     color: #FFFFFF;
     margin-left: 15px;
+    padding-top: 17px;
 }
 
 .category__img__sub__span {

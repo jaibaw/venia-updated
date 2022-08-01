@@ -5,7 +5,7 @@ import edit1 from "../../../assests/images/edit1.svg";
 import helpcircle from "../../../assests/images/helpcircle.svg"
 import { useState } from "react";
 
-// quntity selection
+// payment 
 function PaymentInformation(props: any) {
 
     //maintain state on refresh 
@@ -16,8 +16,7 @@ function PaymentInformation(props: any) {
     const [showshippingInfo, setshowshippingInfo] = useState(false);
     const [showshippingInfoEdit, setshowshippingInfoEdit] = useState(false);
     const [showshippingInfoLabel, setshowshippingInfoLabel] = useState(true);
-    const [checkedCreditCart, setCheckedCreditCart] = useState(true);
-    const [checkedPaypal, setCheckedPaypal] = useState(true);
+     const [checkedPaypal, setCheckedPaypal] = useState(true);
 
     const handleContReviewOrder = () => {
         setshowshippingInfo(false)
@@ -39,12 +38,10 @@ function PaymentInformation(props: any) {
 
 
     const handleCreditCartClick = () => {
-        setCheckedCreditCart(true);
-        setCheckedPaypal(false);
+         setCheckedPaypal(false);
     }
 
     const handlePaypal = () => {
-        setCheckedCreditCart(false);
         setCheckedPaypal(true);
     }
 
@@ -148,8 +145,7 @@ function PaymentInformation(props: any) {
                             <div className="aem-Grid aem-Grid--12">
                                 <div className="aem-GridColumn aem-GridColumn--default--8   aem-GridColumn--phone--12 ">
                                     <div className="input__box__div">
-                                        <img className="check__square__img " src={checksquare}></img>
-
+                                        <img className="check__square__img " src={checksquare} alt="check-square"></img>
                                         <label>Billing address same as shipping address</label>
                                     </div>
                                 </div>

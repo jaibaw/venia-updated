@@ -1,10 +1,9 @@
 import venialogoupdated from '../../assests/images/venialogoupdated.jpg';
 import shoppingbag from '../../assests/images/shoppingbag.svg';
 import { ROUTES } from '../../constant/routes';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import menu from '../../assests/images/menu.png';
-// import Sidebar from './Sidebar';
 import { useState } from 'react';
 import { action_setMenuBarStatus } from '../../actions/get-products';
 import Sidebar from './Sidebar';
@@ -12,6 +11,7 @@ import Sidebar from './Sidebar';
 //appbar
 function Appbar() {
     const dispatch = useDispatch();
+    const location = useLocation();
 
     //local state
     const [menuBar, setMenuBar] = useState(false);
@@ -21,7 +21,6 @@ function Appbar() {
     const cartValue = total ? total : ' ';
 
     //redux state
-    const setCartQuantity = useSelector((state: any) => state.getProductList.setCartQuantity);
     const setMenuBarStatus = useSelector((state: any) => state.getProductList.setMenuBarStatus);
 
     const handleMenuBar = () => {
@@ -58,9 +57,29 @@ function Appbar() {
                     <div className={menuBar ? 'menu' : "aem-GridColumn aem-GridColumn--default--1 aem-GridColumn--phone--3"}>
                         <ul className='menu-class'>
                             {
-                                cartValue !== ' ' ?
-                                    <Link to={ROUTES.SHOPPING_CART}> {cartValue === ' ' ? setCartQuantity : cartValue} {<img className={setMenuBarStatus ? 'list-class' : 'search-logo'} alt='cart' src={shoppingbag}></img>}</Link>
-                                    : <img className={setMenuBarStatus ? 'list-class' : 'search-logo'} alt='cart' src={shoppingbag}></img>
+                                ((cartValue === ' ') || (location.pathname === '/delete-product')) ?
+                                    <div>
+                                        <img
+                                            className={setMenuBarStatus ? 'list-class' : 'search-logo'}
+                                            alt='cart'
+                                            src={shoppingbag}>
+                                        </img>
+                                    </div>
+                                    :
+                                    <div>
+                                        <Link to={ROUTES.SHOPPING_CART}>
+                                            {
+                                                <div className='badge__div'>
+                                                    <img
+                                                        className={setMenuBarStatus ? 'list-class' : 'search-logo'}
+                                                        alt='cart' src={shoppingbag}>
+                                                    </img>
+                                                    <span className='badge'>{cartValue === ' ' ? 0 : cartValue}</span>
+                                                </div>
+                                            }
+                                        </Link>
+                                    </div>
+
                             }
                         </ul>
                     </div>

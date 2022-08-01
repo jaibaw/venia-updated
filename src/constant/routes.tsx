@@ -9,5 +9,7 @@ export const ROUTES = {
 
     CHECKOUT : "/checkout",
 
-    ORDER_PLACES : "/order-placed"
+    ORDER_PLACES : "/order-placed",
+
+    DELETE_PRODUCT : "/delete-product"
 }

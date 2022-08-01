@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
+import { useState } from "react";
 import pluscircle from "../../assests/images/pluscircle.svg";
 import minuscircle from "../../assests/images/minuscircle.svg";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { action_setQuantity } from "../../actions/get-products";
 
 // quntity selection
@@ -40,15 +40,15 @@ function Quantity(props: any) {
 
     //retun component
     return (
-        <div className="quantity-container">
+        <div className="quantity__container">
             {
                 <div>
-                    <span >{<img id={props.quantityId} className="quantity-logo-minus" alt="decrement" src={minuscircle} onClick={onChangeDecrement}></img>
+                    <span >{<img id={props.quantityId} className="quantity__logo__minus" alt="decrement" src={minuscircle} onClick={onChangeDecrement}></img>
                     }</span>
 
-                    <span id={props.quantityId} className="quantity-span">{(props.quantityId !== 0 ? quantity : quantityCart)}</span>
+                    <span id={props.quantityId} className="quantity__span">{(props.quantityId !== 0 ? quantity : quantityCart)}</span>
 
-                    <span>{<img id={props.quantityId} className="quantity-logo-plus" alt='increment' src={pluscircle} onClick={onChangeIncrement}></img>
+                    <span>{<img id={props.quantityId} className="quantity__logo__plus" alt='increment' src={pluscircle} onClick={onChangeIncrement}></img>
                     }</span>
 
                 </div>

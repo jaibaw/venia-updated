@@ -40,18 +40,26 @@
     visibility: visible;
 }
 
-.cart__count {
-    // font-size: var(--font-size-small);
-    // background: var(--color-body);
+.badge {
+    border-radius: 0.27rem;
     width: 20px;
     height: 20px;
     position: absolute;
-  //  margin-top: -20px;
-    right: -8px;
+    margin-top: -35px;
+    right: 19px;
     border-radius: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: black !important;
+    color: #FFFFFF;
+    font-size: .6rem;
+    border-radius: 50rem !important;
+}
+
+.badge__div {
+    position: relative;
+    width: 50px;
 }
 
 //Mobile View

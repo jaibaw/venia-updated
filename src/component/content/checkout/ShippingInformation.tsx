@@ -1,10 +1,8 @@
 import { useState } from "react";
 import edit1 from "../../../assests/images/edit1.svg";
 
-// quntity selection
+// shipping info selection
 function ShippingInformation(props: any) {
-
-
     //local state
     const [showshippingInfo, setshowshippingInfo] = useState(false);
     const [showshippingInfoEdit, setshowshippingInfoEdit] = useState(false);

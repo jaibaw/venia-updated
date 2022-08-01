@@ -1,6 +1,6 @@
 import OrderSuccess from "../component/content/OrderSuccess";
 
-// quntity selection
+// order
 function Order(props: any) {
     //retun component
     return (

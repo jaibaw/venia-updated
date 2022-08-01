@@ -1,7 +1,6 @@
 import CheckoutPage from "../component/content/checkout/CheckoutPage";
-import PriceSummary from "../component/content/PriceSummary";
 
-// quntity selection
+// checkout
 function CheckoutContainer(props: any) {
     //retun component
     return (
