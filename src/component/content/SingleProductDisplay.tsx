@@ -9,7 +9,6 @@ import { ROUTES } from "../../constant/routes";
 import { Link } from "react-router-dom";
 import StarRating from "../common/StarRating";
 import chevrondown from "../../assests/images/chevrondown.svg";
-
 // single product display
 function SingleProductDisplay() {
     // redux state
@@ -26,6 +25,7 @@ function SingleProductDisplay() {
 
     // maintain cart quantity
     const addTocart = () => {
+        alert("product added in cart")
         cartItemList.push(singleProductDetail);
         let uniqueCartItemList = [...new Set(cartItemList)];
         window.localStorage.setItem('cart', JSON.stringify(uniqueCartItemList))

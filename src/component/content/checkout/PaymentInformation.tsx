@@ -27,25 +27,21 @@ function PaymentInformation(props: any) {
     const [expirationDate, setExpirationDate] = useState("");
     const [paymentType, setPaymentType] = useState("");
 
-    const paymentInfo = window.localStorage.getItem('paymentInfo');
-    let paymentInfoList = paymentInfo ? JSON.parse(paymentInfo) : {};
-
+    const cardNumberRestore = window.localStorage.getItem('cardnumber');
+    const cardNameRestore = window.localStorage.getItem('cardname');
+    const cvvNumberRestore = window.localStorage.getItem('cvvnumber');
+    const expirationDateRestore = window.localStorage.getItem('expirationdate');
+    const paymentTypeRestore = window.localStorage.getItem('paymenttype');
 
     const handleContReviewOrder = () => {
-        const formObj = {
-            "cardName": cardName,
-            "cardNumber": cardNumber,
-            "cvvNumber": cvvNumber,
-            "expirationDate": expirationDate,
-            "paymentType": paymentType
-
-        }
-        window.localStorage.setItem('paymentInfo', JSON.stringify(formObj));
         if ((cardName !== "" && cardNumber !== "" && cvvNumber !== "" && expirationDate !== "")
-            || (paymentType === 'Paypal')) {
+            || (paymentType === 'Paypal') || (cardNumberRestore !== "" && cardNameRestore !== "" &&
+                cvvNumberRestore !== "" && expirationDateRestore !== "" && paymentTypeRestore !== "")) {
             setShowPaymentInfo(false)
             setShowPaymentInfoEdit(true)
             setShowPaymentInfoLabel(false)
+        } else {
+            alert("enter all the fields")
         }
     }
 
@@ -61,34 +57,39 @@ function PaymentInformation(props: any) {
         setShowPaymentInfoEdit(false)
     }
 
-
     const handleCreditCartClick = (e: any) => {
-        setPaymentType(e.target.value)
+        setPaymentType(e.target.value);
+        window.localStorage.setItem('paymenttype', e.target.value);
         setCheckedPaypal(false);
         setCheckedPaymentCard(true);
         setCheckedPaymentPaypal(false);
     }
 
     const handlePaypal = (e: any) => {
-        setPaymentType(e.target.value)
+        setPaymentType(e.target.value);
+        window.localStorage.setItem('paymenttype', e.target.value);
         setCheckedPaypal(true);
         setCheckedPaymentCard(false);
         setCheckedPaymentPaypal(true);
     }
 
     const handleCardName = (e: any) => {
+        window.localStorage.setItem('cardname', e.target.value);
         setCardName(e.target.value);
     }
 
     const handleCardNumber = (e: any) => {
+        window.localStorage.setItem('cardnumber', e.target.value);
         setCardNumber(e.target.value)
     }
 
     const handleExpirationDate = (e: any) => {
+        window.localStorage.setItem('expirationdate', e.target.value);
         setExpirationDate(e.target.value)
     }
 
     const handleCVVChange = (e: any) => {
+        window.localStorage.setItem('cvvnumber', e.target.value);
         setCvvNumber(e.target.value)
     }
 
@@ -154,7 +155,7 @@ function PaymentInformation(props: any) {
                                             type="text"
                                             name="name-on-card"
                                             id="name-on-card"
-                                            value={cardName ? cardName : paymentInfoList.cardName}
+                                            value={cardName ? cardName : (cardNameRestore && cardNameRestore ? cardNameRestore : cardName)}
                                             onChange={handleCardName}
 
                                         />
@@ -175,7 +176,7 @@ function PaymentInformation(props: any) {
                                             type="text"
                                             name="card-number"
                                             id="card-number"
-                                            value={cardNumber ? cardNumber : paymentInfoList.cardNumber}
+                                            value={cardNumber ? cardNumber : (cardNumberRestore && cardNumberRestore ? cardNumberRestore : cardNumber)}
                                             onChange={handleCardNumber}
                                         />
                                     </div>
@@ -195,7 +196,7 @@ function PaymentInformation(props: any) {
                                                 type="select"
                                                 name="expiration-date"
                                                 id="expiration-date"
-                                                value={expirationDate ? expirationDate : paymentInfoList.expirationDate}
+                                                value={expirationDate ? expirationDate : (expirationDateRestore && expirationDateRestore ? expirationDateRestore : expirationDate)}
                                                 onChange={handleExpirationDate}
                                             />
                                         </div>
@@ -212,7 +213,7 @@ function PaymentInformation(props: any) {
                                                 type="text"
                                                 name="cvv"
                                                 id="cvv"
-                                                value={cvvNumber ? cvvNumber : paymentInfoList.cvvNumber}
+                                                value={cvvNumber ? cvvNumber : (cvvNumberRestore && cvvNumberRestore ? cvvNumberRestore : cvvNumber)}
                                                 onChange={handleCVVChange} />
                                         </div>
                                     </div>
@@ -313,12 +314,12 @@ function PaymentInformation(props: any) {
                                 <div className="shipping__method__summary__label__div">
                                     <div>
                                         <label>
-                                            {paymentType ? paymentType : paymentInfoList.paymentType}
+                                            {paymentType ? paymentType : (paymentTypeRestore && paymentTypeRestore ? paymentTypeRestore : paymentType)}
                                         </label>
                                     </div>
                                     <div>
                                         <label>
-                                            Visa ending with {cardNumber ? cardNumber : paymentInfoList.cardNumber}
+                                            Visa ending with {cardNumber ? cardNumber : (cardNumberRestore && cardNumberRestore ? cardNumberRestore : cardNumber)}
                                         </label>
                                     </div>
                                 </div>

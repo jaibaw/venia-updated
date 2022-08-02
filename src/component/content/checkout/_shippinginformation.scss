@@ -71,6 +71,10 @@ input[type="radio"]:checked {
   border-radius: 8px;
 }
 
+.input__box__select {
+  height: 52px;
+}
+
 .checkout__step1__btn {
   width: 347px;
   height: 40px;
@@ -137,4 +141,15 @@ input[type="radio"]:checked {
 .checkout__edit__icon {
   width: 16px;
   height: 16px;
+}
+
+.options {
+  font: normal normal normal 16px/19px Muli;
+}
+
+.optional__field__span {
+  font: normal normal normal 14px/16px Muli;
+  letter-spacing: 0px;
+  color: #545D63;
+  margin-left: 9vw;
 }

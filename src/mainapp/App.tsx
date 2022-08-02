@@ -3,7 +3,7 @@ import ProductDetail from "../container/ProductDetail";
 import ShoppingCart from "../container/ShoppingCart";
 import Appbar from "../component/header/Appbar"
 import Footer from "../component/footer/Footer";
-import { Routes, Route, useLocation } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { ROUTES } from "../constant/routes";
 import { lazy, Suspense, useEffect } from "react";
 import { useDispatch } from "react-redux";
@@ -20,13 +20,9 @@ const ProductList = lazy(() => import('../container/ProductList'))
 // main app loading
 function App() {
   const dispatch = useDispatch();
-  const location = useLocation();
 
   useEffect(() => {
     dispatch(action_fetchProductList());
-    if (location.pathname === '/delete-product') {
-      window.localStorage.setItem('cart', JSON.stringify([]))
-    }
   });
 
   return (

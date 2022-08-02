@@ -12,12 +12,17 @@ function OrderSuccess(props: any) {
 
     const shippingMethod = window.localStorage.getItem('shippingMethodValue');
 
-    const paymentInfo = window.localStorage.getItem('paymentInfo');
-    let paymentInfoList = paymentInfo ? JSON.parse(paymentInfo) : {};
+    const emailRestore = window.localStorage.getItem('email');
+    const phoneRestore = window.localStorage.getItem('phone');
+    const countryRestore = window.localStorage.getItem('country');
+    const firstNameRestore = window.localStorage.getItem('firstname');
+    const lastNameRestore = window.localStorage.getItem('lastname');
+    const zipRestore = window.localStorage.getItem('zip');
+    const stateRestore = window.localStorage.getItem('state');
+    const cityRestore = window.localStorage.getItem('city');
 
-    const shippingInfo = window.localStorage.getItem('shippingInfo');
-    let shippingInfoList = shippingInfo ? JSON.parse(shippingInfo) : {};
-
+    const cardNumberRestore = window.localStorage.getItem('cardnumber');
+    const paymentTypeRestore = window.localStorage.getItem('paymenttype');
 
     //retun component
     return (
@@ -43,29 +48,29 @@ function OrderSuccess(props: any) {
                             </div>
                             <div>
                                 <label>
-                                    {shippingInfoList.email}
+                                    {emailRestore}
                                 </label>
                             </div>
                             <div>
                                 <label>
-                                    {shippingInfoList.phone}
+                                    {phoneRestore}
                                 </label>
                             </div><div>
                                 <label>
-                                    {shippingInfoList.firstName}{' '}
-                                    {shippingInfoList.lastName}
+                                    {firstNameRestore}{' '}
+                                    {lastNameRestore}
 
                                 </label>
                             </div><div>
                                 <label>
-                                    {shippingInfoList.city}{' '}
-                                    {shippingInfoList.stateArea}{' '}
-                                    {shippingInfoList.zip}
+                                    {cityRestore}{' '}
+                                    {stateRestore}{' '}
+                                    {zipRestore}
                                 </label>
                             </div>
                             <div>
                                 <label>
-                                    {shippingInfoList.country}
+                                    {countryRestore}
                                 </label>
                             </div>
                         </div>
@@ -88,12 +93,12 @@ function OrderSuccess(props: any) {
                                 </div>
                                 <div>
                                     <label>
-                                        {paymentInfoList.paymentType}
+                                        {paymentTypeRestore}
                                     </label>
                                 </div>
                                 <div>
                                     <label>
-                                        Visa ending with {paymentInfoList.cardNumber}
+                                        Visa ending with {cardNumberRestore}
                                     </label>
                                 </div>
                             </div>

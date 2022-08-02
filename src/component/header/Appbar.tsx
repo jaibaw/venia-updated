@@ -47,7 +47,7 @@ function Appbar() {
                     </div>
                     <div className="aem-GridColumn aem-GridColumn--default--8  aem-GridColumn--phone--hide">
                         <ul className='menu-class'>
-                            <li className='list-class-women'>Home</li>
+                            <li className='list-class-women'><span className='home__span' >Home</span></li>
                             <li className='list-class'>Women</li>
                             <li className='list-class'>Men</li>
                             <li className='list-class'>Smart Gear</li>
