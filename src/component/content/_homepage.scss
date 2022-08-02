@@ -179,6 +179,20 @@
     opacity: 1;
 }
 
-.border__div{
+.border__div {
     margin-left: -3.5vw;
+}
+
+
+
+
+//mobile View
+@media (min-width: 320px) and (max-width: 768px) {
+    .home-page-sub-container-2 {
+        margin: 0vw 16px 128px 15px;
+    }
+
+    .category-img {
+        height: 360px;
+    }
 }

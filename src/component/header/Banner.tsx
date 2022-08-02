@@ -63,7 +63,7 @@ function Banner() {
                     </div>
                     <div className='aem-GridColumn aem-GridColumn--default--8'>
                         <div>
-                            <img className="man-sit" src={mansitcrop} alt='man-play'>
+                            <img className="man__sit" src={mansitcrop} alt='man-sit'>
                             </img>
 
                         </div>
@@ -76,7 +76,7 @@ function Banner() {
                 <div className="aem-Grid aem-Grid--12  aem-GridColumn--phone--12">
                     <div className='aem-GridColumn aem-GridColumn--phone--12'>
                         <div>
-                            <img className="man-play-phone" src={mansitcrop} alt='man-play'>
+                            <img className="man__sit" src={mansitcrop} alt='man-play'>
                             </img>
 
                         </div>
@@ -112,10 +112,10 @@ function Banner() {
                             />
                         </div>
                     </div>
-                    <div className="aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--phone--12">
+                    <div className="aem-GridColumn aem-GridColumn--phone--12">
                         <div className='filter-sort-div'>
                             <div className="aem-Grid aem-Grid--12  aem-GridColumn--phone--12">
-                                <div className='aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--6'>
+                                <div className='aem-GridColumn  aem-GridColumn--phone--6'>
                                     <div className='filter-sort-sub-container'>
                                         <img className='filter-sort-logo' alt='filter' src={sliders}></img>
                                         <span className='filter-sort-span'>
@@ -123,7 +123,7 @@ function Banner() {
                                         </span>
                                     </div>
                                 </div>
-                                <div className='aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--6'>
+                                <div className='aem-GridColumn  aem-GridColumn--phone--6'>
                                     <div className='filter-sort-sub-container'>
                                         <img onClick={OnArrowUp} className='sort-logo' alt='increment' src={arrowup}></img>
                                         <img onClick={OnArrowDown} className='sort-logo' alt='decrement' src={arrowdown}></img>
@@ -167,6 +167,8 @@ function Banner() {
                     </div>
                 </div>
             </div>
+
+            {/* {phone view end} */}
         </div>
     );
 }

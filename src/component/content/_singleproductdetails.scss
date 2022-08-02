@@ -12,6 +12,7 @@
 
 .product-rating-span {
     font: normal normal 600 15px/20px Muli;
+    text-decoration: underline;
 }
 
 .product-discription-details {
@@ -61,7 +62,7 @@
 //mobile View
 @media (min-width: 320px) and (max-width: 768px) {
     .product-title {
-        margin: 78% 0px 4px 0px;
+        margin: 0px 0px 8px 0px;
     }
 
     .product-price-span {
@@ -70,6 +71,7 @@
 
     .product-rating-span {
         padding-bottom: 3vw;
+        text-decoration: underline;
     }
 
     .product-attribute {
@@ -113,7 +115,7 @@
 //mobile View
 @media (min-width: 500px) and (max-width: 768px) {
     .quantity-div {
-        margin-left: 34vw;
+        margin-left: 32vw;
     }
 }
 

@@ -31,9 +31,6 @@ function ShippingInformation(props: any) {
     const stateRestore = window.localStorage.getItem('state');
     const cityRestore = window.localStorage.getItem('city');
 
-
-    console.log(             email ? email : (emailRestore && emailRestore ? emailRestore : email) ,"kk"
-    )
     const handleContShippingMethod = () => {
         if ((city !== "" && country !== "" && email !== "" && phone !== "" &&
             firstName !== "" && lastName !== "" && zip !== "" && stateArea !== "" && streetAddress !== "") ||
@@ -43,7 +40,7 @@ function ShippingInformation(props: any) {
             setshowshippingInfoEdit(true);
             setshowshippingInfoLabel(false);
             props.priceSummaryDiv(showshippingInfo);
-        }else{
+        } else {
             alert("enter all the fields")
         }
     }
@@ -53,7 +50,7 @@ function ShippingInformation(props: any) {
         setshowshippingInfoEdit(false)
         setshowshippingInfo(true)
         props.priceSummaryDiv(showshippingInfo);
-    
+
     }
 
     const handleShippingInfoLabel = () => {
@@ -209,7 +206,7 @@ function ShippingInformation(props: any) {
                                         >
                                             {COUNTRY.map(function (option: any) {
                                                 return (
-                                                    <option className="options"  id={option.id} key={option.id} value={option.value}>
+                                                    <option className="options" id={option.id} key={option.id} value={option.value}>
                                                         <span className="options">{option.label} </span>
                                                     </option>
                                                 );
@@ -358,7 +355,7 @@ function ShippingInformation(props: any) {
                                 </div>
                             </div>
                             <div className="aem-Grid aem-Grid--12">
-                                <div className="aem-GridColumn aem-GridColumn--default--12   aem-GridColumn--phone--12 ">
+                                <div className="aem-GridColumn aem-GridColumn--default--12">
                                     <div>
                                         <button
                                             type='button'

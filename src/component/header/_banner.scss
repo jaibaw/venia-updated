@@ -13,7 +13,7 @@
     padding: 96px 91px 106px 90px;
 }
 
-.man-sit {
+.man__sit {
     width: -webkit-fill-available;
     height: 320px;
     margin-top: 16px;
@@ -59,6 +59,22 @@
 /*=== Mobile Media ===*/
 @media (min-width: 320px) and (max-width: 768px) {
 
+    .banner-sub-container {
+        margin: 24px 14vw 0vw 0vw;
+    }
+
+    .man__sit {
+        width: 100vw;
+        margin-top: 0px;
+    }
+
+    .banner__block {
+        width: 90vw;
+        height: 285px;
+        margin-top: -12vw;
+        margin-left: 5.5vw;
+    }
+
     .banner-desktop {
         display: none;
     }
@@ -70,12 +86,12 @@
 
     .filter-sort-div {
         display: block;
-        padding-left: 15%;
         padding-bottom: 5%;
     }
 
     .filter-sort-sub-container {
         padding-top: 6%;
+        margin-left: 20vw;
     }
 
     .filter-sort-logo {
@@ -88,10 +104,9 @@
         margin-right: 3px;
     }
 
-
     .result-div {
-        margin-left: 40%;
-        margin-bottom: 3%;
+        margin-left: 45vw;
+        margin-bottom: 32px;
     }
 }
 

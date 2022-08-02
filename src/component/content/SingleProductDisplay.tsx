@@ -71,6 +71,7 @@ function SingleProductDisplay() {
                     </div>
 
                 </div>
+                {/* {phone view} */}
                 <div className="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12">
                     <div>
                         <Breadcrum />
@@ -80,6 +81,16 @@ function SingleProductDisplay() {
                             <div className='product-display'>
                                 <img className="single-img-display" alt='product' src={singleProductDetail.image}>
                                 </img>
+                                <div className="dot__div">
+                                    {
+                                        IMG_CONST_VALUE.map((key) => {
+                                            return (
+                                                <div className="dot">
+                                                </div>
+                                            )
+                                        })
+
+                                    }</div>
                             </div>
                         </div>
                     </div>
@@ -143,6 +154,8 @@ function SingleProductDisplay() {
                         </div>
                     </div>
                 </div>
+                {/* {phone view end} */}
+
             </div>
 
 

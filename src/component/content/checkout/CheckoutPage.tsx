@@ -33,17 +33,17 @@ function CheckoutPage() {
                 </div>
                 <div className="aem-GridColumn aem-GridColumn--default--4   aem-GridColumn--phone--12 ">
                     <div>
-                        <div className={!showpriceSummary ? "checkout__info__show" : "checkout__info__hide"}>
+                        <div className={!showpriceSummary ? "price__summary__div__info__show" : "price__summary__div__info__hide"}>
                             <div className='price__summary__container'>
-                                <div className="aem-Grid aem-Grid--12">
-                                    <div className="aem-GridColumn aem-GridColumn--default--8 aem-GridColumn--phone--11">
+                                <div className="aem-Grid aem-Grid--12 aem-GridColumn--phone--hide">
+                                    <div className="aem-GridColumn aem-GridColumn--default--8 aem-GridColumn--phone--hide">
                                         <div className="sign__in__label">
                                             <label>
                                                 Sign in for Express Checkout
                                             </label>
                                         </div>
                                     </div>
-                                    <div className="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--11">
+                                    <div className="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--hide">
                                         <div>
                                             <button
                                                 type='button'

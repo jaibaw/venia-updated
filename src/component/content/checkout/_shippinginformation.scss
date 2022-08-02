@@ -153,3 +153,13 @@ input[type="radio"]:checked {
   color: #545D63;
   margin-left: 9vw;
 }
+
+//mobile View
+@media (min-width: 320px) and (max-width: 768px) {
+  .checkout__step1__btn {
+    width: -webkit-fill-available;
+    margin-left: 5vw;
+    margin-right: 5vw;
+  }
+
+}

@@ -64,7 +64,7 @@
 
 //mobile View
 @media (min-width: 320px) and (max-width: 768px) {
-    .price-summary-container {
+    .price__summary__container {
         width: auto;
         height: max-content;
         padding: 30px 30px 30px 30px;
@@ -73,7 +73,7 @@
         margin-left: 0%;
     }
 
-    .price-summary-img-checkout {
+    .price__summary__img__checkout {
         width: auto;
     }
 
@@ -81,20 +81,20 @@
         margin-left: 20vw;
     }
 
-    .price-summary-img-paypal {
+    .price__summary__img__paypal {
         width: auto;
         height: 43px;
     }
 }
 
 @media (min-width: 401px) and (max-width: 511px) {
-    .price-summary-imgs-container {
+    .price__summary__imgs__container {
         margin-left: 10vw;
     }
 }
 
 @media (min-width: 320px) and (max-width: 400px) {
-    .price-summary-imgs-container {
+    .price__summary__imgs__container {
         margin-left: 0vw;
     }
 

@@ -27,3 +27,21 @@
     color: #172026;
     opacity: 1;
 }
+
+
+.price__summary__div__info__show {
+    display: block;
+}
+
+.price__summary__div__info__hide {
+    display: none;
+}
+
+
+//mobile View
+@media (min-width: 320px) and (max-width: 768px) {
+    .price__summary__div__info__show {
+        display: none;
+    }
+
+}
