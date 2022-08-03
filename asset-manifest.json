@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/venia-updated/static/css/main.e50e57a9.css",
-    "main.js": "/venia-updated/static/js/main.e4dbb0ee.js",
-    "static/js/845.1e6517e5.chunk.js": "/venia-updated/static/js/845.1e6517e5.chunk.js",
+    "main.css": "/venia-updated/static/css/main.40393d1b.css",
+    "main.js": "/venia-updated/static/js/main.4fe4a893.js",
+    "static/js/845.1eb89e14.chunk.js": "/venia-updated/static/js/845.1eb89e14.chunk.js",
     "static/js/787.de51f1e3.chunk.js": "/venia-updated/static/js/787.de51f1e3.chunk.js",
     "static/js/287.26269a18.chunk.js": "/venia-updated/static/js/287.26269a18.chunk.js",
     "static/media/mengroup.png": "/venia-updated/static/media/mengroup.e381db1c14abfc717006.png",
@@ -15,17 +15,20 @@
     "static/media/sliders.svg": "/venia-updated/static/media/sliders.07a0e59562aded129aac7c8a5259c413.svg",
     "static/media/share.svg": "/venia-updated/static/media/share.c9452d8d0a01f15f7b30c66f52b97baa.svg",
     "static/media/trash.svg": "/venia-updated/static/media/trash.a3e697fde0ae7e80f40a3f3214ef433d.svg",
+    "static/media/morehorizontal.svg": "/venia-updated/static/media/morehorizontal.2ea01748eed974013c1a1108ed9c5969.svg",
     "static/media/instagram.svg": "/venia-updated/static/media/instagram.f7483e2a7dff4c35e5142659dd996bf6.svg",
     "static/media/instagram1.svg": "/venia-updated/static/media/instagram1.739ad9bd170222df3b01b65421da0c3c.svg",
     "index.html": "/venia-updated/index.html",
     "static/media/helpcircle.svg": "/venia-updated/static/media/helpcircle.6e768c3bac19f3986961e860b1d13f2d.svg",
     "static/media/pluscircle.svg": "/venia-updated/static/media/pluscircle.1c91df00bbc3c35b83908f30ff20475d.svg",
     "static/media/shoppingbag.svg": "/venia-updated/static/media/shoppingbag.cb28c1ef909a846a6a309e7ed3ef2c02.svg",
+    "static/media/menu.svg": "/venia-updated/static/media/menu.d4e0cba29b9b64b9877c5feca68b2d2d.svg",
     "static/media/arrowup.svg": "/venia-updated/static/media/arrowup.bffb5a388e9ce654e32b9665d1dbed6d.svg",
     "static/media/mappin.svg": "/venia-updated/static/media/mappin.852024007d574484f01c3346de7dd731.svg",
     "static/media/checksquare.svg": "/venia-updated/static/media/checksquare.1913a6da6782d0eb35ceb7b7aa07c9cd.svg",
     "static/media/lock.svg": "/venia-updated/static/media/lock.5ff97e2157304c0ee2a0e39c62a6cd5c.svg",
     "static/media/minuscircle.svg": "/venia-updated/static/media/minuscircle.e934335b664aeca8f3d3968f708b5a06.svg",
+    "static/media/x.svg": "/venia-updated/static/media/x.d53986b46fddc38d98919b5e8f542368.svg",
     "static/media/arrowdown.svg": "/venia-updated/static/media/arrowdown.ad1e372bfba7126beaef93d275515815.svg",
     "static/media/twitter.svg": "/venia-updated/static/media/twitter.3d9f31115be6b897b5d45c0aad4c1c1f.svg",
     "static/media/twitter1.svg": "/venia-updated/static/media/twitter1.61c1556d49acb6663324097c700f4d43.svg",
@@ -36,14 +39,14 @@
     "static/media/facebook1.svg": "/venia-updated/static/media/facebook1.7c4105cbf363f541530bc7e3026f894d.svg",
     "static/media/chevrondown.svg": "/venia-updated/static/media/chevrondown.fadc45040e456e5cea02f3cd047ee412.svg",
     "static/media/chevronleft.svg": "/venia-updated/static/media/chevronleft.4ac6ee7882c74803488aa3c28a368590.svg",
-    "main.e50e57a9.css.map": "/venia-updated/static/css/main.e50e57a9.css.map",
-    "main.e4dbb0ee.js.map": "/venia-updated/static/js/main.e4dbb0ee.js.map",
-    "845.1e6517e5.chunk.js.map": "/venia-updated/static/js/845.1e6517e5.chunk.js.map",
+    "main.40393d1b.css.map": "/venia-updated/static/css/main.40393d1b.css.map",
+    "main.4fe4a893.js.map": "/venia-updated/static/js/main.4fe4a893.js.map",
+    "845.1eb89e14.chunk.js.map": "/venia-updated/static/js/845.1eb89e14.chunk.js.map",
     "787.de51f1e3.chunk.js.map": "/venia-updated/static/js/787.de51f1e3.chunk.js.map",
     "287.26269a18.chunk.js.map": "/venia-updated/static/js/287.26269a18.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e50e57a9.css",
-    "static/js/main.e4dbb0ee.js"
+    "static/css/main.40393d1b.css",
+    "static/js/main.4fe4a893.js"
   ]
 }
