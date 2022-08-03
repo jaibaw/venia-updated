@@ -7,6 +7,7 @@ import menstand from "../../assests/images/menstand.png";
 import mappin from "../../assests/images/mappin.svg";
 import chevronleft from "../../assests/images/chevronleft.svg"
 import { CATEGORY, IMG_CONST_VALUE } from "../../constant/common";
+import ImgSlider from "../common/ImgSlider";
 
 //home
 function HomePage() {
@@ -59,38 +60,47 @@ function HomePage() {
                             <div>
                                 <img className="man__grp__img" src={mengroup} alt='man-play'>
                                 </img>
-
                             </div>
+                            {/* <div className="man__grp__img" >
+                                <ImgSlider />
+                            </div> */}
                         </div>
-                        <div className="shop__now__detail">
-                            <div className="home__title__div">
-                                <label>
-                                    <span>Shop the new</span>  <br></br> <span>Signature Collection</span>
-                                </label>
-                            </div>
-                            <div className="home__title__discription__div">
-                                <label>
-                                    Lorem ipsum dolor sit amet, consectetur  <br></br>adipiscing elit, sed do eiusmod tempor   </label>
-                            </div>
-                            <div>
-                                <Link to={ROUTES.PRODUCT_LIST}>{
-                                    <button type="button" className="shop__now__btn">
-                                        SHOP NOW
-                                    </button>
-                                }</Link>
-                            </div>
-                            <div>
-                                <div className="dot__div">
-                                    {
-                                        IMG_CONST_VALUE.map((key) => {
-                                            return (
-                                                <div className="dot">
-                                                </div>
-                                            )
-                                        })
-                                    }</div>
 
+                        <div>
+                            <div className="shop__now__detail">
+                                <div className="shop__now__details__div">
+                                    <div className="home__title__div">
+                                        <label>
+                                            <span>Shop the new</span>  <br></br> <span>Signature Collection</span>
+                                        </label>
+                                    </div>
+                                    <div className="home__title__discription__div">
+                                        <label>
+                                            Lorem ipsum dolor sit amet, consectetur  <br></br>adipiscing elit, sed do eiusmod tempor   </label>
+                                    </div>
+                                    <div>
+                                        <Link to={ROUTES.PRODUCT_LIST}>{
+                                            <button type="button" className="shop__now__btn shop__now__btn__phone__home">
+                                                SHOP NOW
+                                            </button>
+                                        }</Link>
+                                    </div>
+                                </div>
+
+                                {/* <div>
+                                    <div className="dot__div">
+                                        {
+                                            IMG_CONST_VALUE.map((key) => {
+                                                return (
+                                                    <div className="dot">
+                                                    </div>
+                                                )
+                                            })
+                                        }</div>
+
+                                </div> */}
                             </div>
+
                         </div>
 
                     </div>
@@ -213,6 +223,16 @@ function HomePage() {
                                         <div className="aem-GridColumn aem-GridColumn--phone--12">
                                             <div>
                                                 <Link to={ROUTES.PRODUCT_LIST}>{
+                                                    <button type="button" className="shop__now__btn">
+                                                        SHOP NOW
+                                                    </button>
+                                                }</Link>
+
+                                            </div>
+                                        </div>
+                                        <div className="aem-GridColumn aem-GridColumn--phone--12">
+                                            <div>
+                                                <Link to={ROUTES.PRODUCT_LIST}>{
                                                     <button type="button" className="shop__cont__btn">
                                                         SHOP COLLECTION
                                                     </button>
@@ -221,18 +241,8 @@ function HomePage() {
                                             </div>
 
                                         </div>
-                                        <div className="aem-GridColumn aem-GridColumn--phone--12">
-                                            <div>
-                                                <Link to={ROUTES.PRODUCT_LIST}>{
-                                                    <button type="button" className="shop__now__btn">
-                                                        SHOP NOW
-                                                    </button>
-                                                }</Link>
-
-                                            </div>
-                                        </div>
                                     </div>
-                                    <div className="border">
+                                    <div className="border border-home">
                                     </div>
                                 </div>
                             </div>
@@ -279,6 +289,8 @@ function HomePage() {
                                     </div>
                                 </div>
                             </div>
+
+
 
                         </div>
                     </div>

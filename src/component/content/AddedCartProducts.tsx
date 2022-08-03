@@ -1,17 +1,23 @@
 import SimpleAccordion from '../common/Accordian';
 import EditMenu from '../common/EditMenu';
 import Quantity from '../common/Quantity';
-import threemenu from '../../assests/images/threemenu.png';
+import morehorizontal from '../../assests/images/morehorizontal.svg';
+import { useState } from 'react';
 
 // added products in cart
 function AddedCartProducts() {
 
+    const [showMenuItem, setshowshowMenuItem] = useState(false);
+
     //maintain state on refresh 
     const Product = window.localStorage.getItem('cart');
     let uniqueCartItemList = Product ? JSON.parse(Product) : [];
-    //maintain state on refresh 
     const total = window.localStorage.getItem('cartValue');
     const cartValue = total ? total : ' ';
+
+    const handleThreeMenuIcon = () => {
+        setshowshowMenuItem(true)
+    }
 
     //return component
     return (
@@ -51,8 +57,18 @@ function AddedCartProducts() {
 
 
                             <div className="aem-GridColumn--phone--1">
-                                <div className='hide-three-menu-icon'>
-                                    <img src={threemenu} className='three-menu-logo ' alt='icon'></img>
+                                <div className="dropdown">
+                                    <div className='hide-three-menu-icon'>
+                                        <img
+                                            src={morehorizontal}
+                                            className='three-menu-logo '
+                                            alt='icon'
+                                            onClick={handleThreeMenuIcon}
+                                        ></img>
+                                    </div>
+                                    <div className={showMenuItem ? "checkout__info__show" : "checkout__info__hide"}>
+                                        <EditMenu />
+                                    </div>
                                 </div>
                             </div>
                             <div className="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--hide">
@@ -89,7 +105,7 @@ function AddedCartProducts() {
                 </div>
             </div>
 
-        </div>
+        </div >
     );
 }
 

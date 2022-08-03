@@ -5,7 +5,7 @@ import HomePage from "../component/content/HomePage";
 function Home() {
     
     useEffect(() => {
-           window.localStorage.setItem('cartValue', ' ')
+          // window.localStorage.setItem('cartValue', ' ')
     }, []);
 
     useEffect(() => {

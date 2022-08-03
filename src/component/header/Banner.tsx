@@ -116,7 +116,7 @@ function Banner() {
                         <div className='filter-sort-div'>
                             <div className="aem-Grid aem-Grid--12  aem-GridColumn--phone--12">
                                 <div className='aem-GridColumn  aem-GridColumn--phone--6'>
-                                    <div className='filter-sort-sub-container'>
+                                    <div className='filter__sub__container'>
                                         <img className='filter-sort-logo' alt='filter' src={sliders}></img>
                                         <span className='filter-sort-span'>
                                             Filter Results
@@ -124,7 +124,7 @@ function Banner() {
                                     </div>
                                 </div>
                                 <div className='aem-GridColumn  aem-GridColumn--phone--6'>
-                                    <div className='filter-sort-sub-container'>
+                                    <div className='sort__sub__container'>
                                         <img onClick={OnArrowUp} className='sort-logo' alt='increment' src={arrowup}></img>
                                         <img onClick={OnArrowDown} className='sort-logo' alt='decrement' src={arrowdown}></img>
                                         <span className='filter-sort-span'>

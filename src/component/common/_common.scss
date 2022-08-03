@@ -116,4 +116,20 @@
          padding: 1vw 8vw 1vw 8vw;
      }
 
+     //edit
+     .edit__icon__container {
+         position: absolute;
+         margin-left: 77vw;
+         margin-top: 0px;
+     }
+
+     .image-gallery-slide .image-gallery-image {
+         object-fit: fill !important
+     }
+
+     .image-gallery-content .image-gallery-slide .image-gallery-image {
+        //  max-height: calc(680px) !important
+     }
+
  }
+

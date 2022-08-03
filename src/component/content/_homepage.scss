@@ -185,45 +185,105 @@
 }
 
 
-
-
 //mobile View
 @media (min-width: 320px) and (max-width: 768px) {
     .home-page-sub-container-2 {
-        margin: 0vw 45px 0px 40px;
+        margin: 0vw 40px 0px 40px;
     }
 
     .category-img {
         position: relative;
+        margin-top: -4vw;
     }
 
     .home__title__div {
-        margin-top: 0px;
+        // margin-top: 0px;
+        font: normal normal 600 36px/45px Source Serif Pro;
+        letter-spacing: 0px;
+        color: #1B252C;
     }
 
     .shop__now__detail {
-        margin-top: 46vw;
-        margin-left: 22%;
+        margin-top: 10vw;
+        height: max-content;
+        width: -webkit-fill-available;
         position: absolute;
+        background: transparent linear-gradient(181deg, #F1F1F100 0%, #F0F0F0 100%) 0% 0% no-repeat padding-box;
     }
 
     .category__img__container {
         height: 380px;
     }
 
+    .home__title__1 {
+        font: normal normal 600 36px/45px Source Serif Pro;
+        margin-top: 16px;
+    }
+
+    .home__title__1__div {
+        margin-left: 0px;
+    }
+
+    .home__subtitle__1 {
+        font: normal normal 600 20px/25px Muli;
+    }
+
+    .shop__now__btn {
+        margin-top: 32px;
+        width: -webkit-fill-available;
+        margin-left: 5.4vw;
+        margin-right: 5.4vw;
+        margin-bottom: 24px;
+    }
+
+    .shop__cont__btn {
+        margin-top: 32px;
+        width: -webkit-fill-available;
+        margin-left: 5.4vw;
+        margin-right: 5.4vw;
+        margin-bottom: 32px;
+
+    }
+
+    .border-home {
+        width: -webkit-fill-available;
+        margin-left: 12vw;
+        margin-right: 12vw;
+    }
+
+    .man-stand-img {
+        height: 312px;
+        margin-top: -60px;
+    }
+
+
+    .home__title__2 {
+        font: normal normal 600 36px/45px Source Serif Pro;
+    }
+
+    .block__details {
+        margin-bottom: 32px;
+    }
+
     .man-sky-img {
         width: 100vw;
         margin-left: -40px;
         margin-bottom: -10vw;
+        margin-top: 0px;
     }
 
     .map__in__div {
         position: absolute;
-        margin-top: -345px;
+        margin-top: -500px;
         margin-left: 17vw;
     }
 
     .map__in__img {
         margin-left: 5px;
+    }
+
+    .shop__now__btn__phone__home {
+        margin-left: 76px;
+        margin-right: 76px;
     }
 }

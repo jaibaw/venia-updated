@@ -73,34 +73,39 @@
 //Mobile View
 @media (min-width: 320px) and (max-width: 768px) {
     .sidebar-container {
-        width: 540%;
+        position: absolute;
         height: max-content;
-        margin-top: -34%;
-        margin-left: 185px;
+        /* margin-top: -34%; */
+        background: white;
+        /* margin-left: 185px; */
         border: 2px solid #91959C;
         box-shadow: 0px 8px 16px #00000026;
+        width: -webkit-fill-available;
+        margin-left: 10vw;
     }
 
     .attr {
         width: auto;
         padding-bottom: 4%;
+        margin-top: 20px;
         padding-left: 5%;
+        margin-right: 20px;
+        margin-left: 20px;
+        border-top: #E5E5E7 3px solid;
+        border-bottom: #E5E5E7 3px solid;
     }
 
     .sidebar-span {
-        font: normal normal normal 30px/38px Muli;
-        color: #1D1D1B;
+        font: normal normal 600 16px/24px Muli;
+        color: #181C24;
     }
 
     .checkbox-span {
         width: 70%;
-        font: normal normal normal 20px/32px Muli;
+        font: normal normal normal 16px/24px Muli;
     }
 
     .chechbox-resize {
-        width: 35px;
-        height: 35px;
-        margin: 17px 40px 25px 0px;
         padding-top: 23px;
     }
 
@@ -108,15 +113,32 @@
         padding: 4% 0% 4% 0%;
     }
 
+    .sidebar__btn {
+        margin-bottom: 70px;
+    }
+
+    .clear__all__sapn__div {
+        text-decoration: underline;
+        font: normal normal 600 14px/24px Muli;
+        letter-spacing: 0px;
+        color: #181C24;
+        margin-top: 32px;
+        margin-left: 20px;
+        padding-left: 5%;
+    }
+
     .filter-title-div {
         width: auto;
         padding: 3% 0% 4% 5%;
-        background: ghostwhite;
+        background: #E5E5E7 0% 0% no-repeat padding-box;
+        font: normal normal 600 16px/24px Muli;
+        letter-spacing: 0.32px;
+        color: #1D1D1B;
     }
 
     .close-log {
         margin-left: 75%;
-        width: 35px;
+        width: 14px;
         display: block;
         margin-top: -3%;
     }

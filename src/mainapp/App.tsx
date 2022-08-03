@@ -12,6 +12,10 @@ import Home from "../container/Home";
 import CheckoutContainer from "../container/CheckoutContainer";
 import Order from "../container/Order";
 import Delete from "../component/common/Delete";
+import Women from "../component/content/menuBar/Women";
+import Men from "../component/content/menuBar/Men";
+import SmartGear from "../component/content/menuBar/SmartGear";
+import Accessories from "../component/content/menuBar/Accessories";
 
 //lazy loading
 const ProductList = lazy(() => import('../container/ProductList'))
@@ -44,6 +48,12 @@ function App() {
                 <Route path={ROUTES.CHECKOUT} element={<CheckoutContainer />} />
                 <Route path={ROUTES.ORDER_PLACES} element={<Order />} />
                 <Route path={ROUTES.DELETE_PRODUCT} element={<Delete />} />
+          
+                <Route path={ROUTES.WOMEN} element={<Women />} />
+                <Route path={ROUTES.MEN} element={<Men />} />
+                <Route path={ROUTES.SMART_GEAR} element={<SmartGear />} />
+                <Route path={ROUTES.ACCESSORIES} element={<Accessories />} />
+          
               </Routes>
             </main>
           </div>

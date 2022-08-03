@@ -64,7 +64,7 @@ function ShippingMethod() {
         <div className="shipping__method__container">
             <div>
                 <div onClick={handleShippingMethodLabel} className={showShippingMethodLabel ? "checkout__info__show " : "checkout__info__hide"}>
-                    <div className='checkout__methods__div' >
+                    <div className='checkout__methods__div checkout__methods__accordian__label' >
                         <label >
                             2. Shipping Method
                         </label>

@@ -99,7 +99,7 @@ function PaymentInformation(props: any) {
             <div>
                 <div onClick={handlePaymentInfoLabel} className={showPaymentInfoLabel ? "checkout__info__show " : "checkout__info__hide"}>
                     <div className="payment__info__border">
-                        <div className='checkout__methods__div' >
+                        <div className='checkout__methods__div checkout__methods__accordian__label' >
                             <label >
                                 3. Payment Information
                             </label>
@@ -383,7 +383,7 @@ function PaymentInformation(props: any) {
                             </div>
                             <div className="payment__term__and__policy__label">
                                 <label>By clicking confirm order you agree to our
-                                    <span className="payment__term__and__policy">Terms and Conditions</span>
+                                    <span className="payment__term__and__policy ">Terms and Conditions</span>
                                 </label>
                             </div>
                         </div>

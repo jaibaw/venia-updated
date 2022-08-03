@@ -12,6 +12,15 @@
     display: none;
 }
 
+.menu__bar__title__div {
+    font: normal normal 600 16px/24px Muli;
+    font: normal normal 600 16px/24px Muli;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+    text-decoration: none;
+}
+
 .venia-logo {
     margin-top: 6%;
     width: 63%;
@@ -51,7 +60,7 @@
     height: 20px;
     position: absolute;
     margin-top: -35px;
-    right: 19px;
+    right: 11px;
     border-radius: 100%;
     display: flex;
     align-items: center;
@@ -63,22 +72,23 @@
 }
 
 .badge__div {
-    position: relative;
-    width: 50px;
+    position: absolute;
+    width: 42px;
 }
 
 //Mobile View
 @media (min-width: 320px) and (max-width: 768px) {
     .menu {
-        width: 10vw;
+        width: 6vw;
         display: block;
         margin-top: 10px;
+        margin-left: 15px;
     }
 
     .venia-logo {
         margin-top: 0%;
         width: auto;
-        margin-left: 17vw;
+        margin-left: 0vw;
         height: 4rem;
     }
 
@@ -106,6 +116,12 @@
 
 
 @media (min-width: 1024px) and (max-width: 1207px) {
+    .menu-class {
+        margin-left: 0px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 433px) {
     .menu-class {
         margin-left: 0px;
     }

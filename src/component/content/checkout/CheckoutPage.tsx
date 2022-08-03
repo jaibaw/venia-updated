@@ -78,6 +78,9 @@ function CheckoutPage() {
                                         </button>
                                     }</Link>
                                 </div>
+                            </div>
+                            <div className='aem-GridColumn aem-GridColumn--phone--12'>
+
                                 <div className="payment__term__and__policy__label">
                                     <div>
                                         <label>By clicking confirm order you agree to our

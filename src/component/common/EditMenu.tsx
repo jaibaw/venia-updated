@@ -16,7 +16,7 @@ function EditMenu() {
         <div>
             <div className="edit__icon__container">
                 <div className="aem-Grid aem-Grid--12">
-                    <div className="aem-GridColumn aem-GridColumn--default--2  aem-GridColumn--phone--hide">
+                    <div className="aem-GridColumn aem-GridColumn--default--2">
                         <img className="edit__icons" src={edit} alt='edit-menu'></img>
 
                     </div>
@@ -26,7 +26,7 @@ function EditMenu() {
                     </div>
                 </div>
                 <div className="aem-Grid aem-Grid--12">
-                    <div className="aem-GridColumn aem-GridColumn--default--2  aem-GridColumn--phone--hide">
+                    <div className="aem-GridColumn aem-GridColumn--default--2">
                         <Link to={ROUTES.DELETE_PRODUCT}>{
                             <img className="edit__icons" src={trash} alt='delete-menu' onClick={handleDelete} ></img>
                         }</Link>
@@ -39,7 +39,7 @@ function EditMenu() {
                     </div>
                 </div>
                 <div className="aem-Grid aem-Grid--12">
-                    <div className="aem-GridColumn aem-GridColumn--default--2  aem-GridColumn--phone--hide">
+                    <div className="aem-GridColumn aem-GridColumn--default--2">
                         <img className="edit__icons" src={heart} alt='save-menu'></img>
 
                     </div>

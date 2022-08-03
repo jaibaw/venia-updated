@@ -3,7 +3,7 @@ import shoppingbag from '../../assests/images/shoppingbag.svg';
 import { ROUTES } from '../../constant/routes';
 import { Link, useLocation } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import menu from '../../assests/images/menu.png';
+import menu from '../../assests/images/menu.svg';
 import { useState } from 'react';
 import { action_setMenuBarStatus } from '../../actions/get-products';
 import Sidebar from './Sidebar';
@@ -15,6 +15,12 @@ function Appbar() {
 
     //local state
     const [menuBar, setMenuBar] = useState(false);
+
+    const [home, setHome] = useState(true);
+    const [women, setWomen] = useState(false);
+    const [men, setMen] = useState(false);
+    const [smartGear, setSmarGear] = useState(false);
+    const [accessories, setAccessories] = useState(false);
 
     //maintain state on refresh 
     const total = window.localStorage.getItem('cartValue');
@@ -30,6 +36,42 @@ function Appbar() {
         dispatch(action_setMenuBarStatus(true));
     }
 
+    const handleClickHome = () => {
+        setHome(true);
+        setWomen(false);
+        setMen(false);
+        setAccessories(false);
+        setSmarGear(false);
+    }
+
+    const handleClickWomen = () => {
+        setHome(false);
+        setWomen(true);
+        setMen(false);
+        setAccessories(false);
+        setSmarGear(false);
+    }
+    const handleClickMen = () => {
+        setHome(false);
+        setWomen(false);
+        setMen(true);
+        setAccessories(false);
+        setSmarGear(false);
+    }
+    const handleClickSmartGear = () => {
+        setHome(false);
+        setWomen(false);
+        setMen(false);
+        setAccessories(false);
+        setSmarGear(true);
+    }
+    const handleClickAccessories = () => {
+        setHome(false);
+        setWomen(false);
+        setMen(false);
+        setAccessories(true);
+        setSmarGear(false);
+    }
     //return component
     return (
         <div className="aem-Grid aem-Grid--12">
@@ -40,14 +82,19 @@ function Appbar() {
                         {
                             setMenuBarStatus &&
                             <div className="aem-GridColumn aem-GridColumn--phone--12">
-                                <Sidebar />
+                                <div className={menuBar ? "checkout__info__show" : "checkout__info__hide"}>
+                                    <Sidebar />
+                                </div>
                             </div>
                         }
                     </div>
-                    <div className={menuBar ? 'menu' : "aem-GridColumn aem-GridColumn--default--2 aem-GridColumn--phone--7"} >
+                    {/* <div className={menuBar ? 'menu' : "aem-GridColumn aem-GridColumn--default--2 aem-GridColumn--phone--7"} > */}
+                    <div className="aem-GridColumn aem-GridColumn--default--2 aem-GridColumn--phone--7" >
+
                         <Link to={ROUTES.HOME}>
                             {<img
-                                className={setMenuBarStatus ? 'list-class' : 'venia-logo'}
+                                // className={setMenuBarStatus ? 'list-class' : 'venia-logo'}
+                                className='venia-logo'
                                 alt='venia-logo'
                                 src={venialogoupdated}>
                             </img>}
@@ -55,20 +102,47 @@ function Appbar() {
                     </div>
                     <div className="aem-GridColumn aem-GridColumn--default--8  aem-GridColumn--phone--hide">
                         <ul className='menu-class'>
-                            <li className='list-class-women'><span className='home__span' >Home</span></li>
-                            <li className='list-class'>Women</li>
-                            <li className='list-class'>Men</li>
-                            <li className='list-class'>Smart Gear</li>
-                            <li className='list-class'>Accessories</li>
+                            <Link className="menu__bar__title__div" to={ROUTES.HOME}>
+                                <li
+                                    className='list-class-women'
+                                    onClick={handleClickHome}
+                                ><span className={home ? 'home__span' : ""} >Home</span></li>
+                            </Link>
+                            <Link className="menu__bar__title__div" to={ROUTES.WOMEN}>
+                                <li
+                                    className='list-class'
+                                    onClick={handleClickWomen}
+                                ><span className={women ? 'home__span' : ""} >Women</span></li>
+                            </Link>
+                            <Link className="menu__bar__title__div" to={ROUTES.MEN}>
+                                <li
+                                    className='list-class'
+                                    onClick={handleClickMen}
+                                ><span className={men ? 'home__span' : ""} >Men</span></li>
+                            </Link>
+                            <Link className="menu__bar__title__div" to={ROUTES.SMART_GEAR}>
+                                <li
+                                    className='list-class'
+                                    onClick={handleClickSmartGear}
+                                ><span className={smartGear ? 'home__span' : ""} >Smart Gear</span></li>
+                            </Link>
+                            <Link className="menu__bar__title__div" to={ROUTES.ACCESSORIES}>
+                                <li
+                                    className='list-class'
+                                    onClick={handleClickAccessories}
+                                ><span className={accessories ? 'home__span' : ""} >Accessories</span></li>
+                            </Link>
+
                         </ul>
                     </div>
-                    <div className={menuBar ? 'menu' : "aem-GridColumn aem-GridColumn--default--1 aem-GridColumn--phone--3"}>
+                    <div className="aem-GridColumn aem-GridColumn--default--1 aem-GridColumn--phone--3">
                         <ul className='menu-class'>
                             {
                                 ((cartValue === ' ' && setCartQuantity === '') || (location.pathname === '/delete-product')) ?
                                     <div>
                                         <img
                                             className={setMenuBarStatus ? 'list-class' : 'search-logo'}
+                                            //className='search-logo'
                                             alt='cart'
                                             src={shoppingbag}>
                                         </img>
@@ -79,7 +153,8 @@ function Appbar() {
                                             {
                                                 <div className='badge__div'>
                                                     <img
-                                                        className={setMenuBarStatus ? 'list-class' : 'search-logo'}
+                                                        //className={setMenuBarStatus ? 'list-class' : 'search-logo'}
+                                                        className='search-logo'
                                                         alt='cart' src={shoppingbag}>
                                                     </img>
                                                     <span className='badge'>{cartValue === ' ' ? setCartQuantity : cartValue}</span>
@@ -91,9 +166,9 @@ function Appbar() {
                         </ul>
                     </div>
                 </nav>
-            </div>
+            </div >
 
-        </div>
+        </div >
 
     );
 }

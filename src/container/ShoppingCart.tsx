@@ -8,7 +8,8 @@ function ShoppingCart() {
     const setMenuBarStatus = useSelector((state: any) => state.getProductList.setMenuBarStatus);
 
     return (
-        <div className={setMenuBarStatus ? 'display-list' : 'shopping-cart-container'}   >
+        // <div className={setMenuBarStatus ? 'display-list' : 'shopping-cart-container'}   >
+        <div className='shopping-cart-container'>
             <div className='shopping-cart-sub-container'>
                 <div className="aem-Grid aem-Grid--12">
                     <div className='shopping-cart-title'>
@@ -17,7 +18,7 @@ function ShoppingCart() {
                         </span>
                     </div>
                     <div className='shopping__cart__border'>
-                        <div className='border'>
+                        <div className='border shipping__border'>
                         </div>
                     </div>
                     <div className="aem-GridColumn aem-GridColumn--default--8 aem-GridColumn--phone--12">

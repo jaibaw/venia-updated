@@ -18,26 +18,23 @@
 
 //mobile View
 @media (min-width: 320px) and (max-width: 768px) {
-    // .shopping-cart-title {
-    //     padding: 0vw 0vw 0vw 24vw;
-    // }
+    .shopping-cart-title {
+        padding: 0vw 10vw 0vw 10vw;
+        font: normal normal 600 36px/45px Source Serif Pro;
+    }
 
-    // .shopping-cart-title-span {
-    //     font: normal normal 600 7vw Source Serif Pro;
-    // }
+    .shopping-cart-title-span {
+        font: normal normal 600 7vw Source Serif Pro;
+    }
 
-    // .shopping-cart-border {
-    //     border: #1F39FF 2px solid;
-    //     width: 15vw;
-    //     height: 0px;
-    //     margin-bottom: 8%;
-    //     margin-left: 45vw;
-    // }
+    .shopping__cart__border {
+        margin-left: 30vw;
+        margin-right: 30vw;
+    }
 
-    // .shopping-cart-sub-container {
-    //     margin-right: 0px;
-    // }
-
+    .shipping__border {
+        height: 6px;
+    }
 }
 
 

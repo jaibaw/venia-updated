@@ -116,7 +116,7 @@ function ShippingInformation(props: any) {
     return (
         <div className="shipping__info__container">
             <div onClick={handleShippingInfoLabel} className={showshippingInfoLabel ? "checkout__info__show " : "checkout__info__hide"}>
-                <div className='checkout__methods__div' >
+                <div className='checkout__methods__div checkout__methods__accordian__label' >
                     <label >
                         1. Shipping Information
                     </label>
@@ -276,11 +276,23 @@ function ShippingInformation(props: any) {
                                 </div>
                                 <div className="aem-GridColumn aem-GridColumn--default--6   aem-GridColumn--phone--12 ">
                                     <div className="label__name__div">
-                                        <label htmlFor="street-address-2" >Street Address2
-                                        </label>
-                                        <label htmlFor="optinal" className="optional__field__span" >Optional
-                                        </label>
+                                        <div className="aem-Grid aem-Grid--12">
+
+                                            <div className="aem-GridColumn aem-GridColumn--default--9   aem-GridColumn--phone--10 ">
+                                                <div>
+                                                    <label htmlFor="street-address-2" >Street Address2
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div className="aem-GridColumn aem-GridColumn--default--3   aem-GridColumn--phone--2">
+                                                <div>
+                                                    <label htmlFor="optinal" className="optional__field__span" >Optional
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
+
                                     <div className="input__box__div">
                                         <input
                                             id="street-address-2"
@@ -423,21 +435,21 @@ function ShippingInformation(props: any) {
                         </div>
                     </div>
                     <div className="aem-Grid aem-Grid--12">
-                           <div className="aem-GridColumn aem-GridColumn--default--5   aem-GridColumn--phone--12 ">
-                                <div className="shipping__method__summary__label__div">
-                                    <div>
-                                        <label>
-                                            {email ? email : (emailRestore && emailRestore ? emailRestore : email)}
-                                        </label>
-                                    </div>
-                                    <div>
-                                        <label>
-                                            +{phone ? phone : (phoneRestore && phoneRestore ? phoneRestore : phone)}
-                                        </label>
-                                    </div>
+                        <div className="aem-GridColumn aem-GridColumn--default--5   aem-GridColumn--phone--12 ">
+                            <div className="shipping__method__summary__label__div">
+                                <div>
+                                    <label>
+                                        {email ? email : (emailRestore && emailRestore ? emailRestore : email)}
+                                    </label>
+                                </div>
+                                <div>
+                                    <label>
+                                        +{phone ? phone : (phoneRestore && phoneRestore ? phoneRestore : phone)}
+                                    </label>
                                 </div>
                             </div>
-                     
+                        </div>
+
                         <div className="aem-GridColumn aem-GridColumn--default--5   aem-GridColumn--phone--12 ">
                             <div className="shipping__method__summary__label__div">
                                 <div>

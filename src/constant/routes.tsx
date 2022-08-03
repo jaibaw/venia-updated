@@ -5,11 +5,20 @@ export const ROUTES = {
 
     PRODUCT_DETAILS: "/product-detail",
 
-    SHOPPING_CART : "/shopping-cart",
+    SHOPPING_CART: "/shopping-cart",
 
-    CHECKOUT : "/checkout",
+    CHECKOUT: "/checkout",
 
-    ORDER_PLACES : "/order-placed",
+    ORDER_PLACES: "/order-placed",
 
-    DELETE_PRODUCT : "/delete-product"
+    DELETE_PRODUCT: "/delete-product",
+
+    WOMEN: "/women",
+
+    MEN: "/men",
+
+    SMART_GEAR: "/smart-gear",
+
+    ACCESSORIES: "/accessories",
+
 }

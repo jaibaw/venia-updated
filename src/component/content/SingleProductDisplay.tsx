@@ -9,6 +9,7 @@ import { ROUTES } from "../../constant/routes";
 import { Link } from "react-router-dom";
 import StarRating from "../common/StarRating";
 import chevrondown from "../../assests/images/chevrondown.svg";
+import ImgSlider from "../common/ImgSlider";
 // single product display
 function SingleProductDisplay() {
     // redux state
@@ -25,7 +26,6 @@ function SingleProductDisplay() {
 
     // maintain cart quantity
     const addTocart = () => {
-        alert("product added in cart")
         cartItemList.push(singleProductDetail);
         let uniqueCartItemList = [...new Set(cartItemList)];
         window.localStorage.setItem('cart', JSON.stringify(uniqueCartItemList))
@@ -44,10 +44,18 @@ function SingleProductDisplay() {
                                 <div>
                                     {
                                         IMG_CONST_VALUE.map((key) => {
+                                            console.log("key", key)
                                             return (
+
                                                 <div className='side-product-div'>
-                                                    <img className='side-product-display' alt='product' src={singleProductDetail.image}>
-                                                    </img>
+                                                    {
+                                                        key === 1 ?
+                                                            <img className='side-product-display one__product__div' alt='product' src={singleProductDetail.image}>
+                                                            </img>
+                                                            :
+                                                            <img className='side-product-display' alt='product' src={singleProductDetail.image}>
+                                                            </img>
+                                                    }
                                                 </div>
                                             )
                                         })
@@ -79,18 +87,9 @@ function SingleProductDisplay() {
                     <div className='aem-GridColumn  aem-GridColumn--phone--12'>
                         <div className="product-display-phone-view">
                             <div className='product-display'>
-                                <img className="single-img-display" alt='product' src={singleProductDetail.image}>
-                                </img>
-                                <div className="dot__div">
-                                    {
-                                        IMG_CONST_VALUE.map((key) => {
-                                            return (
-                                                <div className="dot">
-                                                </div>
-                                            )
-                                        })
-
-                                    }</div>
+                                {/* <img className="single-img-display" alt='product' src={singleProductDetail.image}>
+                                </img> */}
+                                <ImgSlider />
                             </div>
                         </div>
                     </div>

@@ -44,4 +44,34 @@
         display: none;
     }
 
+    .payment__term__and__policy__label {
+        margin-bottom: 60px;
+        margin-left: 20vw;
+        margin-right: 20vw;
+    }
+
+    .payment__term__and__policy{
+        margin-left: 10vw;
+    }
+}
+
+@media (min-width: 443px) and (max-width: 568px) {
+    .payment__term__and__policy__label {
+        margin-right: 10vw;
+        margin-left: 15vw;
+    }
+}
+
+@media (min-width: 369px) and (max-width: 444px) {
+    .payment__term__and__policy__label {
+        margin-right: 0vw;
+        margin-left: 10%;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 370px) {
+    .payment__term__and__policy__label {
+        margin-right: -1vw;
+        margin-left: 0%;
+    }
 }

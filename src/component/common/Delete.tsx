@@ -1,16 +1,19 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { action_setCartQuantity } from "../../actions/get-products";
 import { ROUTES } from "../../constant/routes";
 
 // delete
 const Delete = () => {
-
+    const dispatch = useDispatch();
+   
     let cartItemList = useSelector((state: any) => state.getProductList.cartItemList);
 
     const handleClick = () => {
         cartItemList.length = 0
         window.localStorage.setItem('cartValue', ' ')
         window.localStorage.setItem('cart', JSON.stringify([]))
+        dispatch(action_setCartQuantity(""));
     }
 
     return (
