@@ -116,30 +116,32 @@ function OrderSuccess(props: any) {
                                 {uniqueCartItemList && uniqueCartItemList.map(function (key: any) {
                                     return (
                                         <div className="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12">
-                                            <div className="aem-Grid aem-Grid--12">
+                                            <div className="order__img__bottom">
+                                                <div className="aem-Grid aem-Grid--12">
+                                                    <div className="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--3">
+                                                        <div>
+                                                            <img className="payment__product__cart__img" alt='product' src={key.image}>
+                                                            </img>
+                                                        </div>
+                                                    </div>
+                                                    <div className="aem-GridColumn aem-GridColumn--default--8 aem-GridColumn--phone--6">
+                                                        <div className="order__img__label">
+                                                            <div className="payent__product__label">
+                                                                <label htmlFor='title'> {key.title}</label>
+                                                            </div>
+                                                            <div>
+                                                                <label htmlFor='size' >  Size : Medium</label>
+                                                            </div>
+                                                            <div >
+                                                                <label htmlFor='color'> Color : Black</label>
+                                                            </div>
+                                                            <div>
+                                                                <label htmlFor='price'>${key.price}</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
 
-                                                <div className="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--5">
-                                                    <div>
-                                                        <img className="payment__product__cart__img" alt='product' src={key.image}>
-                                                        </img>
-                                                    </div>
-                                                </div>
-                                                <div className="aem-GridColumn aem-GridColumn--default--8 aem-GridColumn--phone--6">
-                                                    <div>
-                                                        <div className="payent__product__label">
-                                                            <label htmlFor='title'> {key.title}</label>
-                                                        </div>
-                                                        <div>
-                                                            <label htmlFor='size' >  Size : Medium</label>
-                                                        </div>
-                                                        <div >
-                                                            <label htmlFor='color'> Color : Black</label>
-                                                        </div>
-                                                        <div>
-                                                            <label htmlFor='price'>${key.price}</label>
-                                                        </div>
-                                                    </div>
-                                                </div>
                                             </div>
                                         </div>
                                     );

@@ -72,8 +72,8 @@
 @media (min-width: 320px) and (max-width: 768px) {
 
     .dot__div {
-        margin-left: 35vw;
-        margin-top: -19vw;
+        margin-left: 31vw;
+        margin-top: -100px;
     }
 
     .dot {
@@ -97,14 +97,14 @@
 
     .product-display {
         width: -webkit-fill-available;
-        height: 100vw;
-        padding: 20px 20px 20px 20px;
+        height: max-content;
+        padding: 6vw 6vw 6vw 6vw;
         opacity: 1;
     }
 
     .single-img-display {
         height: -webkit-fill-available;
-        padding: 25px 20px 20px 20px;
+        padding: 8vw 8vw 8vw 8vw;
     }
 
     .details-div {
@@ -125,11 +125,11 @@
         margin-left: 34vw;
     }
 
-    .add__to__cart__btn{
-        margin-left: 25vw;
+    .add__to__cart__btn {
+        width: -webkit-fill-available;
     }
-    
-    .border__div__product{
+
+    .border__div__product {
         margin-bottom: 20px;
     }
 }

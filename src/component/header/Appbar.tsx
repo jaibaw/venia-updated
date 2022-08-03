@@ -20,8 +20,10 @@ function Appbar() {
     const total = window.localStorage.getItem('cartValue');
     const cartValue = total ? total : ' ';
 
+
     //redux state
     const setMenuBarStatus = useSelector((state: any) => state.getProductList.setMenuBarStatus);
+    const setCartQuantity = useSelector((state: any) => state.getProductList.setCartQuantity);
 
     const handleMenuBar = () => {
         setMenuBar(true);
@@ -43,7 +45,13 @@ function Appbar() {
                         }
                     </div>
                     <div className={menuBar ? 'menu' : "aem-GridColumn aem-GridColumn--default--2 aem-GridColumn--phone--7"} >
-                        <Link to={ROUTES.HOME}>{<img className={setMenuBarStatus ? 'list-class' : 'venia-logo'} alt='venia-logo' src={venialogoupdated}></img>}</Link>
+                        <Link to={ROUTES.HOME}>
+                            {<img
+                                className={setMenuBarStatus ? 'list-class' : 'venia-logo'}
+                                alt='venia-logo'
+                                src={venialogoupdated}>
+                            </img>}
+                        </Link>
                     </div>
                     <div className="aem-GridColumn aem-GridColumn--default--8  aem-GridColumn--phone--hide">
                         <ul className='menu-class'>
@@ -57,7 +65,7 @@ function Appbar() {
                     <div className={menuBar ? 'menu' : "aem-GridColumn aem-GridColumn--default--1 aem-GridColumn--phone--3"}>
                         <ul className='menu-class'>
                             {
-                                ((cartValue === ' ') || (location.pathname === '/delete-product')) ?
+                                ((cartValue === ' ' && setCartQuantity === '') || (location.pathname === '/delete-product')) ?
                                     <div>
                                         <img
                                             className={setMenuBarStatus ? 'list-class' : 'search-logo'}
@@ -74,12 +82,11 @@ function Appbar() {
                                                         className={setMenuBarStatus ? 'list-class' : 'search-logo'}
                                                         alt='cart' src={shoppingbag}>
                                                     </img>
-                                                    <span className='badge'>{cartValue === ' ' ? 0 : cartValue}</span>
+                                                    <span className='badge'>{cartValue === ' ' ? setCartQuantity : cartValue}</span>
                                                 </div>
                                             }
                                         </Link>
                                     </div>
-
                             }
                         </ul>
                     </div>

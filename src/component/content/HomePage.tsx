@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
 import { ROUTES } from "../../constant/routes";
 import mengroupcrop from "../../assests/images/mengroupcrop.png";
+import mengroup from "../../assests/images/mengroup.png";
 import mensky from "../../assests/images/mensky.png";
 import menstand from "../../assests/images/menstand.png";
 import mappin from "../../assests/images/mappin.svg";
 import chevronleft from "../../assests/images/chevronleft.svg"
-import { CATEGORY } from "../../constant/common";
+import { CATEGORY, IMG_CONST_VALUE } from "../../constant/common";
 
 //home
 function HomePage() {
@@ -14,14 +15,14 @@ function HomePage() {
             <div className="home-page-sub-container-1">
                 <div className="aem-Grid aem-Grid--12">
 
-                    <div className="aem-GridColumn aem-GridColumn--default--1   aem-GridColumn--phone--12 ">
+                    <div className="aem-GridColumn aem-GridColumn--default--1  aem-GridColumn--phone--hide">
                         <div>
                             <img className="back__arraow" src={chevronleft} alt="chevronleft">
                             </img>
                         </div>
                     </div>
 
-                    <div className="aem-GridColumn aem-GridColumn--default--5   aem-GridColumn--phone--12 ">
+                    <div className="aem-GridColumn aem-GridColumn--default--5 aem-GridColumn--phone--hide">
                         <div>
                             <div className="home__title__div">
                                 <label>
@@ -44,13 +45,57 @@ function HomePage() {
 
 
                     </div>
-                    <div className="aem-GridColumn aem-GridColumn--default--6   aem-GridColumn--phone--12 ">
+                    <div className="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--hide">
                         <div>
-                            <img className="man-grp-img" src={mengroupcrop} alt='men-group'>
+                            <img className="man__grp__img" src={mengroupcrop} alt='men-group'>
                             </img>
                         </div>
                     </div>
                 </div>
+                {/* Phone View */}
+                <div className='banner-phone'>
+                    <div className="aem-Grid aem-Grid--12  aem-GridColumn--phone--12">
+                        <div className='aem-GridColumn aem-GridColumn--phone--12'>
+                            <div>
+                                <img className="man__grp__img" src={mengroup} alt='man-play'>
+                                </img>
+
+                            </div>
+                        </div>
+                        <div className="shop__now__detail">
+                            <div className="home__title__div">
+                                <label>
+                                    <span>Shop the new</span>  <br></br> <span>Signature Collection</span>
+                                </label>
+                            </div>
+                            <div className="home__title__discription__div">
+                                <label>
+                                    Lorem ipsum dolor sit amet, consectetur  <br></br>adipiscing elit, sed do eiusmod tempor   </label>
+                            </div>
+                            <div>
+                                <Link to={ROUTES.PRODUCT_LIST}>{
+                                    <button type="button" className="shop__now__btn">
+                                        SHOP NOW
+                                    </button>
+                                }</Link>
+                            </div>
+                            <div>
+                                <div className="dot__div">
+                                    {
+                                        IMG_CONST_VALUE.map((key) => {
+                                            return (
+                                                <div className="dot">
+                                                </div>
+                                            )
+                                        })
+                                    }</div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                {/* {phone view end} */}
             </div>
 
             <div className="home-page-sub-container-2">
@@ -60,22 +105,24 @@ function HomePage() {
                             CATEGORY.map((key) => {
                                 return (
                                     <div className="aem-GridColumn aem-GridColumn--default--3  aem-GridColumn--phone--12">
-                                        <div className="category__img__list__div">
-                                            <Link to={ROUTES.PRODUCT_LIST}>{
-                                                <img className="category-img" id={key.id} src={key.img} alt='category-list'>
-                                                </img>}
-                                            </Link>
-                                        </div>
-                                        <div className="category__img__div">
-                                            <div className="category__img__span__div">
-                                                <label>
-                                                    {key.name}
-                                                </label>
+                                        <div className="category__img__container" >
+                                            <div className="category__img__list__div">
+                                                <Link to={ROUTES.PRODUCT_LIST}>{
+                                                    <img className="category-img" id={key.id} src={key.img} alt='category-list'>
+                                                    </img>}
+                                                </Link>
                                             </div>
-                                            <div>
-                                                <label className="category__img__sub__span ">
-                                                    Lorem ipsum dolor sit amet
-                                                </label>
+                                            <div className="category__img__div">
+                                                <div className="category__img__span__div">
+                                                    <label>
+                                                        {key.name}
+                                                    </label>
+                                                </div>
+                                                <div>
+                                                    <label className="category__img__sub__span ">
+                                                        Lorem ipsum dolor sit amet
+                                                    </label>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -85,10 +132,9 @@ function HomePage() {
 
                     </div>
                 </div>
-
                 <div className="home-page-margin-botton">
                     <div className="aem-Grid aem-Grid--12">
-                        <div className="aem-GridColumn aem-GridColumn--default--8   aem-GridColumn--phone--12 ">
+                        <div className="aem-GridColumn aem-GridColumn--default--8  aem-GridColumn--phone--hide">
                             <div className="home__title__1__div">
                                 <div className="home__title__1">
                                     <label>
@@ -104,7 +150,7 @@ function HomePage() {
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor labore dolore magna lorem ipsum dolor sit dolore magna.</p>
                                 </div>
                                 <div className="aem-Grid aem-Grid--12">
-                                    <div className="aem-GridColumn aem-GridColumn--default--6   aem-GridColumn--phone--12 ">
+                                    <div className="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--hide">
                                         <div>
                                             <Link to={ROUTES.PRODUCT_LIST}>{
                                                 <button type="button" className="shop__cont__btn">
@@ -115,7 +161,7 @@ function HomePage() {
                                         </div>
 
                                     </div>
-                                    <div className="aem-GridColumn aem-GridColumn--default--6   aem-GridColumn--phone--12 ">
+                                    <div className="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--hide">
                                         <div>
                                             <Link to={ROUTES.PRODUCT_LIST}>{
                                                 <button type="button" className="shop__now__btn">
@@ -131,13 +177,70 @@ function HomePage() {
                             </div>
 
                         </div>
-                        <div className="aem-GridColumn aem-GridColumn--default--4   aem-GridColumn--phone--12 ">
+                        <div className="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--hide">
                             <div>
                                 <img className="man-stand-img" src={menstand} alt="men-stand">
                                 </img>
                             </div>
                         </div>
                     </div>
+
+                    {/* Phone View */}
+                    <div className='banner-phone'>
+                        <div className="aem-Grid aem-Grid--12  aem-GridColumn--phone--12">
+                            <div className='aem-GridColumn aem-GridColumn--phone--12'>
+                                <div>
+                                    <img className="man-stand-img" src={menstand} alt="men-stand">
+                                    </img>
+                                </div>
+                            </div>
+                            <div className='aem-GridColumn aem-GridColumn--phone--12'>
+                                <div className="home__title__1__div">
+                                    <div className="home__title__1">
+                                        <label>
+                                            Take off in the new Signature Legging
+                                        </label>
+                                    </div>
+                                    <div className="home__subtitle__1">
+                                        <label>
+                                            Lorem Ipsum Dolor Tempor
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor labore dolore magna lorem ipsum dolor sit dolore magna.</p>
+                                    </div>
+                                    <div className="aem-Grid aem-Grid--12">
+                                        <div className="aem-GridColumn aem-GridColumn--phone--12">
+                                            <div>
+                                                <Link to={ROUTES.PRODUCT_LIST}>{
+                                                    <button type="button" className="shop__cont__btn">
+                                                        SHOP COLLECTION
+                                                    </button>
+                                                }</Link>
+
+                                            </div>
+
+                                        </div>
+                                        <div className="aem-GridColumn aem-GridColumn--phone--12">
+                                            <div>
+                                                <Link to={ROUTES.PRODUCT_LIST}>{
+                                                    <button type="button" className="shop__now__btn">
+                                                        SHOP NOW
+                                                    </button>
+                                                }</Link>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="border">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    {/* {phone view end} */}
+
                 </div>
 
                 <div>
@@ -166,10 +269,12 @@ function HomePage() {
                                     </div>
                                 </div>
                                 <div>
-                                    <img className="map__in__img " src={mappin} alt="mappin">
-                                    </img>
-                                    <div className="border__div">
-                                        <div className="border">
+                                    <div className="map__in__div">
+                                        <img className="map__in__img " src={mappin} alt="mappin">
+                                        </img>
+                                        <div className="border__div">
+                                            <div className="border">
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

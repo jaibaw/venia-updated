@@ -120,7 +120,7 @@ function PaymentInformation(props: any) {
                     <div>
                         <div className="payment__opt__credit__card__div">
                             <div className="aem-Grid aem-Grid--12">
-                                <div className="aem-GridColumn aem-GridColumn--default--1   aem-GridColumn--phone--12 ">
+                                <div className="aem-GridColumn aem-GridColumn--default--1   aem-GridColumn--phone--1 ">
                                     <div>
                                         <input
                                             type="radio"
@@ -132,7 +132,7 @@ function PaymentInformation(props: any) {
                                         />
                                     </div>
                                 </div>
-                                <div className="aem-GridColumn aem-GridColumn--default--11   aem-GridColumn--phone--12 ">
+                                <div className="aem-GridColumn aem-GridColumn--default--11   aem-GridColumn--phone--11 ">
                                     <div>
                                         <label htmlFor="credit-card">
                                             Credit Card
@@ -183,8 +183,8 @@ function PaymentInformation(props: any) {
                                 </div>
                             </div>
                             <div>
-                                <div className="aem-Grid aem-Grid--12">
-                                    <div className="aem-GridColumn aem-GridColumn--default--5   aem-GridColumn--phone--12 ">
+                                <div className="aem-Grid aem-Grid--12 aem-GridColumn--phone--12">
+                                    <div className="aem-GridColumn aem-GridColumn--default--5   aem-GridColumn--phone--8">
                                         <div className="label__name__div">
                                             <label htmlFor="expiration-date">Expiration Date
                                             </label>
@@ -192,7 +192,7 @@ function PaymentInformation(props: any) {
                                         <div className="input__box__div">
                                             <input
                                                 required
-                                                className="input__box"
+                                                className="input__box input__box__payment"
                                                 type="select"
                                                 name="expiration-date"
                                                 id="expiration-date"
@@ -201,7 +201,7 @@ function PaymentInformation(props: any) {
                                             />
                                         </div>
                                     </div>
-                                    <div className="aem-GridColumn aem-GridColumn--default--2   aem-GridColumn--phone--12 ">
+                                    <div className="aem-GridColumn aem-GridColumn--default--2   aem-GridColumn--phone--3">
                                         <div className="label__name__div">
                                             <label htmlFor="cvv">CVV
                                             </label>
@@ -209,7 +209,7 @@ function PaymentInformation(props: any) {
                                         <div className="input__box__div">
                                             <input
                                                 required
-                                                className="input__box"
+                                                className="input__box input__box__payment"
                                                 type="text"
                                                 name="cvv"
                                                 id="cvv"
@@ -217,7 +217,7 @@ function PaymentInformation(props: any) {
                                                 onChange={handleCVVChange} />
                                         </div>
                                     </div>
-                                    <div className="aem-GridColumn aem-GridColumn--default--1   aem-GridColumn--phone--12 ">
+                                    <div className="aem-GridColumn aem-GridColumn--default--1   aem-GridColumn--phone--1">
                                         <div className="helpcircle__div">
                                             <img src={helpcircle} alt="help-circle">
                                             </img>
@@ -237,7 +237,7 @@ function PaymentInformation(props: any) {
                         </div>
                         <div className={checkedPaypal ? "" : "payment__option__div"}>
                             <div className="aem-Grid aem-Grid--12">
-                                <div className="aem-GridColumn aem-GridColumn--default--1   aem-GridColumn--phone--12 ">
+                                <div className="aem-GridColumn aem-GridColumn--default--1   aem-GridColumn--phone--1">
                                     <div>
                                         <input
                                             type="radio"
@@ -249,7 +249,7 @@ function PaymentInformation(props: any) {
                                         />
                                     </div>
                                 </div>
-                                <div className="aem-GridColumn aem-GridColumn--default--11   aem-GridColumn--phone--12 ">
+                                <div className="aem-GridColumn aem-GridColumn--default--11   aem-GridColumn--phone--11">
                                     <div>
                                         <label htmlFor="paypal">
                                             PayPal
@@ -299,7 +299,7 @@ function PaymentInformation(props: any) {
                                                     </img>
                                                 </div>
                                             </div>
-                                            <div className="aem-GridColumn aem-GridColumn--default--4   aem-GridColumn--phone--2 ">
+                                            <div className="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--hide">
                                                 <div className="checkout__edit__label">
                                                     <label>Edit</label>
                                                 </div>
@@ -328,7 +328,7 @@ function PaymentInformation(props: any) {
                     </div>
                     <div className="payent__product__summary__container">
                         <div className="payent__product__sub__summary__container">
-                            <div className="aem-Grid aem-Grid--12">
+                            <div className="aem-Grid aem-Grid--12 aem-GridColumn--phone--12">
                                 <div className="payment__product__cart__count">
                                     <label>
                                         {uniqueCartItemList.length}{' '} items in your order
@@ -337,52 +337,58 @@ function PaymentInformation(props: any) {
                                 {uniqueCartItemList && uniqueCartItemList.map(function (key: any) {
                                     return (
                                         <div className="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12">
-                                            <div className="aem-Grid aem-Grid--12">
+                                            <div className="order__img__bottom">
+                                                <div className="aem-Grid aem-Grid--12">
+                                                    <div className="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--3">
+                                                        <div>
+                                                            <img className="payment__product__cart__img" alt='product' src={key.image}>
+                                                            </img>
+                                                        </div>
+                                                    </div>
+                                                    <div className="aem-GridColumn aem-GridColumn--default--8 aem-GridColumn--phone--6">
+                                                        <div className="order__img__label">
+                                                            <div className="payent__product__label">
+                                                                <label htmlFor='title'> {key.title}</label>
+                                                            </div>
+                                                            <div>
+                                                                <label htmlFor='size' >  Size : Medium</label>
+                                                            </div>
+                                                            <div >
+                                                                <label htmlFor='color'> Color : Black</label>
+                                                            </div>
+                                                            <div>
+                                                                <label htmlFor='price'>${key.price}</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
 
-                                                <div className="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--5">
-                                                    <div>
-                                                        <img className="payment__product__cart__img" alt='product' src={key.image}>
-                                                        </img>
-                                                    </div>
-                                                </div>
-                                                <div className="aem-GridColumn aem-GridColumn--default--8 aem-GridColumn--phone--6">
-                                                    <div>
-                                                        <div className="payent__product__label">
-                                                            <label htmlFor='title'> {key.title}</label>
-                                                        </div>
-                                                        <div>
-                                                            <label htmlFor='size' >  Size : Medium</label>
-                                                        </div>
-                                                        <div >
-                                                            <label htmlFor='color'> Color : Black</label>
-                                                        </div>
-                                                        <div>
-                                                            <label htmlFor='price'>${key.price}</label>
-                                                        </div>
-                                                    </div>
-                                                </div>
                                             </div>
                                         </div>
                                     );
                                 })}
                             </div>
                         </div>
+                    </div>
+                    <div className="aem-Grid aem-Grid--12">
+                        <div className="aem-GridColumn aem-GridColumn--default--12  aem-GridColumn--phone--hide">
+                            <div className="checkout__step4__btn_div">
+                                <Link to={ROUTES.ORDER_PLACES}>{
+                                    <button type="submit" className="checkout__step4__btn">
+                                        <span className="btn__span">
+                                            PLACE ORDER
+                                        </span>
+                                    </button>
+                                }</Link>
+                            </div>
+                            <div className="payment__term__and__policy__label">
+                                <label>By clicking confirm order you agree to our
+                                    <span className="payment__term__and__policy">Terms and Conditions</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
 
-                    </div>
-                    <div className="checkout__step4__btn_div">
-                        <Link to={ROUTES.ORDER_PLACES}>{
-                            <button type="submit" className="checkout__step4__btn">
-                                <span className="btn__span">
-                                    PLACE ORDER
-                                </span>
-                            </button>
-                        }</Link>
-                    </div>
-                    <div className="payment__term__and__policy__label">
-                        <label>By clicking confirm order you agree to our
-                            <span className="payment__term__and__policy">Terms and Conditions</span>
-                        </label>
-                    </div>
                 </div>
 
             </div>

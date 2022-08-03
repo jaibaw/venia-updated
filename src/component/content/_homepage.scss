@@ -15,7 +15,7 @@
     margin: 0vw 14vw 128px 15vw;
 }
 
-.man-grp-img {
+.man__grp__img {
     width: -webkit-fill-available;
     height: 650px;
 }
@@ -111,6 +111,7 @@
     margin-right: 10px;
     margin-top: -70px;
     position: relative;
+    border-bottom: #1363DF 8px solid
 }
 
 .category__img__span__div {
@@ -189,10 +190,40 @@
 //mobile View
 @media (min-width: 320px) and (max-width: 768px) {
     .home-page-sub-container-2 {
-        margin: 0vw 16px 128px 15px;
+        margin: 0vw 45px 0px 40px;
     }
 
     .category-img {
-        height: 360px;
+        position: relative;
+    }
+
+    .home__title__div {
+        margin-top: 0px;
+    }
+
+    .shop__now__detail {
+        margin-top: 46vw;
+        margin-left: 22%;
+        position: absolute;
+    }
+
+    .category__img__container {
+        height: 380px;
+    }
+
+    .man-sky-img {
+        width: 100vw;
+        margin-left: -40px;
+        margin-bottom: -10vw;
+    }
+
+    .map__in__div {
+        position: absolute;
+        margin-top: -345px;
+        margin-left: 17vw;
+    }
+
+    .map__in__img {
+        margin-left: 5px;
     }
 }

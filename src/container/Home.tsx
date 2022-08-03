@@ -3,9 +3,13 @@ import HomePage from "../component/content/HomePage";
 
 //home
 function Home() {
+    
     useEffect(() => {
-        //maintain state on refresh 
-        window.localStorage.setItem('cartValue', ' ')
+           window.localStorage.setItem('cartValue', ' ')
+    }, []);
+
+    useEffect(() => {
+        //maintain state on refresh   
         window.localStorage.setItem('email', ' ');
         window.localStorage.setItem('phone', ' ');
         window.localStorage.setItem('country', ' ');

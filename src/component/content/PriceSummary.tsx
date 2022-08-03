@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
 import paypal from "../../assests/images/paypal.png";
 import lock from "../../assests/images/lock.svg";
-import { useEffect} from "react";
+import { useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { ROUTES } from "../../constant/routes";
 
@@ -16,13 +16,20 @@ function PriceSummary(props: any) {
     const Product = window.localStorage.getItem('cart');
     let uniqueCartItemList = Product ? JSON.parse(Product) : [];
 
+    //maintain state on refresh 
+    const total = window.localStorage.getItem('cartValue');
+    const cartValue = total ? total : ' ';
 
     useEffect(() => {
         price();
     });
 
     const handleCheckOut = () => {
-        alert("shipping the product")
+        if (cartValue === ' ') {
+            alert("add the product in cart")
+        } else {
+            alert("shipping the product")
+        }
     }
 
     let totolPrice = 0;
@@ -92,8 +99,13 @@ function PriceSummary(props: any) {
             <div className="aem-Grid aem-Grid--12">
                 <div className={location.pathname === '/checkout' ? 'checkout__btn__display' : 'price__summary__imgs__container'}>
                     <div>
-                        <Link to={ROUTES.CHECKOUT}>
-                            <button type="button" className="checkout__btn"  onClick={handleCheckOut}>
+                        <Link to={cartValue === ' ' ? ROUTES.SHOPPING_CART: ROUTES.CHECKOUT }>
+                            <button
+                                type="button"
+                                className="checkout__btn"
+                                onClick={handleCheckOut}
+                               // disabled = {cartValue === ' ' ? true : false}
+                            >
                                 {<img className="lock__img" src={lock} alt="lock"></img>}
                                 CHECKOUT
                             </button>

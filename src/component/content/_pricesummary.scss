@@ -49,7 +49,7 @@
 }
 
 .checkout__btn {
-    width: 270px;
+    width: -webkit-fill-available;
     height: 40px;
     border: 2px solid #2A65D7;
     border-radius: 10px;
@@ -73,29 +73,8 @@
         margin-left: 0%;
     }
 
-    .price__summary__img__checkout {
-        width: auto;
-    }
-
-    .price__summary__imgs__container {
-        margin-left: 20vw;
-    }
-
     .price__summary__img__paypal {
-        width: auto;
+        width: -webkit-fill-available;
         height: 43px;
     }
-}
-
-@media (min-width: 401px) and (max-width: 511px) {
-    .price__summary__imgs__container {
-        margin-left: 10vw;
-    }
-}
-
-@media (min-width: 320px) and (max-width: 400px) {
-    .price__summary__imgs__container {
-        margin-left: 0vw;
-    }
-
 }

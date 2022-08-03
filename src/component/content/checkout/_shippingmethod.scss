@@ -21,3 +21,13 @@
 .shipping__method__container {
     font: normal normal normal 16px/24px Muli;
 }
+
+//mobile View
+@media (min-width: 320px) and (max-width: 768px) {
+    .checkout__step2__btn {
+        width: -webkit-fill-available;
+        margin-left: 5vw;
+        margin-right: 5vw;
+    }
+
+}

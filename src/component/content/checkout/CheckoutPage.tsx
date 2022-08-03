@@ -1,5 +1,7 @@
 
 import { useState } from "react";
+import { Link } from "react-router-dom";
+import { ROUTES } from "../../../constant/routes";
 import PriceSummary from "../PriceSummary";
 import PaymentInformation from "./PaymentInformation";
 import ShippingInformation from "./ShippingInformation";
@@ -63,6 +65,32 @@ function CheckoutPage() {
                     <div className={showpriceSummary ? "price__summary__div" : ""}>
                         <PriceSummary />
                     </div>
+                    {/* Phone View */}
+                    <div className='banner-phone'>
+                        <div className="aem-Grid aem-Grid--12  aem-GridColumn--phone--12">
+                            <div className='aem-GridColumn aem-GridColumn--phone--12'>
+                                <div className="checkout__step4__btn_div">
+                                    <Link to={ROUTES.ORDER_PLACES}>{
+                                        <button type="submit" className="checkout__step4__btn">
+                                            <span className="btn__span">
+                                                PLACE ORDER
+                                            </span>
+                                        </button>
+                                    }</Link>
+                                </div>
+                                <div className="payment__term__and__policy__label">
+                                    <div>
+                                        <label>By clicking confirm order you agree to our
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <span className="payment__term__and__policy">Terms and Conditions</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {/* {phone view end} */}
                 </div>
             </div>
         </div>

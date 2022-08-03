@@ -355,7 +355,7 @@ function ShippingInformation(props: any) {
                                 </div>
                             </div>
                             <div className="aem-Grid aem-Grid--12">
-                                <div className="aem-GridColumn aem-GridColumn--default--12">
+                                <div className="aem-GridColumn aem-GridColumn--default--12  aem-GridColumn--phone--hide">
                                     <div>
                                         <button
                                             type='button'
@@ -369,6 +369,26 @@ function ShippingInformation(props: any) {
                                     </div>
                                 </div>
                             </div>
+
+                            <div className='banner-phone'>
+                                <div className="aem-Grid aem-Grid--12  aem-GridColumn--phone--12">
+                                    <div className='aem-GridColumn aem-GridColumn--phone--12'>
+                                        <div>
+                                            <button
+                                                type='button'
+                                                className="checkout__step1__btn"
+                                                onClick={handleContShippingMethod}
+                                            >
+                                                <span className="btn__span">
+                                                    CONTINUE
+                                                </span>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
                         </form>
                     </div>
                 </div>
@@ -392,7 +412,7 @@ function ShippingInformation(props: any) {
                                                 </img>
                                             </div>
                                         </div>
-                                        <div className="aem-GridColumn aem-GridColumn--default--4   aem-GridColumn--phone--2 ">
+                                        <div className="aem-GridColumn aem-GridColumn--default--4   aem-GridColumn--phone--hide ">
                                             <div className="checkout__edit__label">
                                                 <label>Edit</label>
                                             </div>
@@ -403,20 +423,21 @@ function ShippingInformation(props: any) {
                         </div>
                     </div>
                     <div className="aem-Grid aem-Grid--12">
-                        <div className="aem-GridColumn aem-GridColumn--default--5   aem-GridColumn--phone--12 ">
-                            <div className="shipping__method__summary__label__div">
-                                <div>
-                                    <label>
-                                        {email ? email : (emailRestore && emailRestore ? emailRestore : email)}
-                                    </label>
-                                </div>
-                                <div>
-                                    <label>
-                                        +{phone ? phone : (phoneRestore && phoneRestore ? phoneRestore : phone)}
-                                    </label>
+                           <div className="aem-GridColumn aem-GridColumn--default--5   aem-GridColumn--phone--12 ">
+                                <div className="shipping__method__summary__label__div">
+                                    <div>
+                                        <label>
+                                            {email ? email : (emailRestore && emailRestore ? emailRestore : email)}
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <label>
+                                            +{phone ? phone : (phoneRestore && phoneRestore ? phoneRestore : phone)}
+                                        </label>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                     
                         <div className="aem-GridColumn aem-GridColumn--default--5   aem-GridColumn--phone--12 ">
                             <div className="shipping__method__summary__label__div">
                                 <div>

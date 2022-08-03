@@ -79,7 +79,7 @@ function ShippingMethod() {
                 </div>
                 <div>
                     <div className="aem-Grid aem-Grid--12">
-                        <div className="aem-GridColumn aem-GridColumn--default--1   aem-GridColumn--phone--12 ">
+                        <div className="aem-GridColumn aem-GridColumn--default--1   aem-GridColumn--phone--1 ">
                             <div>
                                 <input
                                     id="shipping-method"
@@ -92,7 +92,7 @@ function ShippingMethod() {
                                 />
                             </div>
                         </div>
-                        <div className="aem-GridColumn aem-GridColumn--default--11   aem-GridColumn--phone--12 ">
+                        <div className="aem-GridColumn aem-GridColumn--default--11   aem-GridColumn--phone--11 ">
                             <div>
                                 <label htmlFor="standard-shipping">
                                     <span className="delivery__method__span">
@@ -107,7 +107,7 @@ function ShippingMethod() {
                 </div>
                 <div>
                     <div className="aem-Grid aem-Grid--12">
-                        <div className="aem-GridColumn aem-GridColumn--default--1   aem-GridColumn--phone--12 ">
+                        <div className="aem-GridColumn aem-GridColumn--default--1   aem-GridColumn--phone--1 ">
                             <div>
                                 <input
                                     type="radio"
@@ -120,7 +120,7 @@ function ShippingMethod() {
                                 />
                             </div>
                         </div>
-                        <div className="aem-GridColumn aem-GridColumn--default--11   aem-GridColumn--phone--12 ">
+                        <div className="aem-GridColumn aem-GridColumn--default--11   aem-GridColumn--phone--11 ">
                             <div>
                                 <label htmlFor="express-delivery">
                                     <span className="delivery__method__span"> Express Delivery</span>
@@ -134,7 +134,7 @@ function ShippingMethod() {
                 <div>
 
                     <div className="aem-Grid aem-Grid--12">
-                        <div className="aem-GridColumn aem-GridColumn--default--1   aem-GridColumn--phone--12 ">
+                        <div className="aem-GridColumn aem-GridColumn--default--1   aem-GridColumn--phone--1 ">
                             <div>
                                 <input
                                     type="radio"
@@ -147,7 +147,7 @@ function ShippingMethod() {
                                 />
                             </div>
                         </div>
-                        <div className="aem-GridColumn aem-GridColumn--default--11   aem-GridColumn--phone--12 ">
+                        <div className="aem-GridColumn aem-GridColumn--default--11   aem-GridColumn--phone--11 ">
                             <div>
                                 <label htmlFor="ted-lasso">
                                     <span className="delivery__method__span">Next Day Delivery </span>
@@ -183,20 +183,20 @@ function ShippingMethod() {
                     <div className="aem-Grid aem-Grid--12">
                         <div className="aem-GridColumn aem-GridColumn--default--10   aem-GridColumn--phone--10 ">
                             <div className="shipping__method__summary__div">
-                                <label>Shipping Method</label>
+                                <label>Shipping Information</label>
                             </div>
                         </div>
                         <div className="aem-GridColumn aem-GridColumn--default--2   aem-GridColumn--phone--2 ">
                             <div onClick={handleContPayementEdit}>
                                 <div className="shipping__method__summary__div">
                                     <div className="aem-Grid aem-Grid--12">
-                                        <div className="aem-GridColumn aem-GridColumn--default--4   aem-GridColumn--phone--2 ">
+                                        <div className="aem-GridColumn aem-GridColumn--default--4   aem-GridColumn--phone--4 ">
                                             <div>
                                                 <img className="checkout__edit__icon" src={edit1} alt="edit">
                                                 </img>
                                             </div>
                                         </div>
-                                        <div className="aem-GridColumn aem-GridColumn--default--4   aem-GridColumn--phone--2 ">
+                                        <div className="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--hide">
                                             <div className="checkout__edit__label">
                                                 <label>Edit</label>
                                             </div>
