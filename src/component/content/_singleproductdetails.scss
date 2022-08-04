@@ -1,3 +1,5 @@
+@import "../../mainapp/color";
+
 .product-title {
     margin: 20px 0px 13px 0px;
 }
@@ -23,7 +25,7 @@
 .product-attribute-span {
     font: normal normal 600 20px/30px Muli;
     letter-spacing: 0px;
-    color: #172026;
+    color: $semiBoldLabel;
 }
 
 .product-add-to-cart-logo {

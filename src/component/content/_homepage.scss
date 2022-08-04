@@ -1,3 +1,5 @@
+@import "../../mainapp/color";
+
 .homepage-container {
     width: auto;
     height: max-content;
@@ -8,7 +10,7 @@
 }
 
 .home-page-sub-container-1 {
-    background: #E5E5E7;
+    background: $sidebarBorder;
 }
 
 .home-page-sub-container-2 {
@@ -47,9 +49,9 @@
     width: -webkit-fill-available;
     height: 432px;
     /* UI Properties */
-    background: #1B252C 0% 0% no-repeat padding-box;
+    background: black 0% 0% no-repeat padding-box;
     opacity: 1;
-    color: #FFFFFF;
+    color: $white;
 }
 
 .back__arraow {
@@ -79,14 +81,14 @@
     height: 40px;
     /* UI Properties */
     background: var(--primary-brand) 0% 0% no-repeat padding-box;
-    background: #1363DF 0% 0% no-repeat padding-box;
+    background: $blue 0% 0% no-repeat padding-box;
     box-shadow: 0px 3px 6px #39373729;
     border-radius: 10px;
     opacity: 1;
-    border-color: #1363DF;
+    border-color: $blue;
     font: normal normal bold 14px/16px Muli;
     letter-spacing: 0px;
-    color: #FFFFFF;
+    color: $white;
     text-transform: uppercase;
     margin-top: 24px;
     margin-bottom: 67px;
@@ -96,13 +98,13 @@
     width: 221px;
     height: 40px;
     background: var(--white) 0% 0% no-repeat padding-box;
-    background: #FFFFFF 0% 0% no-repeat padding-box;
-    border: 2px solid #2A65D7;
+    background: $white 0% 0% no-repeat padding-box;
+    border: 2px solid $buttonOutline;
     border-radius: 10px;
     opacity: 1;
     font: normal normal bold 14px/16px Muli;
     letter-spacing: 0px;
-    color: #1363DF;
+    color: $blue;
     text-transform: uppercase;
     margin-top: 24px;
     margin-bottom: 67px;
@@ -115,18 +117,18 @@
     margin-right: 10px;
     margin-top: -70px;
     position: relative;
-    border-bottom: #1363DF 8px solid
+    border-bottom: $blue 8px solid
 }
 
 .category__img__span__div {
     font: normal normal 600 24px/30px Source Serif Pro;
-    color: #FFFFFF;
+    color: $white;
     margin-left: 15px;
     padding-top: 17px;
 }
 
 .category__img__sub__span {
-    color: #FFFFFF;
+    color: $white;
     font: normal normal normal 16px/23px Muli;
     letter-spacing: 0.32px;
     margin-left: 15px;
@@ -160,11 +162,11 @@
     width: 180px;
     height: 40px;
     border: 2px solid var(--white);
-    border: 2px solid #FFFFFF;
+    border: 2px solid $white;
     border-radius: 10px;
     opacity: 1;
-    color: #FFFFFF;
-    background-color: #1B252C;
+    color: $white;
+    background-color: $black;
     margin-top: 32px;
 }
 
@@ -180,7 +182,7 @@
     height: 8px;
     /* UI Properties */
     background: var(--primary-brand) 0% 0% no-repeat padding-box;
-    background: #1363DF 0% 0% no-repeat padding-box;
+    background: $blue 0% 0% no-repeat padding-box;
     opacity: 1;
 }
 
@@ -204,7 +206,7 @@
         // margin-top: 0px;
         font: normal normal 600 36px/45px Source Serif Pro;
         letter-spacing: 0px;
-        color: #1B252C;
+        color: $black;
     }
 
     .shop__now__detail {
@@ -301,4 +303,43 @@
         padding: 82px 0px 0px 0px;
         text-align: center;
     }
+}
+
+@media (min-width: 769px) and (max-width: 1280px) {
+    .home__title__2 {
+        font: normal normal 600 36px/45px Source Serif Pro;
+    }
+
+    .home__title__2__div {
+        padding: 6vw 3px 0px 4vw;
+    }
+
+    .shop__cont__service__btn {
+        width: 15vw;
+    }
+
+    .border__div {
+        margin-left: -50px;
+    }
+
+    .shop__now__btn {
+        width: -webkit-fill-available;
+        margin-left: 3vw;
+        margin-right: 3vw;
+    }
+
+    .shop__cont__btn {
+        width: -webkit-fill-available;
+        // margin-left: 3vw;
+        margin-right: 3vw;
+    }
+
+    .category__span__div__for__tablet {
+        text-align: center;
+    }
+
+    .map__in__div {
+        margin-top: -10px;
+    }
+
 }

@@ -40,7 +40,7 @@ function CheckoutPage() {
                                 <div className="aem-Grid aem-Grid--12 aem-GridColumn--phone--hide">
                                     <div className="aem-GridColumn aem-GridColumn--default--8 aem-GridColumn--phone--hide">
                                         <div className="sign__in__label">
-                                            <label>
+                                            <label htmlFor="sign-in">
                                                 Sign in for Express Checkout
                                             </label>
                                         </div>

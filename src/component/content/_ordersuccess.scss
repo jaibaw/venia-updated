@@ -1,3 +1,5 @@
+@import "../../mainapp/color";
+
 .order__success__container {
     font: normal normal normal 16px/24px Muli;
 }
@@ -25,7 +27,7 @@
 }
 
 .discount__span__div {
-    color: #FFFFFF;
+    color: $white;
     font: normal normal 600 36px/45px Source Serif Pro;
     margin-top: 50px;
     margin-left: 5vw;
@@ -42,8 +44,8 @@
     width: -webkit-fill-available;
     height: 351px;
     background: var(--primary-d1) 0% 0% no-repeat padding-box;
-    background: #47B5FF 0% 0% no-repeat padding-box;
-    border: 1px solid #D1D3D6;
+    background: $orderPlaceBadge 0% 0% no-repeat padding-box;
+    border: 1px solid $border;
     border-radius: 2px;
     opacity: 1;
 }

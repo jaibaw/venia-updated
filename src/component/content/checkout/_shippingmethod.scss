@@ -1,3 +1,5 @@
+@import "../../../mainapp/color";
+
 .checkout__step2__btn {
     width: 281px;
     height: 40px;
@@ -5,17 +7,17 @@
     margin-left: 10vw;
     margin-bottom: 48px;
     background: var(--white) 0% 0% no-repeat padding-box;
-    background: #FFFFFF 0% 0% no-repeat padding-box;
-    border: 2px solid #2A65D7;
+    background: $white 0% 0% no-repeat padding-box;
+    border: 2px solid $buttonOutline;
     border-radius: 10px;
-    color: #1363DF;
+    color: $blue;
     opacity: 1;
 }
 
 .delivery__method__span {
     font: normal normal 600 16px/24px Muli;
     letter-spacing: 0px;
-    color: #172026;
+    color: $semiBoldLabel;
 }
 
 .shipping__method__container {

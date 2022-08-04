@@ -1,14 +1,17 @@
+@import "../../../mainapp/color";
+
+
 .checkout__step4__btn {
     width: 300px;
     height: 40px;
     /* UI Properties */
     background: var(--primary-brand) 0% 0% no-repeat padding-box;
-    background: #1363DF 0% 0% no-repeat padding-box;
+    background: $blue 0% 0% no-repeat padding-box;
     box-shadow: 0px 3px 6px #39373729;
     border-radius: 10px;
-    border-color: #1363DF;
+    border-color: $blue;
     opacity: 1;
-    color: #FFFFFF;
+    color: $white;
 }
 
 .checkout__step4__btn_div {
@@ -17,7 +20,7 @@
 }
 
 .payment__info__border {
-    border-bottom: #F4F5F5 2px solid;
+    border-bottom: $PayementAndShipmentBorder 2px solid;
 }
 
 .payment__opt__credit__card__div {
@@ -27,8 +30,8 @@
 
 .payment__option__div {
     font: normal normal normal 16px/24px Muli;
-    border-top: #F4F5F5 2px solid;
-    border-bottom: #F4F5F5 2px solid;
+    border-top: $PayementAndShipmentBorder 2px solid;
+    border-bottom: $PayementAndShipmentBorder 2px solid;
     padding-top: 15px;
     padding-bottom: 15px;
 }
@@ -54,7 +57,7 @@
 .payment__product__cart__count {
     font: normal normal 600 16px/20px Muli;
     letter-spacing: 0px;
-    color: #172026;
+    color: $semiBoldLabel;
     opacity: 1;
     margin: 32px 0px 24px 0px;
 }
@@ -63,7 +66,7 @@
     width: -webkit-fill-available;
     margin-right: 6vw;
     height: max-content;
-    border: #F4F5F5 2px solid;
+    border: $PayementAndShipmentBorder 2px solid;
     font: normal normal normal 16px/24px Muli;
     margin-bottom: 40px;
 }
@@ -77,7 +80,7 @@
     text-decoration: underline;
     font: normal normal 600 16px/24px Muli;
     letter-spacing: 0px;
-    color: #172026;
+    color: $semiBoldLabel;
 }
 
 .payment__term__and__policy__label {

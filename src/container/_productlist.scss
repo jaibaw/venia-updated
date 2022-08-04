@@ -1,3 +1,5 @@
+@import "../mainapp/color";
+
 .product-list-container {
     height: max-content;
     margin: 0vw 10.5vw 0vw 15vw;
@@ -18,5 +20,14 @@
 
     .display-list {
         display: none;
+    }
+}
+
+
+@media (min-width: 769px) and (max-width: 1280px) {
+    .product-list-container {
+        height: max-content;
+        margin: 0vw 1.5vw 0vw 5vw;
+        opacity: 1;
     }
 }

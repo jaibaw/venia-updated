@@ -1,6 +1,8 @@
+@import "../../../mainapp/color";
+
 ::placeholder {
   font: normal normal normal 16px/19px Muli;
-  color: #91959C;
+  color: $placeholderAndBorder
 }
 
 input[type='text'] {
@@ -19,14 +21,14 @@ input[type="radio"] {
   padding: 5px;
   /* background-color only for content */
   background-clip: content-box;
-  border: 2px solid #1363DF;
-  // background-color: #1363DF;
+  border: 2px solid $blue;
+  // background-color: $blue;
   border-radius: 50%;
 }
 
 /* appearance for checked radiobutton */
 input[type="radio"]:checked {
-  background-color: #1363DF;
+  background-color: $blue;
 }
 
 
@@ -52,7 +54,7 @@ input[type="radio"]:checked {
 .checkout__methods__div {
   font: normal normal 600 20px/25px Muli;
   margin-bottom: 24px;
-  border-top: #F4F5F5 2px solid;
+  border-top: $PayementAndShipmentBorder 2px solid;
   padding-top: 24px;
 }
 
@@ -82,10 +84,10 @@ input[type="radio"]:checked {
   margin-left: 10vw;
   margin-bottom: 48px;
   background: var(--white) 0% 0% no-repeat padding-box;
-  background: #FFFFFF 0% 0% no-repeat padding-box;
-  border: 2px solid #2A65D7;
+  background: $white 0% 0% no-repeat padding-box;
+  border: 2px solid $buttonOutline;
   border-radius: 10px;
-  color: #1363DF;
+  color: $blue;
   opacity: 1;
 }
 
@@ -115,7 +117,7 @@ input[type="radio"]:checked {
 .shipping__info__summary__container {
   width: -webkit-fill-available;
   height: max-content;
-  border: #F4F5F5 2px solid;
+  border: $PayementAndShipmentBorder 2px solid;
   margin-bottom: 16px;
 }
 
@@ -134,7 +136,7 @@ input[type="radio"]:checked {
 .checkout__edit__label {
   font: normal normal 600 16px/22px Muli;
   letter-spacing: 0px;
-  color: #1363DF;
+  color: $blue;
   opacity: 1;
   margin-top: -3px;
 }
@@ -151,12 +153,12 @@ input[type="radio"]:checked {
 .optional__field__span {
   font: normal normal normal 14px/16px Muli;
   letter-spacing: 0px;
-  color: #545D63;
+  color: $regularLable;
   // margin-left: 9vw;
 }
 
 .checkout__methods__accordian__label {
-  color: #72777F;
+  color: $checkoutAccordian;
 }
 
 //mobile View

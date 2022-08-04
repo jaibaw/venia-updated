@@ -1,15 +1,17 @@
+@import "../../mainapp/color";
+
 .banner__block {
     width: -webkit-fill-available;
     height: 352px;
     /* UI Properties */
-    background: #1B252C 0% 0% no-repeat padding-box;
+    background: $black 0% 0% no-repeat padding-box;
     opacity: 1;
 }
 
 .banner__block__span__div {
     font: normal normal 600 48px/60px Source Serif Pro;
     letter-spacing: 0px;
-    color: #FFFFFF;
+    color: $white ;
     text-align: center;
     padding: 96px 0px 103px 0px;
 }
@@ -31,7 +33,7 @@
     /* UI Properties */
     font: normal normal 600 16px/20px Muli;
     letter-spacing: 0px;
-    color: #172026;
+    color: $semiBoldLabel;
 }
 
 .filter-dropdown-span {
@@ -66,7 +68,7 @@
 @media (min-width: 320px) and (max-width: 768px) {
 
     .banner-sub-container {
-        margin: 24px 14vw 0vw 0vw;
+        margin: 24px 0vw 0vw 0vw;
     }
 
     .man__sit {
@@ -142,5 +144,11 @@
 @media (min-width: 1800px) and (max-width: 1920px) {
     .filter-div {
         margin-left: 130px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1280px) {
+    .banner-sub-container {
+        margin: 4vw 0vw 0vw 5vw;
     }
 }

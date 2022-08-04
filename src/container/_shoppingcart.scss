@@ -1,3 +1,5 @@
+@import "../mainapp/color";
+
 .shopping-cart-title-span {
     font: normal normal 600 40px/35px Source Serif Pro;
     text-align: center;
@@ -38,16 +40,3 @@
         height: 6px;
     }
 }
-
-
-// @media (min-width: 1002px) and (max-width: 1920px) {
-//     .shopping-cart-title {
-//         padding: 30px 27% 1% 35%;
-//     }
-// }
-
-// @media (min-width: 768px) and (max-width: 1001px) {
-//     .shopping-cart-title {
-//         padding: 30px 10% 1% 27%;
-//     }
-// }

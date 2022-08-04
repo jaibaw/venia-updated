@@ -1,12 +1,11 @@
 import { Link } from "react-router-dom";
 import { ROUTES } from "../../constant/routes";
 import mengroupcrop from "../../assests/images/mengroupcrop.png";
-import mengroup from "../../assests/images/mengroup.png";
 import mensky from "../../assests/images/mensky.png";
 import menstand from "../../assests/images/menstand.png";
 import mappin from "../../assests/images/mappin.svg";
 import chevronleft from "../../assests/images/chevronleft.svg"
-import { CATEGORY, IMG_CONST_VALUE } from "../../constant/common";
+import { CATEGORY } from "../../constant/common";
 import ImgSlider from "../common/ImgSlider";
 
 //home
@@ -26,18 +25,18 @@ function HomePage() {
                     <div className="aem-GridColumn aem-GridColumn--default--5 aem-GridColumn--phone--hide">
                         <div>
                             <div className="home__title__div">
-                                <label>
+                                <label htmlFor="home-title">
                                     Shop the new <br></br> Signature Collection
                                 </label>
                             </div>
                             <div className="home__title__discription__div">
-                                <label>
+                                <label  htmlFor="home-title-discription">
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore ar dolore magna aliqua. Labortis mattis <br></br> aliquam faucibus purus
                                 </label>
                             </div>
                             <div>
                                 <Link to={ROUTES.PRODUCT_LIST}>{
-                                    <button type="button" className="shop__now__btn">
+                                    <button id = "shop-now" name="shop-now" type="button" className="shop__now__btn">
                                         SHOP NOW
                                     </button>
                                 }</Link>
@@ -57,10 +56,6 @@ function HomePage() {
                 <div className='banner-phone'>
                     <div className="aem-Grid aem-Grid--12  aem-GridColumn--phone--12">
                         <div className='aem-GridColumn aem-GridColumn--phone--12'>
-                            {/* <div>
-                                <img className="man__grp__img" src={mengroup} alt='man-play'>
-                                </img>
-                            </div> */}
                             <div className="man__grp__img" >
                                 <ImgSlider />
                             </div>
@@ -70,35 +65,22 @@ function HomePage() {
                             <div className="shop__now__detail">
                                 <div className="shop__now__details__div">
                                     <div className="home__title__div">
-                                        <label>
+                                        <label htmlFor="home-title">
                                             <span>Shop the new</span>  <br></br> <span>Signature Collection</span>
                                         </label>
                                     </div>
                                     <div className="home__title__discription__div">
-                                        <label>
+                                        <label htmlFor="home-title-disciption">
                                             Lorem ipsum dolor sit amet, consectetur  <br></br>adipiscing elit, sed do eiusmod tempor   </label>
                                     </div>
                                     <div>
                                         <Link to={ROUTES.PRODUCT_LIST}>{
-                                            <button type="button" className="shop__now__btn shop__now__btn__phone__home">
+                                            <button  id="shop-now" name="shop-now" type="button" className="shop__now__btn shop__now__btn__phone__home">
                                                 SHOP NOW
                                             </button>
                                         }</Link>
                                     </div>
                                 </div>
-
-                                {/* <div>
-                                    <div className="dot__div">
-                                        {
-                                            IMG_CONST_VALUE.map((key) => {
-                                                return (
-                                                    <div className="dot">
-                                                    </div>
-                                                )
-                                            })
-                                        }</div>
-
-                                </div> */}
                             </div>
 
                         </div>
@@ -124,12 +106,12 @@ function HomePage() {
                                             </div>
                                             <div className="category__img__div">
                                                 <div className="category__img__span__div">
-                                                    <label>
+                                                    <label htmlFor="category-name">
                                                         {key.name}
                                                     </label>
                                                 </div>
-                                                <div>
-                                                    <label className="category__img__sub__span ">
+                                                <div className="category__span__div__for__tablet">
+                                                    <label htmlFor="category-sub-title" className="category__img__sub__span ">
                                                         Lorem ipsum dolor sit amet
                                                     </label>
                                                 </div>
@@ -147,12 +129,12 @@ function HomePage() {
                         <div className="aem-GridColumn aem-GridColumn--default--8  aem-GridColumn--phone--hide">
                             <div className="home__title__1__div">
                                 <div className="home__title__1">
-                                    <label>
+                                    <label htmlFor="home-title-1">
                                         Take off in the new Signature Legging
                                     </label>
                                 </div>
                                 <div className="home__subtitle__1">
-                                    <label>
+                                    <label htmlFor="home-subtitle-1">
                                         Lorem Ipsum Dolor Tempor
                                     </label>
                                 </div>
@@ -163,7 +145,7 @@ function HomePage() {
                                     <div className="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--hide">
                                         <div>
                                             <Link to={ROUTES.PRODUCT_LIST}>{
-                                                <button type="button" className="shop__cont__btn">
+                                                <button id="shop-collection" name="shop-collection" type="button" className="shop__cont__btn">
                                                     SHOP COLLECTION
                                                 </button>
                                             }</Link>
@@ -174,7 +156,7 @@ function HomePage() {
                                     <div className="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--hide">
                                         <div>
                                             <Link to={ROUTES.PRODUCT_LIST}>{
-                                                <button type="button" className="shop__now__btn">
+                                                <button id="shop-now" name="shop-now" type="button" className="shop__now__btn">
                                                     SHOP NOW
                                                 </button>
                                             }</Link>
@@ -207,12 +189,12 @@ function HomePage() {
                             <div className='aem-GridColumn aem-GridColumn--phone--12'>
                                 <div className="home__title__1__div">
                                     <div className="home__title__1">
-                                        <label>
+                                        <label htmlFor="home-titlr-1">
                                             Take off in the new Signature Legging
                                         </label>
                                     </div>
                                     <div className="home__subtitle__1">
-                                        <label>
+                                        <label htmlFor="home-subtitle-1">
                                             Lorem Ipsum Dolor Tempor
                                         </label>
                                     </div>
@@ -223,7 +205,7 @@ function HomePage() {
                                         <div className="aem-GridColumn aem-GridColumn--phone--12">
                                             <div>
                                                 <Link to={ROUTES.PRODUCT_LIST}>{
-                                                    <button type="button" className="shop__now__btn">
+                                                    <button  type="button" className="shop__now__btn">
                                                         SHOP NOW
                                                     </button>
                                                 }</Link>
@@ -233,7 +215,7 @@ function HomePage() {
                                         <div className="aem-GridColumn aem-GridColumn--phone--12">
                                             <div>
                                                 <Link to={ROUTES.PRODUCT_LIST}>{
-                                                    <button type="button" className="shop__cont__btn">
+                                                    <button  type="button" className="shop__cont__btn">
                                                         SHOP COLLECTION
                                                     </button>
                                                 }</Link>
@@ -265,15 +247,15 @@ function HomePage() {
                             <div className="block__details">
                                 <div className="home__title__2__div">
                                     <div className="home__title__2">
-                                        <label>Conquer your <br></br>next adventure</label>
+                                        <label htmlFor="home-title-2" >Conquer your <br></br>next adventure</label>
                                     </div>
                                     <div>
-                                        <label>
+                                        <label htmlFor="home-subtitle-2">
                                             Lorem Ipsum Dolor Tempor
                                         </label>
                                     </div>
                                     <div>
-                                        <button type="button" className="shop__cont__service__btn">
+                                        <button type="button"  name="shop-device" className="shop__cont__service__btn">
                                             SHOP DEVICES
                                         </button>
                                     </div>
@@ -289,12 +271,8 @@ function HomePage() {
                                     </div>
                                 </div>
                             </div>
-
-
-
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>

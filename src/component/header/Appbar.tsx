@@ -142,7 +142,6 @@ function Appbar() {
                                     <div>
                                         <img
                                             className={setMenuBarStatus ? 'list-class' : 'search-logo'}
-                                            //className='search-logo'
                                             alt='cart'
                                             src={shoppingbag}>
                                         </img>
@@ -153,7 +152,6 @@ function Appbar() {
                                             {
                                                 <div className='badge__div'>
                                                     <img
-                                                        //className={setMenuBarStatus ? 'list-class' : 'search-logo'}
                                                         className='search-logo'
                                                         alt='cart' src={shoppingbag}>
                                                     </img>

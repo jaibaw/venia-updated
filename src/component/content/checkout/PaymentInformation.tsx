@@ -41,7 +41,7 @@ function PaymentInformation(props: any) {
             setShowPaymentInfoEdit(true)
             setShowPaymentInfoLabel(false)
         } else {
-            alert("enter all the fields")
+            alert("enter respective payment option")
         }
     }
 

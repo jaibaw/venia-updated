@@ -1,3 +1,5 @@
+@import "../../mainapp/color";
+
 .product-display-list-container {
     height: max-content;
     /* UI Properties */
@@ -7,7 +9,7 @@
     text-align: left;
     font: normal normal bold 13px/20px Muli;
     letter-spacing: 0px;
-    color: #172026;
+    color: $semiBoldLabel;
     opacity: 1;
 
 }
