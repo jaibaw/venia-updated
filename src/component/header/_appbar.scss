@@ -112,38 +112,29 @@
     .menu-class {
         margin-top: 0.75rem;
     }
-}
 
-
-@media (min-width: 1024px) and (max-width: 1207px) {
-    .menu-class {
-        margin-left: 0px;
-    }
-}
-
-@media (min-width: 320px) and (max-width: 433px) {
-    .menu-class {
-        margin-left: 0px;
-    }
-}
-
-@media (min-width: 1208px) and (max-width: 1289px) {
-    .menu-class {
-        margin-left: 10%;
+    .venia__logo__allignment {
+        text-align: center;
     }
 }
 
 
-@media (min-width: 769px) and (max-width: 1032px) {
+@media (min-width: 769px) and (max-width: 1280px) {
     .menu-class {
-        margin-left: -35px;
+        margin-left: 30px;
     }
 
     .list-class-women {
-        margin-right: 0.5rem;
+        margin-right: 20px;
     }
 
     .list-class {
-        margin-right: 0rem;
+        margin-right: 20px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 400px) {
+    .badge__div {
+        width: 30px;
     }
 }

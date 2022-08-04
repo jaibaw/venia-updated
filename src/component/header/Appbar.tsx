@@ -88,17 +88,16 @@ function Appbar() {
                             </div>
                         }
                     </div>
-                    {/* <div className={menuBar ? 'menu' : "aem-GridColumn aem-GridColumn--default--2 aem-GridColumn--phone--7"} > */}
                     <div className="aem-GridColumn aem-GridColumn--default--2 aem-GridColumn--phone--7" >
-
-                        <Link to={ROUTES.HOME}>
-                            {<img
-                                // className={setMenuBarStatus ? 'list-class' : 'venia-logo'}
-                                className='venia-logo'
-                                alt='venia-logo'
-                                src={venialogoupdated}>
-                            </img>}
-                        </Link>
+                        <div className='venia__logo__allignment'>
+                            <Link to={ROUTES.HOME}>
+                                {<img
+                                    className='venia-logo'
+                                    alt='venia-logo'
+                                    src={venialogoupdated}>
+                                </img>}
+                            </Link>
+                        </div>
                     </div>
                     <div className="aem-GridColumn aem-GridColumn--default--8  aem-GridColumn--phone--hide">
                         <ul className='menu-class'>
@@ -124,13 +123,13 @@ function Appbar() {
                                 <li
                                     className='list-class'
                                     onClick={handleClickSmartGear}
-                                ><span className={smartGear ? 'home__span' : ""} >Smart Gear</span></li>
+                                ><span className={smartGear ? 'home__span' : ""} >{location.pathname === '/' ? 'Electronics' : 'Smart Gear'}</span></li>
                             </Link>
                             <Link className="menu__bar__title__div" to={ROUTES.ACCESSORIES}>
                                 <li
                                     className='list-class'
                                     onClick={handleClickAccessories}
-                                ><span className={accessories ? 'home__span' : ""} >Accessories</span></li>
+                                ><span className={accessories ? 'home__span' : ""} >{location.pathname === '/' ? 'Jewellery' : 'Accessories'}</span></li>
                             </Link>
 
                         </ul>

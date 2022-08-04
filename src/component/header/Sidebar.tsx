@@ -1,14 +1,29 @@
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { action_fetchProductByCategory, action_setMenuBarStatus } from '../../actions/get-products';
 import { STYLE } from "../../constant/common";
 import x from '../../assests/images/x.svg';
 import { Link } from 'react-router-dom';
 import { ROUTES } from '../../constant/routes';
+import { useEffect, useState } from 'react';
 
 //sidebar
 function Sidebar() {
     const dispatch = useDispatch();
 
+    //redux state
+    const productList = useSelector((state: any) => state.getProductList.getProductList);
+
+    useEffect(() => {
+        setProduct(productList)
+    }, [productList]);
+
+    const [product, setProduct] = useState(productList);
+    const [jewellery, setJewellery] = useState(false);
+    const [men, setMen] = useState(false);
+    const [women, setWomen] = useState(false);
+    const [electronics, setElectronics] = useState(false);
+
+    console.log("h", product)
     //fetch data based on slection of dropdown
     const handleFilterChange = (e: any) => {
         dispatch(action_fetchProductByCategory(e.target.value));
@@ -16,6 +31,28 @@ function Sidebar() {
 
     const handleMenuClose = () => {
         dispatch(action_setMenuBarStatus(false));
+    }
+
+
+
+    const handleWomenChange = (e: any) => {
+        women ? setWomen(false) : setWomen(true)
+        dispatch(action_fetchProductByCategory(e.target.value));
+    }
+
+    const handleMenChange = (e: any) => {
+        men ? setMen(false) : setMen(true)
+        dispatch(action_fetchProductByCategory(e.target.value));
+    }
+
+    const handleJewelleryChange = (e: any) => {
+        jewellery ? setJewellery(false) : setJewellery(true)
+        dispatch(action_fetchProductByCategory(e.target.value));
+    }
+
+    const handleElectronicsChange = (e: any) => {
+        electronics ? setElectronics(false) : setElectronics(true)
+        dispatch(action_fetchProductByCategory(e.target.value));
     }
 
     //return component
@@ -37,26 +74,72 @@ function Sidebar() {
                                 <span className='sidebar-span'>Categories</span>
                             </div>
                             <div className='attr-bottom'>
-                                {STYLE.map(function (key) {
-                                    return (
-                                        <div>
-                                            <fieldset className='fieldset'>
-                                                <input
-                                                    className='chechbox-resize'
-                                                    type="checkbox"
-                                                    id={key.id}
-                                                    name={key.filterLabel}
-                                                    value={key.value}
-                                                    onClick={handleFilterChange}
-                                                // checked={checked}
-                                                >
-                                                </input>
-                                                <span className='checkbox-span'>{key.filterLabel}</span>
-                                            </fieldset>
-                                        </div>
-                                    );
-                                })}
+
+                                <div>
+                                    <fieldset className='fieldset'>
+                                        <input
+                                            className='chechbox-resize'
+                                            type="checkbox"
+                                            id="jewellery"
+                                            name="jewelery"
+                                            value="jewelery"
+                                            onClick={handleJewelleryChange}
+                                            checked={jewellery}
+                                        >
+                                        </input>
+                                        <span className='checkbox-span'>Jewellery</span>
+                                    </fieldset>
+                                </div>
+
+                                <div>
+                                    <fieldset className='fieldset'>
+                                        <input
+                                            className='chechbox-resize'
+                                            type="checkbox"
+                                            id="electronics"
+                                            name="electronics"
+                                            value="electronics"
+                                            onClick={handleElectronicsChange}
+                                            checked={electronics}
+                                        >
+                                        </input>
+                                        <span className='checkbox-span'>Electronics</span>
+                                    </fieldset>
+                                </div>
+
+                                <div>
+                                    <fieldset className='fieldset'>
+                                        <input
+                                            className='chechbox-resize'
+                                            type="checkbox"
+                                            id="men's clothing"
+                                            name="men's clothing"
+                                            value="men's clothing"
+                                            onClick={handleMenChange}
+                                            checked={men}
+                                        >
+                                        </input>
+                                        <span className='checkbox-span'>Men's clothing</span>
+                                    </fieldset>
+                                </div>
+
+                                <div>
+                                    <fieldset className='fieldset'>
+                                        <input
+                                            className='chechbox-resize'
+                                            type="checkbox"
+                                            id="women's clothing"
+                                            name="women's clothing"
+                                            value="women's clothing"
+                                            onClick={handleWomenChange}
+                                            checked={women}
+                                        >
+                                        </input>
+                                        <span className='checkbox-span'>Women's clothing</span>
+                                    </fieldset>
+                                </div>
                             </div>
+
                         </div>
                     </div>
 

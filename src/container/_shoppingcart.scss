@@ -1,9 +1,11 @@
 .shopping-cart-title-span {
     font: normal normal 600 40px/35px Source Serif Pro;
+    text-align: center;
 }
 
 .shopping-cart-title {
-    padding: 30px 35% 1% 35%;
+    text-align: center;
+    padding: 30px 0px 1% 0px
 }
 
 .shopping-cart-sub-container {
@@ -28,8 +30,8 @@
     }
 
     .shopping__cart__border {
-        margin-left: 30vw;
-        margin-right: 30vw;
+        margin-left: 33vw;
+        margin-right: 33vw;
     }
 
     .shipping__border {
@@ -38,14 +40,14 @@
 }
 
 
-@media (min-width: 1002px) and (max-width: 1920px) {
-    .shopping-cart-title {
-        padding: 30px 27% 1% 35%;
-    }
-}
+// @media (min-width: 1002px) and (max-width: 1920px) {
+//     .shopping-cart-title {
+//         padding: 30px 27% 1% 35%;
+//     }
+// }
 
-@media (min-width: 768px) and (max-width: 1001px) {
-    .shopping-cart-title {
-        padding: 30px 10% 1% 27%;
-    }
-}
+// @media (min-width: 768px) and (max-width: 1001px) {
+//     .shopping-cart-title {
+//         padding: 30px 10% 1% 27%;
+//     }
+// }

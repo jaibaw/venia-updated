@@ -13,8 +13,8 @@ function Footer() {
     const setMenuBarStatus = useSelector((state: any) => state.getProductList.setMenuBarStatus);
 
     return (
-        <div className={setMenuBarStatus ? 'display-list' : 'footer-container'}    >      
-            <div className={location.pathname === '/checkout' ? 'checkout__btn__display' :  'footer-main-container'}>
+        <div className={setMenuBarStatus ? 'display-list' : 'footer-container'}    >
+            <div className={location.pathname === '/checkout' ? 'checkout__btn__display' : 'footer-main-container'}>
                 <div className="aem-Grid aem-Grid--12">
                     <div className="aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--phone--12">
                         <div className='footer-sub-container'>
@@ -83,12 +83,12 @@ function Footer() {
                     <div className="aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--phone--hide">
                         <Link to={ROUTES.HOME}>{<img className='footer-venia-logo' alt='venia-logo' src={venia_logo}></img>}</Link>
                     </div>
-                    <div className="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12">
+                    <div className="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--hide">
                         <div className='footer-copy-right-div'>
                             <span className='footer-copy-right-span'>© Company Name Address Ave, City Name, State ZIP</span>
                         </div>
                     </div>
-                    <div className="aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--phone--12">
+                    <div className="aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--phone--hide">
                         <div className='footer-term-policy-container'>
 
                             <span className='footer-term-policy-span'>
@@ -97,6 +97,42 @@ function Footer() {
                             <span className='footer-term-policy-span'>
                                 Privacy Policy
                             </span>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Phone View */}
+                <div className='banner-phone'>
+                    <div className="aem-Grid aem-Grid--12  aem-GridColumn--phone--12">
+                        <div className='aem-GridColumn aem-GridColumn--phone--12'>
+                            <div className='footer__term__policy__phone'>
+                                <div className='footer-term-policy-container'>
+                                    <span className='footer-term-policy-span'>
+                                        Terms of Use
+                                    </span>
+                                    <span className='footer-term-policy-span'>
+                                        Privacy Policy
+                                    </span>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div className='aem-GridColumn aem-GridColumn--phone--12'>
+                            <div>
+                                <div className='footer__copy__right__div '>
+                                    <div  className='footer-copy-right-span'>
+                                        <span >© Company Name</span>
+                                    </div>
+                                    <div  className='footer-copy-right-span'>
+                                        <span> Address Ave, City Name, State ZIP</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className='aem-GridColumn aem-GridColumn--phone--12'>
+                            <div className='footer__logo'>
+                                <Link to={ROUTES.HOME}>{<img className='footer-venia-logo' alt='venia-logo' src={venia_logo}></img>}</Link>
+                            </div>
                         </div>
                     </div>
                 </div>

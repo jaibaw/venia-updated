@@ -31,7 +31,7 @@
     font: normal normal 600 36px/45px Source Serif Pro;
 }
 
-.product-discription-span {
+.product__discription__span__div  {
     font: normal normal 600 20px/25px Muli;
 }
 
@@ -123,16 +123,16 @@
 
     .product__title__span__display__div {
         font: normal normal 600 6vw Source Serif Pro;
-        margin-left: 3vw;
+        text-align: center;
     }
 
     .product-title-span {
         font: normal normal 600 6vw Source Serif Pro;
     }
 
-    .product-discription-span {
+    .product__discription__span__div {
         padding-bottom: 3vw;
-        margin-left: 34vw;
+        text-align: center;
     }
 
     .add__to__cart__btn {

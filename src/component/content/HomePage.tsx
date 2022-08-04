@@ -57,13 +57,13 @@ function HomePage() {
                 <div className='banner-phone'>
                     <div className="aem-Grid aem-Grid--12  aem-GridColumn--phone--12">
                         <div className='aem-GridColumn aem-GridColumn--phone--12'>
-                            <div>
+                            {/* <div>
                                 <img className="man__grp__img" src={mengroup} alt='man-play'>
                                 </img>
-                            </div>
-                            {/* <div className="man__grp__img" >
-                                <ImgSlider />
                             </div> */}
+                            <div className="man__grp__img" >
+                                <ImgSlider />
+                            </div>
                         </div>
 
                         <div>

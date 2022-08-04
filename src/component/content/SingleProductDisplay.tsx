@@ -165,8 +165,8 @@ function SingleProductDisplay() {
                             {singleProductDetail.title}
                         </label>
                     </div>
-                    <div>
-                        <label htmlFor='description' className='product-discription-span'>
+                    <div className="product__discription__span__div">
+                        <label htmlFor='description'>
                             Description
                         </label>
                     </div>

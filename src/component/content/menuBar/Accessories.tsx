@@ -9,7 +9,7 @@ const Accessories = () => {
                 <h1>Work In Progress....!</h1>
             </div>
             <div>
-                <h1>!......Accessories......!</h1>
+                <h1>!......Accessories......! AND !......Jewellery......!</h1>
             </div>
             <div>
                 <Link to={ROUTES.HOME}>

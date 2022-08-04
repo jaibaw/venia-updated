@@ -9,7 +9,7 @@ const SmartGear = () => {
                 <h1>Work In Progress....!</h1>
             </div>
             <div>
-                <h1>!......SmartGear......!</h1>
+                <h1>!......SmartGear......! AND !......Electronics......! </h1>
             </div>
             <div>
                 <Link to={ROUTES.HOME}>

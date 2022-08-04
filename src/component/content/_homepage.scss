@@ -70,6 +70,10 @@
     margin-bottom: 17px;
 }
 
+.shop__now__details__div {
+    text-align: center;
+}
+
 .shop__now__btn {
     width: 220px;
     height: 40px;
@@ -204,7 +208,8 @@
     }
 
     .shop__now__detail {
-        margin-top: 10vw;
+        margin-top: 280px;
+        padding-bottom: 139px;
         height: max-content;
         width: -webkit-fill-available;
         position: absolute;
@@ -222,6 +227,7 @@
 
     .home__title__1__div {
         margin-left: 0px;
+        text-align: center;
     }
 
     .home__subtitle__1 {
@@ -274,7 +280,7 @@
 
     .map__in__div {
         position: absolute;
-        margin-top: -500px;
+        margin-top: -315px;
         margin-left: 17vw;
     }
 
@@ -285,5 +291,14 @@
     .shop__now__btn__phone__home {
         margin-left: 76px;
         margin-right: 76px;
+    }
+
+    .home__title__div {
+        margin-top: 0px;
+    }
+
+    .home__title__2__div {
+        padding: 82px 0px 0px 0px;
+        text-align: center;
     }
 }
