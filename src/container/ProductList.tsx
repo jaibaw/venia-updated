@@ -12,11 +12,13 @@ function ProductList() {
         <div className="aem-Grid aem-Grid--12">
             <div className="aem-Grid aem-Grid--12">
                 <div className='aem-GridColumn aem-GridColumn--default--12 aem-GridColumn--phone--12'>
-                    <Banner />
+                    <div className={setMenuBarStatus ? 'display-list' : ''}>
+                        <Banner />
+                    </div>
                 </div>
             </div>
-            {/* <div className={setMenuBarStatus ? 'display-list' : 'product-list-container'}> */}
-            <div className='product-list-container'>
+            <div className={setMenuBarStatus ? 'display-list' : 'product-list-container'}>
+                {/* <div className='product-list-container'> */}
                 <div className="aem-Grid aem-Grid--12">
                     <div className='aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--phone--hide'>
                         <Sidebar />

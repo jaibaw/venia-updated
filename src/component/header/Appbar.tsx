@@ -74,6 +74,7 @@ function Appbar() {
     }
     //return component
     return (
+        
         <div className="aem-Grid aem-Grid--12">
             <div className='header-container'>
                 <nav className="aem-Grid aem-Grid--12">

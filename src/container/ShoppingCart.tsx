@@ -8,30 +8,30 @@ function ShoppingCart() {
     const setMenuBarStatus = useSelector((state: any) => state.getProductList.setMenuBarStatus);
 
     return (
-        // <div className={setMenuBarStatus ? 'display-list' : 'shopping-cart-container'}   >
-        <div className='shopping-cart-container'>
-            <div className='shopping-cart-sub-container'>
-                <div className="aem-Grid aem-Grid--12">
-                    <div className='shopping-cart-title'>
-                        <span className='shopping-cart-title-span'>
-                            Your Shopping Bag
-                        </span>
-                    </div>
-                    <div className='shopping__cart__border'>
-                        <div className='border shipping__border'>
+        <div className={setMenuBarStatus ? 'display-list' : 'shopping-cart-container'}   >
+         {/* <div className='shopping-cart-container'> */}
+                <div className='shopping-cart-sub-container'>
+                    <div className="aem-Grid aem-Grid--12">
+                        <div className='shopping-cart-title'>
+                            <span className='shopping-cart-title-span'>
+                                Your Shopping Bag
+                            </span>
                         </div>
-                    </div>
-                    <div className="aem-GridColumn aem-GridColumn--default--8 aem-GridColumn--phone--12">
-                        <AddedCartProducts />
-                    </div>
-                    <div className="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--12">
-                        <PriceSummary />
+                        <div className='shopping__cart__border'>
+                            <div className='border shipping__border'>
+                            </div>
+                        </div>
+                        <div className="aem-GridColumn aem-GridColumn--default--8 aem-GridColumn--phone--12">
+                            <AddedCartProducts />
+                        </div>
+                        <div className="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--12">
+                            <PriceSummary />
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    );
+            );
 }
 
-export default ShoppingCart;
+            export default ShoppingCart;
 

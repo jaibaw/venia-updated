@@ -1,12 +1,11 @@
 import { useEffect } from "react";
+import { useSelector } from "react-redux";
 import HomePage from "../component/content/HomePage";
 
 //home
 function Home() {
-    
-    useEffect(() => {
-          // window.localStorage.setItem('cartValue', ' ')
-    }, []);
+    //redux state
+    const setMenuBarStatus = useSelector((state: any) => state.getProductList.setMenuBarStatus);
 
     useEffect(() => {
         //maintain state on refresh   
@@ -30,7 +29,7 @@ function Home() {
 
     return (
         <div className="aem-Grid aem-Grid--12   aem-GridColumn--phone--12 ">
-            <div>
+            <div className={setMenuBarStatus ? 'display-list' : ''}   >
                 <HomePage />
             </div>
         </div>
