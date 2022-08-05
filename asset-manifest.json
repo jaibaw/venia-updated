@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/venia-updated/static/css/main.935315a8.css",
-    "main.js": "/venia-updated/static/js/main.51053567.js",
+    "main.css": "/venia-updated/static/css/main.63c5a413.css",
+    "main.js": "/venia-updated/static/js/main.e47e0550.js",
     "static/js/845.1543a6b5.chunk.js": "/venia-updated/static/js/845.1543a6b5.chunk.js",
     "static/js/787.de51f1e3.chunk.js": "/venia-updated/static/js/787.de51f1e3.chunk.js",
     "static/js/287.26269a18.chunk.js": "/venia-updated/static/js/287.26269a18.chunk.js",
@@ -22,33 +22,33 @@
     "static/media/instagram1.svg": "/venia-updated/static/media/instagram1.739ad9bd170222df3b01b65421da0c3c.svg",
     "static/media/helpcircle.svg": "/venia-updated/static/media/helpcircle.6e768c3bac19f3986961e860b1d13f2d.svg",
     "index.html": "/venia-updated/index.html",
-    "static/media/pluscircle.svg": "/venia-updated/static/media/pluscircle.1c91df00bbc3c35b83908f30ff20475d.svg",
+    "static/media/pluscircle.svg": "/venia-updated/static/media/pluscircle.08eac2b53cb1c45bf72cef7b6421a0f3.svg",
     "static/media/shoppingbag.svg": "/venia-updated/static/media/shoppingbag.cb28c1ef909a846a6a309e7ed3ef2c02.svg",
     "static/media/menu.svg": "/venia-updated/static/media/menu.d4e0cba29b9b64b9877c5feca68b2d2d.svg",
     "static/media/arrowup.svg": "/venia-updated/static/media/arrowup.bffb5a388e9ce654e32b9665d1dbed6d.svg",
     "static/media/mappin.svg": "/venia-updated/static/media/mappin.852024007d574484f01c3346de7dd731.svg",
     "static/media/checksquare.svg": "/venia-updated/static/media/checksquare.1913a6da6782d0eb35ceb7b7aa07c9cd.svg",
     "static/media/lock.svg": "/venia-updated/static/media/lock.5ff97e2157304c0ee2a0e39c62a6cd5c.svg",
-    "static/media/minuscircle.svg": "/venia-updated/static/media/minuscircle.e934335b664aeca8f3d3968f708b5a06.svg",
+    "static/media/minuscircle.svg": "/venia-updated/static/media/minuscircle.b8a5b28bf9877a9166bc10ea1efeb3b3.svg",
     "static/media/x.svg": "/venia-updated/static/media/x.d53986b46fddc38d98919b5e8f542368.svg",
     "static/media/arrowdown.svg": "/venia-updated/static/media/arrowdown.ad1e372bfba7126beaef93d275515815.svg",
     "static/media/twitter.svg": "/venia-updated/static/media/twitter.3d9f31115be6b897b5d45c0aad4c1c1f.svg",
     "static/media/twitter1.svg": "/venia-updated/static/media/twitter1.61c1556d49acb6663324097c700f4d43.svg",
-    "static/media/heart.svg": "/venia-updated/static/media/heart.3b35352339d37da7c50b5bcdbc557cd0.svg",
+    "static/media/heart.svg": "/venia-updated/static/media/heart.cce4106454ce8462f66ff2618862a9d9.svg",
     "static/media/edit.svg": "/venia-updated/static/media/edit.d86fb5c57c99ad0d8312adf90283ac77.svg",
     "static/media/edit1.svg": "/venia-updated/static/media/edit1.6b59e1b743abca759053bf719f598982.svg",
     "static/media/facebook.svg": "/venia-updated/static/media/facebook.b5b54c5572636785078aa70b8bdffe26.svg",
     "static/media/facebook1.svg": "/venia-updated/static/media/facebook1.7c4105cbf363f541530bc7e3026f894d.svg",
     "static/media/chevrondown.svg": "/venia-updated/static/media/chevrondown.fadc45040e456e5cea02f3cd047ee412.svg",
     "static/media/chevronleft.svg": "/venia-updated/static/media/chevronleft.4ac6ee7882c74803488aa3c28a368590.svg",
-    "main.935315a8.css.map": "/venia-updated/static/css/main.935315a8.css.map",
-    "main.51053567.js.map": "/venia-updated/static/js/main.51053567.js.map",
+    "main.63c5a413.css.map": "/venia-updated/static/css/main.63c5a413.css.map",
+    "main.e47e0550.js.map": "/venia-updated/static/js/main.e47e0550.js.map",
     "845.1543a6b5.chunk.js.map": "/venia-updated/static/js/845.1543a6b5.chunk.js.map",
     "787.de51f1e3.chunk.js.map": "/venia-updated/static/js/787.de51f1e3.chunk.js.map",
     "287.26269a18.chunk.js.map": "/venia-updated/static/js/287.26269a18.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.935315a8.css",
-    "static/js/main.51053567.js"
+    "static/css/main.63c5a413.css",
+    "static/js/main.e47e0550.js"
   ]
 }
