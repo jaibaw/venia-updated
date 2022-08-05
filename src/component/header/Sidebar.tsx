@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { action_fetchProductByCategory, action_setMenuBarStatus } from '../../actions/get-products';
+import { action_fetchProductByCategorySelctions, action_setMenuBarStatus } from '../../actions/get-products';
 import { STYLE } from "../../constant/common";
 import x from '../../assests/images/x.svg';
 import { Link } from 'react-router-dom';
@@ -12,45 +12,33 @@ function Sidebar() {
 
     //redux state
     const productList = useSelector((state: any) => state.getProductList.getProductList);
+    const [product, setProduct] = useState(productList);
+    const [checkedProducts, setCheckedProducts] = useState<any[]>([]);;
 
     useEffect(() => {
         setProduct(productList)
     }, [productList]);
 
-    const [product, setProduct] = useState(productList);
-    const [jewellery, setJewellery] = useState(false);
-    const [men, setMen] = useState(false);
-    const [women, setWomen] = useState(false);
-    const [electronics, setElectronics] = useState(false);
+    useEffect(() => {
+        dispatch(action_fetchProductByCategorySelctions(getFilteredProducts()))
+    }, [checkedProducts])
 
-    //fetch data based on slection of dropdown
-    const handleFilterChange = (e: any) => {
-        dispatch(action_fetchProductByCategory(e.target.value));
+    const handleFilterChange = (event: any) => {
         dispatch(action_setMenuBarStatus(false));
-    };
+        const categoryName = event.target.value;
+        setCheckedProducts((prev: any) =>
+            checkedProducts.includes(categoryName)
+                ? prev.filter((cur: any) => cur !== categoryName)
+                : [...prev, event.target.value]
+        );
+    }
+
+    const getFilteredProducts = () => {
+        return product.filter((product: any) => checkedProducts.includes(product.category));
+    }
 
     const handleMenuClose = () => {
         dispatch(action_setMenuBarStatus(false));
-    }
-
-    const handleWomenChange = (e: any) => {
-        women ? setWomen(false) : setWomen(true)
-        dispatch(action_fetchProductByCategory(e.target.value));
-    }
-
-    const handleMenChange = (e: any) => {
-        men ? setMen(false) : setMen(true)
-        dispatch(action_fetchProductByCategory(e.target.value));
-    }
-
-    const handleJewelleryChange = (e: any) => {
-        jewellery ? setJewellery(false) : setJewellery(true)
-        dispatch(action_fetchProductByCategory(e.target.value));
-    }
-
-    const handleElectronicsChange = (e: any) => {
-        electronics ? setElectronics(false) : setElectronics(true)
-        dispatch(action_fetchProductByCategory(e.target.value));
     }
 
     //return component
@@ -81,8 +69,7 @@ function Sidebar() {
                                             id="jewellery"
                                             name="jewelery"
                                             value="jewelery"
-                                            onClick={handleJewelleryChange}
-                                            checked={jewellery}
+                                            onClick={handleFilterChange}
                                         >
                                         </input>
                                         <span className='checkbox-span'>Jewellery</span>
@@ -97,8 +84,7 @@ function Sidebar() {
                                             id="electronics"
                                             name="electronics"
                                             value="electronics"
-                                            onClick={handleElectronicsChange}
-                                            checked={electronics}
+                                            onClick={handleFilterChange}
                                         >
                                         </input>
                                         <span className='checkbox-span'>Electronics</span>
@@ -113,8 +99,7 @@ function Sidebar() {
                                             id="men's clothing"
                                             name="men's clothing"
                                             value="men's clothing"
-                                            onClick={handleMenChange}
-                                            checked={men}
+                                            onClick={handleFilterChange}
                                         >
                                         </input>
                                         <span className='checkbox-span'>Men's clothing</span>
@@ -129,8 +114,7 @@ function Sidebar() {
                                             id="women's clothing"
                                             name="women's clothing"
                                             value="women's clothing"
-                                            onClick={handleWomenChange}
-                                            checked={women}
+                                            onClick={handleFilterChange}
                                         >
                                         </input>
                                         <span className='checkbox-span'>Women's clothing</span>

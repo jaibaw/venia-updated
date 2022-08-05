@@ -13,6 +13,14 @@ export const action_fetchProductByCategory = (payload: any) => ({
     type: ActionTypes.GET_PRODUCTS.GET_PRODUCT_BY_CATEGORY_DATA
 });
 
+
+// to fetch the product based on category 
+export const action_fetchProductByCategorySelctions = (payload: any) => ({
+    payload,
+    type: ActionTypes.GET_PRODUCTS.SET_PRODUCT_LIST_BY_CATEGORY_SELECTION
+});
+
+
 // to fetch the single product  
 export const action_fetchSingleProduct = (payload: any) => ({
     payload,

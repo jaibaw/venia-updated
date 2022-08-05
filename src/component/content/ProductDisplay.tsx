@@ -15,9 +15,11 @@ function ProductDisplay() {
     // maintain local state
     const [currentPage, setCurrentPage] = useState(1);
     const [loader, setLoader] = useState(true);
+    //const [loader, setLoader] = useState(true);
 
     //redux state
     const productList = useSelector((state: any) => state.getProductList.getProductList);
+    const ProductListByCategory = useSelector((state: any) => state.getProductList.getProductListByCategory);
 
     useEffect(() => {
         if (productList.length > 1) {
@@ -25,10 +27,13 @@ function ProductDisplay() {
         }
     }, [productList]);
 
+
     // pagination
     const firstPageIndex = (currentPage - 1) * PAGE_SIZE;
     const lastPageIndex = firstPageIndex + PAGE_SIZE;
-    const currentProductList = productList.slice(firstPageIndex, lastPageIndex);
+    const currentProductList = ProductListByCategory.length > 0 ?
+        ProductListByCategory.slice(firstPageIndex, lastPageIndex) :
+        productList.slice(firstPageIndex, lastPageIndex)
 
     //on product click dispatch single product detail
     const onProductClick = (e: any) => {
@@ -44,41 +49,42 @@ function ProductDisplay() {
             </div>
             <div className='product-dispaly-sub-container'>
                 <div className="aem-Grid aem-Grid--12">
-                    {currentProductList && currentProductList.map(function (key: any) {
-                        return (
-                            <div className="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--6">
-                                <div className='product-display-container'>
-                                    <div className='product-display-img-div'>
-                                        <Link to={ROUTES.PRODUCT_DETAILS}>
-                                            {<img
-                                                className='product-img'
-                                                alt='product'
-                                                src={key.image}
-                                                id={key.id}
-                                                onClick={onProductClick}
-                                            >
-                                            </img>
-                                            }
-                                        </Link>
-                                    </div>
-                                    <div className="aem-Grid aem-Grid--12 aem-GridColumn--phone--12">
-                                        <div className='product-discription'>
-                                            <div className='product__label__div'>
-                                                <label htmlFor='title'>{key.title}</label>
-                                            </div>
-                                            <div className='product__price__div'>
-                                                <label htmlFor='price' >${key.price}</label>
-                                            </div>
-                                            <div className='save__img__div '>
-                                                <img alt='save' src={heart}></img>
+                    {
+                        currentProductList && currentProductList.map(function (key: any) {
+                            return (
+                                <div className="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--6">
+                                    <div className='product-display-container'>
+                                        <div className='product-display-img-div'>
+                                            <Link to={ROUTES.PRODUCT_DETAILS}>
+                                                {<img
+                                                    className='product-img'
+                                                    alt='product'
+                                                    src={key.image}
+                                                    id={key.id}
+                                                    onClick={onProductClick}
+                                                >
+                                                </img>
+                                                }
+                                            </Link>
+                                        </div>
+                                        <div className="aem-Grid aem-Grid--12 aem-GridColumn--phone--12">
+                                            <div className='product-discription'>
+                                                <div className='product__label__div'>
+                                                    <label htmlFor='title'>{key.title}</label>
+                                                </div>
+                                                <div className='product__price__div'>
+                                                    <label htmlFor='price' >${key.price}</label>
+                                                </div>
+                                                <div className='save__img__div '>
+                                                    <img alt='save' src={heart}></img>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
 
+                                    </div>
                                 </div>
-                            </div>
-                        );
-                    })}
+                            );
+                        })}
                 </div>
             </div>
             <div className="aem-Grid aem-Grid--12 aem-GridColumn--phone--12">

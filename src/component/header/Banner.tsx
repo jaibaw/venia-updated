@@ -18,6 +18,7 @@ function Banner() {
 
     //redux state
     const productList = useSelector((state: any) => state.getProductList.getProductList);
+    const ProductListByCategory = useSelector((state: any) => state.getProductList.getProductListByCategory);
 
     //fetch data based on slection of dropdown
     const filterChange = (e: any) => {
@@ -141,7 +142,7 @@ function Banner() {
 
                     <div className="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12" >
                         <div className='result-div'>
-                            <span className='result-span'> {productList && productList ? productList.length : 0}</span>
+                            <span className='result-span'> {ProductListByCategory.length > 0 ? ProductListByCategory.length : (productList.length > 0 ? productList.length : 0)}</span>
                             <span className='result-span'>Results</span>
                         </div>
                     </div>
