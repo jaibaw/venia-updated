@@ -1,138 +1,156 @@
 @import "../../mainapp/color";
- 
- 
- // Breadcrum
- .span__beadcrum {
-     text-transform: capitalize;
-     /* UI Properties */
-     font: normal normal normal 16px/24px Muli;
-     letter-spacing: 0px;
-     color: $semiBoldLabel;
-     opacity: 1;
- }
-
- .breadcrum__container {
-     height: 20px;
- }
-
- .hide__link {
-     text-decoration: none !important
- }
-
- // quantity
- .quantity__logo__minus {
-     width: 20px;
-     height: 20px;
-     margin-right: 10px;
- }
-
- .quantity__logo__plus {
-     width: 20px;
-     height: 20px;
-     margin-left: 10px;
- }
-
- .quantity__span {
-     padding: 5px 35px 5px 35px;
-     border: 2px solid $placeholderAndBorder;
-     border-radius: 8px;
-     opacity: 1;
- }
-
- //Accordian
- .accordian__typo1__span {
-     font: normal normal normal 18px/22px Muli;
- }
-
- .accordian__typo2__span {
-     font: normal normal normal 14px/21px Muli;
-     margin-left: 50%;
- }
-
- .accordian__container {
-     margin-top: 10px;
-     margin-bottom: 50px;
- }
-
- //Edit Menu
- .edit__icons {
-     width: 16px;
-     height: 16px;
-     margin-top: 4px;
- }
-
- .edit__icon__span {
-     font: normal normal 600 12px/14px Muli;
-     letter-spacing: 0px;
-     color: $semiBoldLabel;
-     text-decoration: none;
- }
-
- .edit__icon__container {
-     margin-top: 20px;
- }
-
- //loader
- .react-spinner-material {
-     margin: 25% 35% 25% 35%;
- }
-
- //delete
- .delete__container {
-     margin: 10vw 28vw 10vw 28vw;
- }
-
- /*=== Mobile Media ===*/
- @media (min-width: 320px) and (max-width: 768px) {
-
-     //braedcum 
-     .breadcrum__container {
-         height: 45px;
-     }
-
-     .breadcum {
-         margin-left: 13%;
-     }
-
-     .span__beadcrum {
-         text-transform: capitalize;
-         /* UI Properties */
-         font: normal normal normal 20px/25px Muli;
-         letter-spacing: 0px;
-         color: $sidebarSpan;
-         opacity: 1;
-     }
-
-     //loader
-     .react-spinner-material {
-         margin: 65% 65% 65% 65%;
-     }
 
 
-     //Accordian
-     .accordian__container {
-         margin: 2vw;
-     }
+// Breadcrum
+.span__beadcrum {
+    text-transform: capitalize;
+    /* UI Properties */
+    font: normal normal normal 16px/24px Muli;
+    letter-spacing: 0px;
+    color: $semiBoldLabel;
+    opacity: 1;
+}
 
-     //quantity
-     .quantity__span {
-         padding: 1vw 8vw 1vw 8vw;
-     }
+.breadcrum__container {
+    height: 20px;
+}
 
-     //edit
-     .edit__icon__container {
-         position: absolute;
-         margin-left: 77vw;
-         margin-top: 0px;
-     }
+.hide__link {
+    text-decoration: none !important
+}
 
-     .image-gallery-slide .image-gallery-image {
-         object-fit: fill !important
-     }
+// quantity
+.quantity__logo__minus {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
 
-     .image-gallery-content .image-gallery-slide .image-gallery-image {
-         max-height: calc(630px) !important;
-         height: 630px !important; 
-     }
+.quantity__logo__plus {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+}
 
- }
+.quantity__span {
+    padding: 5px 35px 5px 35px;
+    border: 2px solid $placeholderAndBorder;
+    border-radius: 8px;
+    opacity: 1;
+}
+
+//Accordian
+.accordian__typo1__span {
+    font: normal normal normal 18px/22px Muli;
+}
+
+.accordian__typo2__span {
+    font: normal normal normal 14px/21px Muli;
+    margin-left: 50%;
+}
+
+.accordian__container {
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+//Edit Menu
+.edit__icons {
+    width: 16px;
+    height: 16px;
+    margin-top: 4px;
+}
+
+.edit__icon__span {
+    font: normal normal 600 12px/14px Muli;
+    letter-spacing: 0px;
+    color: $semiBoldLabel;
+    text-decoration: none;
+}
+
+.edit__icon__container {
+    margin-top: 20px;
+}
+
+//loader
+.react-spinner-material {
+    margin: 25% 35% 25% 35%;
+}
+
+//delete
+.delete__container {
+    margin: 0vw 0vw 50px 0vw;
+    text-align: center;
+}
+
+.image-gallery-slide .image-gallery-image {
+    object-fit: fill !important
+}
+
+.image-gallery-content .image-gallery-slide .image-gallery-image {
+    max-height: calc(630px) !important;
+    height: 630px !important;
+}
+
+/*=== Mobile Media ===*/
+@media (min-width: 320px) and (max-width: 768px) {
+
+    //braedcum 
+    .breadcrum__container {
+        height: 45px;
+    }
+
+    .breadcum {
+        margin-left: 13%;
+    }
+
+    .span__beadcrum {
+        text-transform: capitalize;
+        /* UI Properties */
+        font: normal normal normal 20px/25px Muli;
+        letter-spacing: 0px;
+        color: $sidebarSpan;
+        opacity: 1;
+    }
+
+    //loader
+    .react-spinner-material {
+        margin: 65% 65% 65% 65%;
+    }
+
+
+    //Accordian
+    .accordian__container {
+        margin: 2vw;
+    }
+
+    //quantity
+    .quantity__span {
+        padding: 1vw 8vw 1vw 8vw;
+    }
+
+    //edit
+    .edit__icon__container {
+        position: absolute;
+        margin-left: 77vw;
+        margin-top: 0px;
+    }
+
+    .image-gallery-slide .image-gallery-image {
+        object-fit: fill !important
+    }
+
+    .image-gallery-content .image-gallery-slide .image-gallery-image {
+        max-height: calc(630px) !important;
+        height: 630px !important;
+    }
+
+}
+
+//mobile View
+@media (min-width: 769px) and (max-width: 1024px) {
+    .image-gallery-content .image-gallery-slide .image-gallery-image {
+        max-height: calc(630px) !important;
+        height: 600px !important;
+    }
+}

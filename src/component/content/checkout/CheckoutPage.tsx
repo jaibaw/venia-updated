@@ -47,14 +47,17 @@ function CheckoutPage() {
                                     </div>
                                     <div className="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--hide">
                                         <div>
-                                            <button
-                                                type='button'
-                                                className="sign__in__btn"
-                                            >
-                                                <span className="sign__in__btn__span">
-                                                    SIGN IN
-                                                </span>
-                                            </button>
+                                            <Link to={ROUTES.HOME}>{
+
+                                                <button
+                                                    type='button'
+                                                    className="sign__in__btn"
+                                                >
+                                                    <span className="sign__in__btn__span">
+                                                        SIGN IN
+                                                    </span>
+                                                </button>
+                                            }</Link>
                                         </div>
                                     </div>
 

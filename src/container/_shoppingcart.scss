@@ -20,6 +20,15 @@
     margin-left: 45%;
 }
 
+.shopping__cart__img {
+    width: 200px;
+    height: 200px;
+}
+
+.shopping__0cart__item__div {
+    text-align: center;
+}
+
 //mobile View
 @media (min-width: 320px) and (max-width: 768px) {
     .shopping-cart-title {
@@ -38,5 +47,11 @@
 
     .shipping__border {
         height: 6px;
+    }
+}
+
+@media (min-width: 1440px) and (max-width: 1920px) {
+    .shopping__cart__border{
+        margin-left: 47%;
     }
 }

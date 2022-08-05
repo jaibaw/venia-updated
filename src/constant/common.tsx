@@ -8,7 +8,7 @@ export const STYLE = [
     { id: "electronics", value: "electronics", filterLabel: 'Electronics' },
 ]
 
-export const IMG_CONST_VALUE = [1, 2, 3, 4, 5]
+export const IMG_CONST_VALUE = ["1", "2", "3", "4", "5"]
 
 export const CATEGORY = [
     { id: "1", img: 'https://fakestoreapi.com/img/71z3kpMAYsL._AC_UY879_.jpg', name: "Shop Women" },

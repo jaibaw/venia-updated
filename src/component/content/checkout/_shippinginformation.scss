@@ -1,5 +1,14 @@
 @import "../../../mainapp/color";
 
+select {
+  color: $sidebarSpan;
+  font: normal normal normal 16px/19px Muli;
+}
+
+option:not(:first-of-type) {
+  color: $black;
+}
+
 ::placeholder {
   font: normal normal normal 16px/19px Muli;
   color: $placeholderAndBorder
@@ -7,6 +16,7 @@
 
 input[type='text'] {
   font: normal normal normal 16px/25px Muli;
+  color: $sidebarSpan;
 }
 
 input[type="radio"] {
@@ -81,7 +91,7 @@ input[type="radio"]:checked {
   width: 347px;
   height: 40px;
   margin-top: 41px;
-  margin-left: 10vw;
+  // margin-left: 10vw;
   margin-bottom: 48px;
   background: var(--white) 0% 0% no-repeat padding-box;
   background: $white 0% 0% no-repeat padding-box;
@@ -89,6 +99,10 @@ input[type="radio"]:checked {
   border-radius: 10px;
   color: $blue;
   opacity: 1;
+}
+
+.btn__checkout__div {
+  text-align: center;
 }
 
 .shipping__method__summary__div {

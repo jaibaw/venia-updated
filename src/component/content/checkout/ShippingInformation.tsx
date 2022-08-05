@@ -41,7 +41,7 @@ function ShippingInformation(props: any) {
             setshowshippingInfoLabel(false);
             props.priceSummaryDiv(showshippingInfo);
         } else {
-            alert("enter all the fields")
+            alert("enter all required the fields")
         }
     }
 
@@ -176,6 +176,7 @@ function ShippingInformation(props: any) {
                                             id="phone-number"
                                             className="input__box"
                                             type="text"
+                                            maxLength = {10}
                                             name="phone-number"
                                             value={phone ? phone : (phoneRestore && phoneRestore ? phoneRestore : phone)}
                                             placeholder="(222) 222-2222"
@@ -368,7 +369,7 @@ function ShippingInformation(props: any) {
                             </div>
                             <div className="aem-Grid aem-Grid--12">
                                 <div className="aem-GridColumn aem-GridColumn--default--12  aem-GridColumn--phone--hide">
-                                    <div>
+                                    <div className="btn__checkout__div">
                                         <button
                                             type='button'
                                             className="checkout__step1__btn"
@@ -385,7 +386,7 @@ function ShippingInformation(props: any) {
                             <div className='banner-phone'>
                                 <div className="aem-Grid aem-Grid--12  aem-GridColumn--phone--12">
                                     <div className='aem-GridColumn aem-GridColumn--phone--12'>
-                                        <div>
+                                        <div className="btn__checkout__div ">
                                             <button
                                                 type='button'
                                                 className="checkout__step1__btn"

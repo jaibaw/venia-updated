@@ -23,17 +23,15 @@ function Sidebar() {
     const [women, setWomen] = useState(false);
     const [electronics, setElectronics] = useState(false);
 
-    console.log("h", product)
     //fetch data based on slection of dropdown
     const handleFilterChange = (e: any) => {
         dispatch(action_fetchProductByCategory(e.target.value));
+        dispatch(action_setMenuBarStatus(false));
     };
 
     const handleMenuClose = () => {
         dispatch(action_setMenuBarStatus(false));
     }
-
-
 
     const handleWomenChange = (e: any) => {
         women ? setWomen(false) : setWomen(true)
@@ -167,18 +165,21 @@ function Sidebar() {
                                     {STYLE.map(function (key) {
                                         return (
                                             <div>
-                                                <fieldset className='fieldset'>
-                                                    <input
-                                                        className='chechbox-resize'
-                                                        type="checkbox"
-                                                        id={key.id}
-                                                        name={key.filterLabel}
-                                                        value={key.value}
-                                                        onClick={handleFilterChange}
-                                                    >
-                                                    </input>
-                                                    <span className='checkbox-span'>{key.filterLabel}</span>
-                                                </fieldset>
+                                                <Link to={ROUTES.PRODUCT_LIST}>{
+
+                                                    <fieldset className='fieldset'>
+                                                        <input
+                                                            className='chechbox-resize'
+                                                            type="checkbox"
+                                                            id={key.id}
+                                                            name={key.filterLabel}
+                                                            value={key.value}
+                                                            onClick={handleFilterChange}
+                                                        >
+                                                        </input>
+                                                        <span className='checkbox-span'>{key.filterLabel}</span>
+                                                    </fieldset>
+                                                }</Link>
                                             </div>
                                         );
                                     })}

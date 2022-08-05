@@ -23,7 +23,9 @@ function Home() {
         // window.localStorage.setItem('cardname', "");
         // window.localStorage.setItem('cvvnumber', "");
         // window.localStorage.setItem('expirationdate', "");
-         window.localStorage.setItem('paymenttype', "");
+        // window.localStorage.setItem('cartValue', "");
+
+        window.localStorage.setItem('paymenttype', "");
     })
 
 

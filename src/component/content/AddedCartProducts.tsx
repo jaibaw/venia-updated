@@ -12,8 +12,6 @@ function AddedCartProducts() {
     //maintain state on refresh 
     const Product = window.localStorage.getItem('cart');
     let uniqueCartItemList = Product ? JSON.parse(Product) : [];
-    const total = window.localStorage.getItem('cartValue');
-    const cartValue = total ? total : ' ';
 
     const handleThreeMenuIcon = () => {
         setshowshowMenuItem(true)
@@ -22,15 +20,10 @@ function AddedCartProducts() {
     //return component
     return (
         <div className='added-item-cart-container'>
-            <div>
-                <div className={cartValue === ' ' ? "checkout__info__show" : "checkout__info__hide"}>
-                    <h1>Nothing In cart</h1>
-                </div>
-            </div>
 
             {uniqueCartItemList && uniqueCartItemList.map((key: any) => {
                 return (
-                    <div className={cartValue !== ' ' ? "checkout__info__show" : "checkout__info__hide"}>
+                    <div>
                         <div className="aem-Grid aem-Grid--12">
                             <div className="aem-GridColumn aem-GridColumn--default--2 aem-GridColumn--phone--5">
                                 <div className='added-cart-product'>

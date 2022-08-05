@@ -30,13 +30,13 @@ function HomePage() {
                                 </label>
                             </div>
                             <div className="home__title__discription__div">
-                                <label  htmlFor="home-title-discription">
+                                <label htmlFor="home-title-discription">
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore ar dolore magna aliqua. Labortis mattis <br></br> aliquam faucibus purus
                                 </label>
                             </div>
                             <div>
                                 <Link to={ROUTES.PRODUCT_LIST}>{
-                                    <button id = "shop-now" name="shop-now" type="button" className="shop__now__btn">
+                                    <button id="shop-now" name="shop-now" type="button" className="shop__now__btn">
                                         SHOP NOW
                                     </button>
                                 }</Link>
@@ -75,7 +75,7 @@ function HomePage() {
                                     </div>
                                     <div>
                                         <Link to={ROUTES.PRODUCT_LIST}>{
-                                            <button  id="shop-now" name="shop-now" type="button" className="shop__now__btn shop__now__btn__phone__home">
+                                            <button id="shop-now" name="shop-now" type="button" className="shop__now__btn shop__now__btn__phone__home">
                                                 SHOP NOW
                                             </button>
                                         }</Link>
@@ -156,7 +156,11 @@ function HomePage() {
                                     <div className="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--hide">
                                         <div>
                                             <Link to={ROUTES.PRODUCT_LIST}>{
-                                                <button id="shop-now" name="shop-now" type="button" className="shop__now__btn">
+                                                <button
+                                                    id="shop-now"
+                                                    name="shop-now"
+                                                    type="button"
+                                                    className="shop__now__btn shop__now__btn__tablet">
                                                     SHOP NOW
                                                 </button>
                                             }</Link>
@@ -205,7 +209,7 @@ function HomePage() {
                                         <div className="aem-GridColumn aem-GridColumn--phone--12">
                                             <div>
                                                 <Link to={ROUTES.PRODUCT_LIST}>{
-                                                    <button  type="button" className="shop__now__btn">
+                                                    <button type="button" className="shop__now__btn ">
                                                         SHOP NOW
                                                     </button>
                                                 }</Link>
@@ -215,7 +219,7 @@ function HomePage() {
                                         <div className="aem-GridColumn aem-GridColumn--phone--12">
                                             <div>
                                                 <Link to={ROUTES.PRODUCT_LIST}>{
-                                                    <button  type="button" className="shop__cont__btn">
+                                                    <button type="button" className="shop__cont__btn">
                                                         SHOP COLLECTION
                                                     </button>
                                                 }</Link>
@@ -255,7 +259,7 @@ function HomePage() {
                                         </label>
                                     </div>
                                     <div>
-                                        <button type="button"  name="shop-device" className="shop__cont__service__btn">
+                                        <button type="button" name="shop-device" className="shop__cont__service__btn">
                                             SHOP DEVICES
                                         </button>
                                     </div>

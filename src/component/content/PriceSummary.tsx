@@ -77,34 +77,33 @@ function PriceSummary(props: any) {
                         <label htmlFor='subtoatl-value'>${totolPrice.toFixed(2)}</label>
                     </div>
                     <div className='price__summary__sub__title__div'>
-                        <label htmlFor='coupon-value'>-${35.43}</label>
+                        <label htmlFor='coupon-value'>-${totolPrice > 130 ? 35.43 : 10}</label>
                     </div>
 
                     <div className='price__summary__sub__title__div'>
-                        <label htmlFor='gift-card-value'>-${50}</label>
+                        <label htmlFor='gift-card-value'>-${totolPrice > 130 ? 50 : 5}</label>
                     </div>
 
                     <div className='price__summary__sub__title__div'>
-                        <label htmlFor='tax-value'>${23.28}</label>
+                        <label htmlFor='tax-value'>${totolPrice > 130 ? 23.28 : 10}</label>
                     </div>
 
                     <div className='price__summary__sub__title__div'>
                         <label htmlFor='free'>FREE</label>
                     </div>
                     <div className='price__summary__sub__title__div'>
-                        <label htmlFor='toatl-value' className="estimated__total__span ">${totolPrice.toFixed(2)}</label>
+                        <label htmlFor='toatl-value' className="estimated__total__span ">${(totolPrice  >130 ? totolPrice  - 35.43 - 50 - 23.28 : totolPrice  - 10 - 5 - 10 ).toFixed(2)}</label>
                     </div>
                 </div>
             </div>
             <div className="aem-Grid aem-Grid--12">
                 <div className={location.pathname === '/checkout' ? 'checkout__btn__display' : 'price__summary__imgs__container'}>
                     <div>
-                        <Link to={cartValue === ' ' ? ROUTES.SHOPPING_CART: ROUTES.CHECKOUT }>
+                        <Link to={cartValue === ' ' ? ROUTES.SHOPPING_CART : ROUTES.CHECKOUT}>
                             <button
                                 type="button"
                                 className="checkout__btn"
                                 onClick={handleCheckOut}
-                               // disabled = {cartValue === ' ' ? true : false}
                             >
                                 {<img className="lock__img" src={lock} alt="lock"></img>}
                                 CHECKOUT

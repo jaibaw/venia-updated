@@ -33,7 +33,7 @@
     font: normal normal 600 36px/45px Source Serif Pro;
 }
 
-.product__discription__span__div  {
+.product__discription__span__div {
     font: normal normal 600 20px/25px Muli;
 }
 
@@ -74,6 +74,12 @@
     border-bottom: $blue 4px solid;
 }
 
+.read-more-button {
+    font-weight: 800;
+    text-decoration: underline;
+    display: inline;
+}
+
 //mobile View
 @media (min-width: 320px) and (max-width: 768px) {
 
@@ -102,10 +108,6 @@
     }
 
     .product-display {
-        // width: -webkit-fill-available;
-        // height: max-content;
-        // padding: 6vw 6vw 6vw 6vw;
-        // opacity: 1;
         padding: 0;
         opacity: 1;
         width: 60vw;
@@ -143,5 +145,31 @@
 
     .border__div__product {
         margin-bottom: 20px;
+    }
+}
+
+
+//mobile View
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    .product-display{
+        padding: 0;
+    }
+    .side-product-display{
+        width: 60px;
+        height: 100px;
+    }
+
+    .down__arrow{
+        margin-left: 20px;
+    }
+
+    .product-title-span{
+        
+        font: normal normal 600 3vw Source Serif Pro;
+    }
+
+    .share-save-div{
+        margin-bottom: 3px;
     }
 }

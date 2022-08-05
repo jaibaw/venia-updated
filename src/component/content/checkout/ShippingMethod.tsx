@@ -160,7 +160,7 @@ function ShippingMethod() {
 
                 <div className="aem-Grid aem-Grid--12">
                     <div className="aem-GridColumn aem-GridColumn--default--12   aem-GridColumn--phone--12 ">
-                        <div>
+                        <div className="btn__checkout__div" >
                             <button
                                 id="cont-payment"
                                 type="button"

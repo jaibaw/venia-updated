@@ -1,9 +1,7 @@
 @import "../../mainapp/color";
- 
- 
+
 .header-container {
-    height: 5rem;
-    //border-bottom: #eceeef 0.188rem solid;
+    // height: 5rem;
     background-color: $blue;
     /* UI Properties */
     font: normal normal 600 1rem/1.25rem Muli;
@@ -12,6 +10,14 @@
 }
 
 .menu {
+    display: none;
+}
+
+.list__menu__show {
+    display: inline;
+}
+
+.list__menu__hide {
     display: none;
 }
 
@@ -37,7 +43,7 @@
 }
 
 .home__span {
-    padding-bottom: 26px;
+    padding-bottom: 12px;
     border-bottom: $white 4px solid;
 }
 
@@ -68,7 +74,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: $badgeBlack !important;
+    background-color: $badgeBlack  !important;
     color: $white;
     font-size: .6rem;
     border-radius: 50rem !important;

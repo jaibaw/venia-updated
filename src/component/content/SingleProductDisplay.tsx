@@ -10,6 +10,9 @@ import { Link } from "react-router-dom";
 import StarRating from "../common/StarRating";
 import chevrondown from "../../assests/images/chevrondown.svg";
 import ImgSlider from "../common/ImgSlider";
+import { useState } from "react";
+import ReadMoreReact from 'read-more-react';
+
 // single product display
 function SingleProductDisplay() {
     // redux state
@@ -21,7 +24,7 @@ function SingleProductDisplay() {
     const singleProductDetail = (Object.keys(productDetail).length > 0) ? productDetail : (Product ? JSON.parse(Product) : {})
     const dispatch = useDispatch();
 
-    //redux state
+    const [thumbnailImg, setThumbnailImg] = useState("1");
 
 
     // maintain cart quantity
@@ -31,6 +34,11 @@ function SingleProductDisplay() {
         window.localStorage.setItem('cart', JSON.stringify(uniqueCartItemList))
         window.localStorage.setItem('cartValue', JSON.stringify(uniqueCartItemList.length))
         dispatch(action_setCartQuantity(uniqueCartItemList.length));
+    }
+
+    const handleThumbanailImg = (e: any) => {
+        setThumbnailImg(e.target.id)
+
     }
 
     // return component
@@ -44,17 +52,17 @@ function SingleProductDisplay() {
                                 <div>
                                     {
                                         IMG_CONST_VALUE.map((key) => {
-                                            console.log("key", key)
                                             return (
 
                                                 <div className='side-product-div'>
                                                     {
-                                                        key === 1 ?
-                                                            <img className='side-product-display one__product__div' alt='product' src={singleProductDetail.image}>
-                                                            </img>
-                                                            :
-                                                            <img className='side-product-display' alt='product' src={singleProductDetail.image}>
-                                                            </img>
+                                                        <img
+                                                            id={key}
+                                                            className={thumbnailImg === key ? 'side-product-display one__product__div' : 'side-product-display'}
+                                                            alt='product'
+                                                            onClick={handleThumbanailImg}
+                                                            src={singleProductDetail.image}>
+                                                        </img>
                                                     }
                                                 </div>
                                             )
@@ -72,8 +80,11 @@ function SingleProductDisplay() {
                         </div>
                         <div className='aem-GridColumn aem-GridColumn--default--9 aem-GridColumn--phone--hide'>
                             <div className='product-display'>
-                                <img className="single-img-display" alt='product' src={singleProductDetail.image}>
-                                </img>
+                                {/* <img className="single-img-display" alt='product' src={singleProductDetail.image}>
+                                </img> */}
+                                <div  className="single-img-display" >
+                                    <ImgSlider />
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -87,8 +98,6 @@ function SingleProductDisplay() {
                     <div className='aem-GridColumn  aem-GridColumn--phone--12'>
                         <div className="product-display-phone-view">
                             <div className='product-display'>
-                                {/* <img className="single-img-display" alt='product' src={singleProductDetail.image}>
-                                </img> */}
                                 <ImgSlider />
                             </div>
                         </div>
@@ -112,9 +121,14 @@ function SingleProductDisplay() {
                         </label>
                     </div>
                     <div className="product-discription-details">
-                        <p >
-                            {singleProductDetail.description}
-                        </p>
+                        <div>
+                            <ReadMoreReact
+                                text={singleProductDetail.description}
+                                min={80}
+                                ideal={100}
+                                max={120}
+                                readMoreText="read more" />
+                        </div>
                     </div>
 
                     <div className="product-attribute">

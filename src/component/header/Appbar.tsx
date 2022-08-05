@@ -18,7 +18,10 @@ function Appbar() {
 
     const [home, setHome] = useState(true);
     const [women, setWomen] = useState(false);
+    const [electronics, setElectronics] = useState(false);
+    const [jewellery, setJewellery] = useState(false);
     const [men, setMen] = useState(false);
+
     const [smartGear, setSmarGear] = useState(false);
     const [accessories, setAccessories] = useState(false);
 
@@ -42,6 +45,8 @@ function Appbar() {
         setMen(false);
         setAccessories(false);
         setSmarGear(false);
+        setElectronics(false);
+        setJewellery(false);
     }
 
     const handleClickWomen = () => {
@@ -50,31 +55,65 @@ function Appbar() {
         setMen(false);
         setAccessories(false);
         setSmarGear(false);
+        setElectronics(false);
+        setJewellery(false);
     }
+
     const handleClickMen = () => {
         setHome(false);
         setWomen(false);
         setMen(true);
         setAccessories(false);
         setSmarGear(false);
+        setElectronics(false);
+        setJewellery(false);
     }
-    const handleClickSmartGear = () => {
+
+    const handleClickSmartGear = (e: any) => {
         setHome(false);
         setWomen(false);
         setMen(false);
         setAccessories(false);
         setSmarGear(true);
+        setElectronics(false);
+        setJewellery(false);
     }
-    const handleClickAccessories = () => {
+
+    const handleClicksetElectronics = (e: any) => {
+        setHome(false);
+        setWomen(false);
+        setMen(false);
+        setAccessories(false);
+        setSmarGear(false);
+        setElectronics(true);
+        setJewellery(false);
+    }
+
+
+    const handleClickJewellery = (e: any) => {
+        setHome(false);
+        setWomen(false);
+        setMen(false);
+        setAccessories(false);
+        setSmarGear(false);
+        setElectronics(false);
+        setJewellery(true);
+    }
+
+    const handleClickAccessories = (e: any) => {
         setHome(false);
         setWomen(false);
         setMen(false);
         setAccessories(true);
         setSmarGear(false);
+        setElectronics(false);
+        setJewellery(false);
     }
+
+
     //return component
     return (
-        
+
         <div className="aem-Grid aem-Grid--12">
             <div className='header-container'>
                 <nav className="aem-Grid aem-Grid--12">
@@ -108,36 +147,59 @@ function Appbar() {
                                     onClick={handleClickHome}
                                 ><span className={home ? 'home__span' : ""} >Home</span></li>
                             </Link>
-                            <Link className="menu__bar__title__div" to={ROUTES.WOMEN}>
+                            <Link className="menu__bar__title__div" to={ROUTES.PRODUCT_LIST}>
                                 <li
                                     className='list-class'
                                     onClick={handleClickWomen}
                                 ><span className={women ? 'home__span' : ""} >Women</span></li>
                             </Link>
-                            <Link className="menu__bar__title__div" to={ROUTES.MEN}>
+                            <Link className="menu__bar__title__div" to={ROUTES.PRODUCT_LIST}>
                                 <li
                                     className='list-class'
                                     onClick={handleClickMen}
                                 ><span className={men ? 'home__span' : ""} >Men</span></li>
                             </Link>
-                            <Link className="menu__bar__title__div" to={ROUTES.SMART_GEAR}>
+                            <Link className={location.pathname === '/' ? "menu__bar__title__div list__menu__show" : "list__menu__hide"}
+                                to={ROUTES.PRODUCT_LIST}>
+                                <li
+                                    className='list-class'
+                                    onClick={handleClicksetElectronics}
+                                ><span className={electronics ? 'home__span' : ""} >Electronics</span></li>
+                            </Link>
+
+                            <Link
+                                className={location.pathname === '/' ? "menu__bar__title__div list__menu__show" : "list__menu__hide"}
+                                to={ROUTES.PRODUCT_LIST}>
+                                <li
+                                    className='list-class'
+                                    onClick={handleClickJewellery}
+                                ><span className={jewellery ? 'home__span' : ""} >Jewellery</span></li>
+                            </Link>
+
+                            <Link
+                                className={location.pathname === '/' ? "list__menu__hide" : "menu__bar__title__div list__menu__show"}
+                                to={ROUTES.SMART_GEAR}>
                                 <li
                                     className='list-class'
                                     onClick={handleClickSmartGear}
-                                ><span className={smartGear ? 'home__span' : ""} >{location.pathname === '/' ? 'Electronics' : 'Smart Gear'}</span></li>
+                                ><span className={smartGear ? 'home__span' : ""} >Smart Gear</span></li>
                             </Link>
-                            <Link className="menu__bar__title__div" to={ROUTES.ACCESSORIES}>
+
+
+                            <Link
+                                className={location.pathname === '/' ? "list__menu__hide" : "menu__bar__title__div list__menu__show"}
+                                to={ROUTES.ACCESSORIES} >
                                 <li
                                     className='list-class'
                                     onClick={handleClickAccessories}
-                                ><span className={accessories ? 'home__span' : ""} >{location.pathname === '/' ? 'Jewellery' : 'Accessories'}</span></li>
+                                ><span className={accessories ? 'home__span' : ""} >Accessories</span></li>
                             </Link>
 
                         </ul>
                     </div>
                     <div className="aem-GridColumn aem-GridColumn--default--1 aem-GridColumn--phone--3">
                         <ul className='menu-class'>
-                            {
+                            {/* {
                                 ((cartValue === ' ' && setCartQuantity === '') || (location.pathname === '/delete-product')) ?
                                     <div>
                                         <img
@@ -160,7 +222,20 @@ function Appbar() {
                                             }
                                         </Link>
                                     </div>
-                            }
+                            } */}
+                            <div>
+                                <Link to={ROUTES.SHOPPING_CART}>
+                                    {
+                                        <div className='badge__div'>
+                                            <img
+                                                className='search-logo'
+                                                alt='cart' src={shoppingbag}>
+                                            </img>
+                                            <span className='badge'>{cartValue === ' ' ? 0 : cartValue}</span>
+                                        </div>
+                                    }
+                                </Link>
+                            </div>
                         </ul>
                     </div>
                 </nav>

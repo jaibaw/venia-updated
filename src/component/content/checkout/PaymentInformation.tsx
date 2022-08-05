@@ -41,7 +41,7 @@ function PaymentInformation(props: any) {
             setShowPaymentInfoEdit(true)
             setShowPaymentInfoLabel(false)
         } else {
-            alert("enter respective payment option")
+            alert("enter respective payment option and details")
         }
     }
 
@@ -263,7 +263,7 @@ function PaymentInformation(props: any) {
 
                     <div className="aem-Grid aem-Grid--12">
                         <div className="aem-GridColumn aem-GridColumn--default--12   aem-GridColumn--phone--12 ">
-                            <div>
+                            <div className="btn__checkout__div ">
                                 <button
                                     type='button'
                                     className="checkout__step2__btn"
