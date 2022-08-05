@@ -154,3 +154,17 @@
         height: 600px !important;
     }
 }
+
+//mobile View
+@media (min-width: 769px) and (max-width: 940px) {
+    .quantity__logo__minus{
+        margin-left: 5px;
+    }
+    .quantity__logo__plus{
+        margin-left: 5px;
+    }
+
+    .quantity__span{
+        padding: 5px 22px;
+    }
+}

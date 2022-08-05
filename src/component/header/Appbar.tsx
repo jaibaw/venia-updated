@@ -33,6 +33,8 @@ function Appbar() {
     //redux state
     const setMenuBarStatus = useSelector((state: any) => state.getProductList.setMenuBarStatus);
     const setCartQuantity = useSelector((state: any) => state.getProductList.setCartQuantity);
+    let cartItemList = useSelector((state: any) => state.getProductList.cartItemList);
+
 
     const handleMenuBar = () => {
         setMenuBar(true);
@@ -110,6 +112,11 @@ function Appbar() {
         setJewellery(false);
     }
 
+    const hadleReturnHome = (e: any) => {
+        if(location.pathname === '/delete-product'){
+            cartItemList.length = 0
+        }
+    }
 
     //return component
     return (
@@ -134,7 +141,9 @@ function Appbar() {
                                 {<img
                                     className='venia-logo'
                                     alt='venia-logo'
-                                    src={venialogoupdated}>
+                                    src={venialogoupdated}
+
+                                    onClick={hadleReturnHome}>
                                 </img>}
                             </Link>
                         </div>

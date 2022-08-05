@@ -79,8 +79,8 @@
     }
 }
 
-@media (min-width: 502px) and (max-width: 768px) {
-    .added-product-quantity {
-        // margin: -5vw 0% 5vw 41vw;
+@media (min-width: 769px) and (max-width: 1280px) {
+    .added-cart-item-span{    
+        font: normal normal 600 15px/15px Muli !important
     }
 }

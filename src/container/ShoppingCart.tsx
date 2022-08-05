@@ -12,8 +12,7 @@ function ShoppingCart() {
 
     const total = window.localStorage.getItem('cartValue');
     const cartValue = total ? total : ' ';
-    console.log("cartValue", cartValue)
-
+    
     return (
         <div className={setMenuBarStatus ? 'display-list' : 'shopping-cart-container'}   >
             {/* <div className='shopping-cart-container'> */}
